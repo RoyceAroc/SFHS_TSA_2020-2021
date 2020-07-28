@@ -1,0 +1,143 @@
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+.navbar-brand {
+  padding: 0px;
+}
+.navbar-brand>img {
+  height: 12em;
+  padding: 15px;
+  width: auto;
+}
+.navbar {
+	width: 100%;
+}
+.example3 .navbar-brand {
+  height: 200px;
+}
+
+#navbar3 {
+	left: -38%;
+	position: relative;
+}
+.example3 .nav >li >a {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.example3 .navbar-toggle {
+  padding: 10px;
+  margin: 25px 15px 25px 0;
+}
+.navbar-primary {
+	background-color: #f5f7f5;
+      box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    border-bottom: 2px solid rgba(221, 221, 221, 0.82);
+    border-top: 3px solid #3e476d;
+      text-transform: uppercase;
+    color: #6d6d6d!important;
+}
+.navbar-primary a {
+    color: #6d6d6d!important;
+}
+/* CSS Transform Align Navbar Brand Text ... This could also be achieved with table / table-cells */
+.navbar-alignit .navbar-header {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  height: 50px;
+}
+.navbar-alignit .navbar-brand {
+	top: 50%;
+	display: block;
+	position: relative;
+	height: auto;
+	-webkit-transform: translate(0,-50%);
+	        transform: translate(0,-50%);
+	margin-right: 15px;
+  	margin-left: 15px;
+}
+
+.navbar-nav>li>.dropdown-menu {
+	z-index: 9999;
+}
+
+.cards {
+	zoom: 70%;
+  width: 400px;
+  margin: 0 auto;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+.cards__container {
+  width: 100%;
+  position: relative;
+  padding-bottom: 71.5%;
+  -webkit-transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.cards__front, .cards__back {
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  background-size: cover;
+  box-shadow: 25px 25px 50px rgba(0, 0, 0, 0.2);
+}
+.cards__front {
+  z-index: 2;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+.cards__back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.cards.is-flipped .cards__container {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.card-1 {
+  background-image: url(images/ss1.PNG);
+}
+
+.card-2 {
+  background-image: url(images/ss2.PNG);
+}
+
+.card-3 {
+  background-image: url(images/ss3.PNG);
+}
+
+.card-4 {
+  background-image: url(images/ss4.PNG);
+}
+
+.card-5 {
+  background-image: url(images/ss5.PNG);
+}
+
+.card-6 {
+  background-image: url(images/ss6.PNG);
+}
