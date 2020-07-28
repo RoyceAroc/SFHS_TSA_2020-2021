@@ -1,0 +1,41 @@
+/* Mobile Compatibility Check */
+@media only screen and (min-width: 300px) and (max-width: 991px) {
+	#quote{
+		display: none;
+	}
+	.cards{
+		display: none;
+	}
+	.navbar-brand {
+		display: none;
+	}
+	.navbar-brand-mobile {
+		display: block;
+		zoom: 150%;
+	}
+	body {
+		text-align: center;
+		zoom: 120%;
+	}
+	#navbar3 {
+		zoom: 120%;
+		left: -25%;
+		font-weight: bold;
+	}
+}
+
+/* Laptop Compatibility Check */
+@media only screen and (min-width:  992px)  {
+	#quote {
+		display: block;
+	}
+	.cards {
+		display: block;
+	}
+	.navbar-brand {
+		display: block;
+	}
+	.navbar-brand-mobile {
+		display: none;
+	}
+}
