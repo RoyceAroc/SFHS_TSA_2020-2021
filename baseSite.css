@@ -6,7 +6,9 @@ body {
 ::-webkit-scrollbar {
   width: 10px;
 }
-
+nav {
+	z-index: 999;
+}
 /* Track */
 ::-webkit-scrollbar-track {
   background: #f1f1f1; 
@@ -16,7 +18,10 @@ body {
 ::-webkit-scrollbar-thumb {
   background: #888; 
 }
-
+@font-face {
+   font-family: myFirstFont;
+   src: url(sansation_light.woff);
+}
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
@@ -32,19 +37,20 @@ body {
 .navbar {
 	width: 100%;
 }
-.example3 .navbar-brand {
-  height: 500px;
-}
+
 
 #navbar3 {
-	left: -50%;
-	top: -300px;
+	right: 10px;
+	z-index: 10010;
 	display: inline-block;
-	position: relative;
+	position: fixed;
+	top: 0px;
+	zoom: 118%;
 }
 .example3 .nav >li >a {
   padding-top: 30px;
   padding-bottom: 30px;
+  z-index: 100100;
 }
 .example3 .navbar-toggle {
   padding: 10px;
@@ -53,11 +59,12 @@ body {
 .navbar-primary {
 	background-color: #0E355F;
     text-transform: uppercase;
-    color: #6d6d6d!important;
+    color: white;
 }
 .navbar-primary a {
-    color: #6d6d6d!important;
+    color: white;
 }
+
 /* CSS Transform Align Navbar Brand Text ... This could also be achieved with table / table-cells */
 .navbar-alignit .navbar-header {
   -webkit-transform-style: preserve-3d;
@@ -151,20 +158,9 @@ body {
   position: relative;
   top: -650px;
   right: -1000px;
-  z-index: 1000;
+  z-index: 999;
 }
 
 
 
-svg.building {
-  position: absolute;
-  left: 0;
-  right: 0;
-/*   bottom: 0px; */
-  margin: 0 auto;
-}
-*
-{
-  margin: 0;
-  padding: 0;
-}
+
