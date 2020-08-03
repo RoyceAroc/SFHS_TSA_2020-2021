@@ -58,13 +58,21 @@ nav {
 }
 .navbar-primary {
 	background-color: #0E355F;
-    text-transform: uppercase;
+    //text-transform: uppercase;
     color: white;
+}
+#intro_b > button {
+	zoom: 110%;
 }
 .navbar-primary a {
     color: white;
 }
-
+.scene {
+	position: absolute;
+	width: 100%;
+	transform: translateY(var(--translateY));
+	will-change: transform;
+}
 /* CSS Transform Align Navbar Brand Text ... This could also be achieved with table / table-cells */
 .navbar-alignit .navbar-header {
   -webkit-transform-style: preserve-3d;
