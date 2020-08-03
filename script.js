@@ -1,4 +1,5 @@
-window.addEventListener("scroll", function (event) {
+ AOS.init();
+ window.addEventListener("scroll", function (event) {
     var scroll = this.scrollY;
     /*
 	id = elem
@@ -22,7 +23,9 @@ function resize() {
 	document.getElementById("create").innerHTML = "<polygon points=\"0,0 " + width + ",0 " + width + ",250 0,170\" style=\"fill:#0E355F;\" />";	
 
 	//Linear Regression Formulas for Building SVG Change
-	document.getElementById("size").style.height = ((width * 0.434965) - 278.0782412) + 90 + "px";
+	document.getElementById("intern").style.zoom = ((width * 0.0450463) + 70.67075) + "%";
+	document.getElementById("intro_b").style.zoom = ((width * 0.100316) - 12.93772394) + "%";
+	document.getElementById("size").style.height = ((width * 0.434965) - 278.0782412) + 140 + "px";
 	//alert(document.getElementById("size").style.height);
 	//document.getElementById("navbar3").style.top = ((((width * 0.434965) - 278.0782412) * -1) + 18) + "px";
 	if(width < 1919) {
