@@ -49,6 +49,9 @@ body::-webkit-scrollbar {
 .item img {
 	display: none;
 }
+#navbar3 {
+	display: none;
+}
 	.content ul{
 	left: 3vh;
 	position: relative;
