@@ -16,6 +16,9 @@
 		display: block;
 		zoom: 150%;
 	}
+	#des {
+		display: none;
+	}
 	body {
 		text-align: center;
 		zoom: 120%;
@@ -47,12 +50,34 @@ body::-webkit-scrollbar {
 	display: none;
 }
 	.content ul{
-	left: 2%;
+	left: 4%;
 	position: relative;
 }
 #intro_b {
 	display: none;
 }
+#modalA {
+		top:200px;
+		right:30px;
+		 left: 60px;
+		 bottom: 80px; 
+		 height:50%; 
+		 width: 80%; 
+	}
+	#modalA a {
+		font-size: 27px;
+	}
+	#modalA button {
+		right: 0px;
+		 top: 0px;
+		border-bottom-left-radius: 15px;
+	}
+	#intern {
+		display: none;
+	}
+	#cool {
+		padding-right: 0px;
+	}
 }
 /* Laptop Compatibility Check */
 @media only screen and (min-width:  992px)  {
@@ -60,6 +85,9 @@ body::-webkit-scrollbar {
 	left: 30%;
 	position: relative;
 }
+.new1 {
+		padding-right: 40%;
+	}
 	.item p {
 		padding-left: 240px;
 	}
@@ -77,5 +105,27 @@ body::-webkit-scrollbar {
 	}
 	.navbar-brand-mobile {
 		display: none;
+	}
+	#phone {
+		display: none;
+	}
+	#modalA {
+		top:30px;
+		right:30px;
+		 left: 130px;
+		 bottom: 80px; 
+		 height:50%; 
+		 width: 80%; 
+	}
+	#modalA a {
+		font-size: 40px;
+	}
+	#modalA button {
+		right: 7px;
+		 top: 7px;
+		border-radius: 20px;
+	}
+	#cool {
+		padding-right: 400px;
 	}
 }
