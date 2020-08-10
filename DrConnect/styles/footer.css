@@ -1,0 +1,24 @@
+footer{
+    background-color: #444444;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+footer h4{
+    color: white;
+}
+footer p, footer a{
+    color: #DEDEDE ; 
+}
+.footersection{
+    width: 100%;
+    padding: 10px;
+}
+.quicklink{
+    display:flex;
+    flex-direction: column;
+}
+.middle{
+    border-right: 1px solid #B2B2B2;
+    border-left: 1px solid #B2B2B2;
+}
