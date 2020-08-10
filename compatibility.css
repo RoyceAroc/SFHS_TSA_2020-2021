@@ -49,6 +49,9 @@ body::-webkit-scrollbar {
 .item img {
 	display: none;
 }
+#app {
+	display: none;
+}
 #navbar3 {
 	display: none;
 }
@@ -64,11 +67,11 @@ body::-webkit-scrollbar {
 		right:30px;
 		 left: 60px;
 		 bottom: 80px; 
-		 height:50%; 
+		 height:60%; 
 		 width: 80%; 
 	}
 	#modalA a {
-		font-size: 27px;
+		font-size: 20px;
 	}
 	#modalA button {
 		right: 0px;
