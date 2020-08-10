@@ -50,7 +50,7 @@ body::-webkit-scrollbar {
 	display: none;
 }
 	.content ul{
-	left: 4%;
+	left: 3vh;
 	position: relative;
 }
 #intro_b {
