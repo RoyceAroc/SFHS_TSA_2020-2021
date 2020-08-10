@@ -153,10 +153,20 @@ window.onload = function() {
 var coll = document.getElementsByClassName("collapsible");
 var i;
 
-for (i = 0; i < coll.length; i++) {
+for (i = 0; i < coll.length; ++i) {
+
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
+	let id = $(this).attr("id");
+	let list = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
+	for(let m=0; m<list.length; m++) {
+		if(id==list[m]) {
+			let cons = [0, 4, 8, 16, 21, 26, 35];
+			document.getElementById(cons[m]).click();
+		}
+	}
+	document.getElementById("content").click();
     if (content.style.maxHeight){
       content.style.maxHeight = null;
     } else {
