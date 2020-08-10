@@ -1,5 +1,8 @@
 /* Mobile Compatibility Check */
 @media only screen and (min-width: 300px) and (max-width: 991px) {
+	html, body {
+		zoom: 50%;
+	}
 	#quote{
 		display: none;
 	}
@@ -18,16 +21,53 @@
 		zoom: 120%;
 	}
 	#navbar3 {
-		zoom: 120%;
-		left: -25%;
-		font-weight: bold;
+		display: none;
 	}
+	svg {
+		display: none;
+	}
+	#officers {
+		left: -22vh;
+		zoom: 80%;
+	}
+html,body {
+		overflow-x: hidden;
+		position: relative;
+	}
+body::-webkit-scrollbar {
+  display: none;
 }
-
+.opera2 {
+	zoom: 50%;
+}
+.opera2 h1 {
+	left: 30%;
+}
+.item img {
+	display: none;
+}
+	.content ul{
+	left: 2%;
+	position: relative;
+}
+#intro_b {
+	display: none;
+}
+}
 /* Laptop Compatibility Check */
 @media only screen and (min-width:  992px)  {
+	.content ul{
+	left: 30%;
+	position: relative;
+}
+	.item p {
+		padding-left: 240px;
+	}
 	#quote {
 		display: block;
+	}
+	#officers {
+		padding-left: 73vh;
 	}
 	.cards {
 		display: block;
