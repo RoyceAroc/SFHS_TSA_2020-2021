@@ -20,6 +20,7 @@
 		
     </head>
     <body>
+		<header id="confetti" style="display: none;position; fixed; top:0; right: 0; left:0; bottom:0; width: 100%; height: 100%; z-index: 100000000000000000;"></header>
         <!-- Compatibility and Site Development in Progress-->
         <div class="example3">
             <nav class="navbar-primary navbar-static-top">
@@ -46,10 +47,10 @@
              
                 </a></div>
                 <div style="position: relative; top:0; z-index: 1000; left: -270px; width: 100000%;">
-                    <svg id="elem_fix" style="position: fixed;" height="250" width="12242">
-                        <	  
+                    <svg id="elem_fix" style="opacity: 0.9;position: fixed;" height="250" width="12242">
+                        	  
                         <polyline points="0,0 0,200 220,200 300, 90 12241,150 12241,0"
-                            style="fill: #485D71;stroke:white;stroke-width:4" />
+                            style="fill: lightblue;stroke:pink;stroke-width:4" />
                     </svg>
                 </div>
                 <div id="intern" style="color:white; z-index: 999; position: relative; left:0; top: 130px; background-color: #0E355F; width: 90%;">
@@ -83,9 +84,22 @@
 		<h4> Class Code: TBD (Long Long)</h4>
 	</div>
   
-  <div class="column">
-		<h3>Instagram</h3>
-		<h2> @sfhs.tsa </h2>
+  <div  class="column">
+		<h3>Social Media</h3>
+	<h2>@sfhs.tsa</h2>
+	<div class="social-icons">
+
+ <!-- <a class="social-icon social-icon--twitter">
+    <i class="fa fa-twitter"></i>
+  </a>
+  <a style="left: 40%;" target="_blank" href="https://www.instagram.com/sfhs.tsa/" class="social-icon social-icon--instagram">
+    <i class="fa fa-instagram"></i>
+  </a>
+
+ <a class="social-icon social-icon--facebook">
+    <i class="fa fa-facebook"></i>
+  </a>-->
+</div>
 	</div>
 	
 </section>	
@@ -96,8 +110,14 @@
 		<div style="z-index: 100000;position: fixed" id="mySidebar" class="sidebar">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
   <a href="index.html">Home</a>
-  <a href="Officers.html">Officers</a>
-  
+    <a href="Chapter/FAQs.html">FAQs</a>
+  <a href="Chapter/Officers.html">Officers</a>
+  <a href="Chapter/Members.html">All Members</a>
+  <a href="Chapter/MeetingInfo.html">Meeting Info</a>
+  <a href="Competition/Levels.html">Rounds</a>
+  <a href="Competition/Timeline.html">Timeline</a>
+  <a href="Competition/EventInformation.html">Event Info</a>
+  <a href="Competition/EventThemes.html">Event Themes</a>
 </div>
 		   	<div style="float: right;z-index: 100000;position: fixed;" id="main">
   <button class="openbtn" onclick="openNav()">☰</button>  
@@ -136,21 +156,35 @@
                 </div>
                 <div id="navbar3" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li style="z-index: 10000;" class="active"><a href="#">Home</a></li>
-                        <li><a  href="Officers.html">Officers&nbsp;&nbsp;</a></li>
-                      <!-- Webmaster  <li><a href="DrConnect/index.html">Company </a></li>-->
-                      <!--  <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Members <span class="caret"></span></a>
+                        <li style="z-index: 10000;" ><a style="background-image: linear-gradient(180deg, rgba(0,0,0,0),rgba(0,0,0,0) 81%,pink 81.1%,pink 85%,rgba(0,0,0,0) 85.1%,rgba(0,0,0,0));font-weight: bold;"  onMouseOver="this.style.color='white';this.style.backgroundColor='transparent'"
+   onMouseOut="this.style.color='white';this.style.backgroundColor='transparent'" href="index.html">Home</a></li>
+                        <!--<li><a  href="Officers.html">Officers&nbsp;&nbsp;</a></li>
+
+                       Webmaster  <li><a href="DrConnect/index.html">Company </a></li>-->
+                       <li class="dropdown">
+                            <a href="#" style="font-weight: bold;"  onMouseOver="this.style.color='white';this.style.backgroundColor='transparent'"
+   onMouseOut="this.style.color='white';this.style.backgroundColor='transparent'"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Chapter <span class="caret"></span></a>
                             <ul style="z-index: 1200" class="dropdown-menu" role="menu">
-                                <li><a href="#">Officers</a></li>
-                                <li><a href="#">All Members</a></li>
-                                <li><a href="#">Meetings Info</a></li>
+                                <li><a href="Chapter/Officers.html">Officers</a></li>
+                                <li><a href="Chapter/Members.html">All Members</a></li>
+                                <li><a href="Chapter/MeetingInfo.html">Meetings Info</a></li>
+                                <li><a href="FAQs.html">FAQs</a></li>
+                            </ul>
+                        </li>
+						<li class="dropdown">
+                            <a href="#" style="font-weight: bold;"  onMouseOver="this.style.color='white';this.style.backgroundColor='transparent'"
+   onMouseOut="this.style.color='white';this.style.backgroundColor='transparent'"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Competition<span class="caret"></span></a>
+                            <ul style="z-index: 1200" class="dropdown-menu" role="menu">
+                                <li><a href="Competition/Levels.html">Levels</a></li>
+                                <li><a href="Competition/Timeline.html">Timeline</a></li>
                                 <li class="divider"></li>
                                 <li class="dropdown-header">Contest</li>
-                                <li><a href="#">Timeline</a></li>
-                                <li><a href="#">Event Information</a></li>
+                                <li><a href="Competition/EventInformation.html">Event Information</a></li>
+								<li><a href="Competition/EventThemes.html">Event Themes</a></li>
                             </ul>
-                        </li>-->
+                        </li>
+						 <li style="z-index: 10000;" ><a style="font-weight: bold;"  onMouseOver="this.style.color='white';this.style.backgroundColor='transparent'"
+   onMouseOut="this.style.color='white';this.style.backgroundColor='transparent'" href="https://forms.gle/1idUPFj6g75AyS2w7">Join Now</a></li>
                     </ul>
                 </div>
             </nav>
@@ -160,7 +194,8 @@
                 </svg>
             </div>
 			
-			<div style="padding-top: 0%; padding-left: 10%; padding-right: 10%; position: absolute;line-height: 3px;" id="content">
+			<div style="padding-top: 0%;  position: absolute;line-height: 3px;" id="content">
+				<div style="padding-left: 10%; padding-right: 10%;">
 				<div id="read" style="position: absolute; top: -100px;"></div>
 				<h1>What's TSA?</h1><br><br>
 				<div>
@@ -245,9 +280,29 @@
 </header>
 <p id="debug"></p>
 <div id="opened" style="background-color: white; z-index: 1000000; position: fixed; display: none; top:30px;right:30px; left: 15px;bottom: 80px; height:90%; width: 97%;  padding-top: 1%; color: black; text-align: center;">
+
 	<button  onclick="closePop()" style="position: absolute; right: 0px; top: -1px; color: white; background-color: red;zoom: 150%; height: 30px;"> X </button>
-	<iframe src="" height="600px" id="guidelines"></iframe>
+<div id="append_iframe">	</div>
 </div>
+	<script>
+		
+	function open1(numA) {
+		let indexA = [49,103,111,265,87,127,163,241,97,0,0,249,257,275,309,317,75,169,201,233,285,119,145,183,301,0,155,295,41,67,137,175,209,217,223,59,193];
+		$("#opened").fadeIn();
+		document.getElementById("append_iframe").innerHTML = "";
+		  var link = "/media/CompGuidelines.pdf#page=" + indexA[numA];
+			var iframe = document.createElement('iframe');
+			iframe.frameBorder=0;
+			iframe.width="300px";
+			iframe.height="600px";
+			iframe.setAttribute("src", link);
+			document.getElementById("append_iframe").appendChild(iframe);
+
+		
+
+		
+	}
+	</script>
 				</header><br><br><br>
 			<h1 id="officers">Officer Team</h1>			
 		<div class="containera">
@@ -301,9 +356,58 @@
   </div>
 </div>
 <br><br><br><br><br><br><br><br><br>
-		<footer style="z-index:1000;background-color: indigo;bottom:0; position: relative;"><h3 style="float: right; ">© SFHS TSA 2020</h3></footer>
-			</div>
-	
+	</div>	  <!-- Site footer -->
+    <footer  class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">TSA, standing for Technology Student Assosciation, is a national student organization created to develop skills in science, mathematics, as well as business education. Further enhancing personal development, leadership, and STEM carrier opportunities.   </p>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Our Chapter</h6>
+            <ul class="footer-links">
+              <li><a href="Chapter/Officers.html">Officers</a></li>
+              <li><a href="Chapter/Members.html">All Members</a></li>
+              <li><a href="Chapter/MeetingInfo.html">Meeting Info</a></li>
+              <li><a href="Chapter/FAQs.html">FAQs</a></li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Competition</h6>
+            <ul class="footer-links">
+              <li><a href="Competition/Levels.html">Rounds</a></li>
+              <li><a href="Competition/Timeline.html">Timeline</a></li>
+              <li><a href="Competition/EventInformation.html">Event Information</a></li>
+              <li><a href="Competition/EventThemes.html">Event Themes</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by 
+         <a href="index.html">SFHS TSA</a>.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul style="left: 44%;position: relative;" class="social-icons">
+             <!-- <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>-->
+            <li><a class="dribbble" href="https://www.forsyth.k12.ga.us/Page/22491"><i class="fa fa-dribbble"></i></a></li>
+              <li><a class="linkedin" href="https://www.instagram.com/sfhs.tsa/"><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
+		</div>	
+
             <div class="build">
                 <svg id="building" style="position: relative; top:0; zoom: 200%;" class="building" width="1000px" height="520px" viewbox="0 0 1139 772" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
                 <!-- Optional single down line for base bottom improvement <line x1="-1000000" y1="772" x2="1295" y2="772" style="stroke:white;stroke-width:8" />-->
