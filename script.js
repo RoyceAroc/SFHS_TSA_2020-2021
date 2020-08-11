@@ -7,10 +7,10 @@
   style="fill: #485D71;stroke:white;stroke-width:4" />
   */
   if((200 -scroll) > 85) {
-  	document.getElementById("elem_fix").innerHTML = ("<polyline points=\"0,0 0," + (200-scroll) + " " + (200-scroll) + "," + (200-scroll) + " 300,90 12241,150 12241,0\" style=\"fill: #485D71;stroke:white;stroke-width:4\"/>");
+  	document.getElementById("elem_fix").innerHTML = ("<polyline points=\"0,0 0," + (200-scroll) + " " + (200-scroll) + "," + (200-scroll) + " 300,90 12241,150 12241,0\" style=\"fill:lightblue;stroke:pink;stroke-width:4\"/>");
 	  document.getElementById("elem_fix").style.height = "250";
   } else {
-	document.getElementById("elem_fix").innerHTML = ("<polyline points=\"0,0 0,90  300, 90 12241,150 12241,0\" style=\"fill: #485D71;stroke:white;stroke-width:4\" />");
+	document.getElementById("elem_fix").innerHTML = ("<polyline points=\"0,0 0,90  300, 90 12241,150 12241,0\" style=\"fill: lightblue;stroke:pink;stroke-width:4\" />");
 	 document.getElementById("elem_fix").style.height = "100";
   }
   if(scroll > 270) {
@@ -175,15 +175,7 @@ for (i = 0; i < coll.length; ++i) {
   });
 }
 
-let index = [49, 103,111,265,87,127,163,241,97,0,0,249,257,275,309,317,75,169,201,233,285,119,145,183,301,0,155,295,41,67,137,175,209,217,223,59,193]
-	function open1(numA) {
-		//var browse = document.getElementById("opened");
-		$("#opened").fadeIn();
-		document.getElementById('guidelines');
-		document.getElementById('guidelines').src = "https://tsa.roydero.com/media/CompGuidelines.pdf#page=" + index[numA];
 
-		
-	}
 
 $(document).ready(function () {
   $('li').click(function () {
@@ -211,9 +203,11 @@ $(document).ready(function () {
 });
 
 function join() {
+	$("#confetti").fadeIn();
     $("#modalA").fadeIn();
 }
 function popClose() {
+		$("#confetti").fadeOut();
 	$("#modalA").fadeOut();
 }
 function closePop() {
@@ -228,3 +222,37 @@ function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("main").style.marginRight= "0";
 }
+
+
+
+
+var inc = 1;
+
+function _(id){
+    return document.getElementById(id);
+}
+function reset(v){
+  document.body.innerHTML = '';
+  inc = 1;
+}
+
+function clearnode(node){
+  setTimeout(function(){
+     _(node).parentNode.removeChild(_(node));
+  }, 1000*2);
+}
+
+setInterval(function(){
+  if (inc < 999999999999999) inc++;
+  else reset(inc);
+  var div = document.createElement('div');
+  let temp = Math.floor((Math.random() * 7) + 1 );
+  div.id = 'paper'+inc;
+  div.style.webkitAnimationDuration = (Math.random()*1+1.5)+'s, 0.5s';
+  div.style.height = eval(7*1+Math.floor((Math.random() * 7) + 1 )-2)+'px';
+  div.style.width = div.style.height;
+  div.className = 'paper paper'+temp;
+  div.style.left = Math.floor((Math.random() * 100) + 1)+'%';
+  document.getElementById("confetti").append(div);
+  clearnode(div.id);
+}, 10);
