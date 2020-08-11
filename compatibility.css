@@ -1,7 +1,16 @@
 /* Mobile Compatibility Check */
-@media only screen and (min-width: 300px) and (max-width: 991px) {
+@media only screen and (min-width: 300px) and (max-width: 991px)  {
 	html, body {
 		zoom: 50%;
+	}
+	#officerPlaque {
+		position: absolute;
+		top:12%;
+		left: 36%;
+		//font-size: 40px;
+	}
+	#navbar3 {
+		display: none;
 	}
 	#quote{
 		display: none;
@@ -55,6 +64,7 @@ body::-webkit-scrollbar {
 #navbar3 {
 	display: none;
 }
+
 	.content ul{
 	left: 3vh;
 	position: relative;
@@ -86,7 +96,7 @@ body::-webkit-scrollbar {
 	}
 }
 /* Laptop Compatibility Check */
-@media only screen and (min-width:  992px)  {
+@media only screen and (min-width:  992px) and (min-height: 400px)  {
 	.content ul{
 	left: 30%;
 	position: relative;
@@ -133,5 +143,11 @@ body::-webkit-scrollbar {
 	}
 	#cool {
 		padding-right: 400px;
+	}
+	#officerPlaque {
+		position: absolute;
+		top:20%;
+		right: 10%;
+		font-size: 40px;
 	}
 }
