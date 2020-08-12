@@ -1,1 +1,517 @@
 
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Event Information | SFHS TSA </title>
+        <link rel="icon" href="../images/favicon.png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../baseSite.css">
+        <link rel="stylesheet" type="text/css" href="../compatibility.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .containerA {
+            padding: 20px;
+            }        
+           .container {
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+            }
+            .section__headline {
+            font-family: "Varela Round", sans-serif;
+            font-size: 62px;
+            font-weight: light;
+            color: #1e88e5;
+            padding-left: 15px;
+            padding-top: 30px;
+            }          
+        </style>
+    </head>
+    <body>
+        <div class="example3">
+        <nav class="navbar-primary navbar-static-top">
+            <a class="navbar-brand"  href="../index.html">
+                <div style="width: 30%; position: relative; left: -3%; top: -30px; z-index: 1001;" >
+                    <img src="../images/Logo.gif" style="width: 200px;transform: scaleX(-1);" alt="SFHS TSA Logo">
+                    <div style="position: absolute; left: 100px; margin-top: -100px; color: white; font-size: 60px;font-family: myFirstFont;">
+                        TSA<br><br>
+                        <p style="font-size: 12px;font-family: Arial, Helvetica, sans-serif; margin-left: -17px;"> LEAD  •  INSPIRE  •  INNOVATE</p>
+                    </div>
+            </a>
+            <div id="searchBar" style="display: none;width: 300vh; left: -50%;position: fixed;  z-index: 1005; color: white; top: 44px; " >
+            <div class="wrap">
+            <!--	<div class="search">
+                <input type="text" class="searchTerm" placeholder="Explore...">
+                <button type="submit" class="searchButton">
+                	<i class="fa fa-search"></i>
+                </button>
+                </div>-->
+            </div> 
+            </div>
+            </img>
+            <a class="navbar-brand-mobile" href="index.html">
+            </a></div>
+            <div style="position: relative; top:0; z-index: 1000; left: -270px; width: 100000%;">
+                <svg id="elem_fix" style="opacity: 0.9;position: fixed;" height="250" width="12242">
+                    <polyline points="0,0 0,200 220,200 300, 90 12241,150 12241,0"
+                        style="fill: lightblue;stroke:pink;stroke-width:4" />
+                </svg>
+            </div>
+            <header id="phone">
+                <div style="z-index: 100000;position: fixed" id="mySidebar" class="sidebar">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                    <a href="../index.html">Home</a>
+                    <a href="../Chapter/FAQs.html">FAQs</a>
+                    <a href="../Chapter/Officers.html">Officers</a>
+                    <a href="../Chapter/Members.html">All Members</a>
+                    <a href="../Chapter/MeetingInfo.html">Meeting Info</a>
+                    <a href="../Competition/Levels.html">Conferences</a>
+                    <a href="../Competition/Timeline.html">Timeline</a>
+                    <a href="../Competition/EventInformation.html">Event Info</a>
+                    <a href="../Competition/EventThemes.html">Event Themes</a>
+                </div>
+                <div style="float: right;z-index: 100000;position: fixed;" id="main">
+                    <button class="openbtn" onclick="openNav()">☰</button>  
+                </div>
+                <div style="width: 100%; position: relative; left: -3%; top: -30px; z-index: 1001;" >
+                    <img src="images/Logo.gif" style="width: 200px;transform: scaleX(-1);" alt="SFHS TSA Logo">
+                    <div style="position: relative; left: 0%; margin-top: -150px; color: white; font-size: 60px;font-family: myFirstFont;">
+                        TSA<br><br>
+                        <p style="font-size: 20px;font-family: Arial, Helvetica, sans-serif; margin-left: -17px;margin-top: -80px;"> LEAD  •  INSPIRE  •  INNOVATE</p>
+                    </div>
+                </div>
+            </header>
+            <div>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar3">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                </div>
+            </div>
+            <div id="navbar3" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li style="z-index: 10000;" ><a style="font-weight: bold;"  onMouseOver="this.style.color='white';this.style.backgroundColor='transparent'"
+                        onMouseOut="this.style.color='white';this.style.backgroundColor='transparent'" href="../index.html">Home</a></li>
+                    <!--<li><a  href="Officers.html">Officers&nbsp;&nbsp;</a></li>
+                        Webmaster  <li><a href="DrConnect/index.html">Company </a></li>-->
+                    <li class="dropdown">
+                        <a href="#" style="background-image: linear-gradient(180deg, rgba(0,0,0,0),rgba(0,0,0,0) 81%,pink 81.1%,pink 85%,rgba(0,0,0,0) 85.1%,rgba(0,0,0,0));font-weight: bold;"  onMouseOver="this.style.color='white';this.style.backgroundColor='transparent'"
+                            onMouseOut="this.style.color='white';this.style.backgroundColor='transparent'"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Chapter <span class="caret"></span></a>
+                        <ul style="z-index: 1200" class="dropdown-menu" role="menu">
+                            <li><a href="../Chapter/Officers.html">Officers</a></li>
+                            <li><a href="../Chapter/Members.html">All Members</a></li>
+                            <li><a href="../Chapter/MeetingInfo.html">Meetings Info</a></li>
+                            <li><a href="../Chapter/FAQs.html">FAQs</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" style="font-weight: bold;"  onMouseOver="this.style.color='white';this.style.backgroundColor='transparent'"
+                            onMouseOut="this.style.color='white';this.style.backgroundColor='transparent'"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Competition<span class="caret"></span></a>
+                        <ul style="z-index: 1200" class="dropdown-menu" role="menu">
+                            <li><a href="../Competition/Levels.html">Conferences</a></li>
+                            <li><a href="../Competition/Timeline.html">Timeline</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Contest</li>
+                            <li><a href="../Competition/EventInformation.html">Event Information</a></li>
+                            <li><a href="../Competition/EventThemes.html">Event Themes</a></li>
+                        </ul>
+                    </li>
+                    <li style="z-index: 10000;" ><a style="font-weight: bold;"  onMouseOver="this.style.color='white';this.style.backgroundColor='transparent'"
+                        onMouseOut="this.style.color='white';this.style.backgroundColor='transparent'" href="https://forms.gle/1idUPFj6g75AyS2w7">Join Now</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Unique Site Data-->
+        
+<div style="padding-top: 13%; padding-left: -5%;" id="list">
+
+<div class="containerA">
+	 <h1 class="section__headline">Competitive Events</h1>
+     <header>
+        <br>
+        <header class="orange">
+            <button id="a" style="border-bottom: 0.1px solid white;" class="collapsible"> Construction Tech</button>
+            <div class="content">
+                <ul>
+                    <li id="0">
+                        <span>Architectural Design</span>
+                        <div></div>
+                    </li>
+                    <li id="1">
+                        <span>Computer-Aided Design (CAD), Architecture</span>
+                        <div></div>
+                    </li>
+                    <li id="2">
+                        <span>Computer-Aided Design (CAD), Engineering</span>
+                        <div></div>
+                    </li>
+                    <li id="3">
+                        <span>Structural Design and Engineering</span>
+                        <div></div>
+                    </li>
+                </ul>
+            </div>
+            <button id="b" style="border-bottom: 0.1px solid white;" class="collapsible">Communications Tech</button>
+            <div class="content">
+                <ul>
+                    <li id="4">
+                        <span>Children's Stories</span>
+                        <div></div>
+                    </li>
+                    <li id="5">
+                        <span>Debating Technological Issues</span>
+                        <div></div>
+                    </li>
+                    <li id="6">
+                        <span>Essays on Technology</span>
+                        <div></div>
+                    </li>
+                    <li id="7">
+                        <span>Promotional Design</span>
+                        <div></div>
+                    </li>
+                </ul>
+            </div>
+            <button id="c" style="border-bottom: 0.1px solid white;" class="collapsible">Computer Science and IT</button>
+            <div class="content">
+                <ul>
+                    <li id="8">
+                        <span>Coding</span>
+                        <div></div>
+                    </li>
+                    <li id="9">
+                        <span>Cybersecurity</span>
+                        <div></div>
+                    </li>
+                    <li id="10">
+                        <span>CompTIA Certification</span>
+                        <div></div>
+                    </li>
+                    <li id="11">
+                        <span>Scientific Visualization (SciVis)</span>
+                        <div></div>
+                    </li>
+                    <li id="12">
+                        <span>Software Development</span>
+                        <div></div>
+                    </li>
+                    <li id="13">
+                        <span>System Control Technology</span>
+                        <div></div>
+                    </li>
+                    <li id="14">
+                        <span>Video Game Design</span>
+                        <div></div>
+                    </li>
+                    <li id="15">
+                        <span>Webmaster</span>
+                        <div></div>
+                    </li>
+                </ul>
+            </div>
+            <button id="d" class="collapsible" style="border-bottom: 0.1px solid white;">Leadership</button>
+            <div class="content">
+                <ul>
+                    <li id="16">
+                        <span>Chapter Team</span>
+                        <div></div>
+                    </li>
+                    <li id="17">
+                        <span>Extemporaneous Speech</span>
+                        <div></div>
+                    </li>
+                    <li id="18">
+                        <span>Future Technology Teacher</span>
+                        <div></div>
+                    </li>
+                    <li id="19">
+                        <span>Prepared Presentation</span>
+                        <div></div>
+                    </li>
+                    <li id="20">
+                        <span>Technology Bowl</span>
+                        <div></div>
+                    </li>
+                </ul>
+            </div>
+            <button id="e" style="border-bottom: 0.1px solid white;" class="collapsible">Manufacturing </button>
+            <div class="content">
+                <ul>
+                    <li id="21">
+                        <span>Computer Integrated Manufacturing (CIM)</span>
+                        <div></div>
+                    </li>
+                    <li id="22">
+                        <span>Dragster Design</span>
+                        <div></div>
+                    </li>
+                    <li id="23">
+                        <span>Flight Endurance</span>
+                        <div></div>
+                    </li>
+                    <li id="24">
+                        <span>Transportation Modeling</span>
+                        <div></div>
+                    </li>
+                    <li id="25">
+                        <span>VEX Robotics Competition</span>
+                        <div></div>
+                    </li>
+                </ul>
+            </div>
+            <button id="f" style="border-bottom: 0.1px solid white;" class="collapsible">STEM</button>
+            <div class="content">
+                <ul>
+                    <li id="26">
+                        <span>Engineering Design</span>
+                        <div></div>
+                    </li>
+                    <li id="27">
+                        <span>Technology Problem Solving</span>
+                        <div></div>
+                    </li>
+                    <li id="28">
+                        <span>Animatronics</span>
+                        <div></div>
+                    </li>
+                    <li id="29">
+                        <span>Board Game Design</span>
+                        <div></div>
+                    </li>
+                    <li id="30">
+                        <span>Digital Video Production</span>
+                        <div></div>
+                    </li>
+                    <li id="31">
+                        <span>Fashion Design and Technology</span>
+                        <div></div>
+                    </li>
+                    <li id="32">
+                        <span>Music Production</span>
+                        <div></div>
+                    </li>
+                    <li id="33">
+                        <span>On Demand Video</span>
+                        <div></div>
+                    </li>
+                    <li id="34">
+                        <span>Photographic Technology</span>
+                        <div></div>
+                    </li>
+                </ul>
+            </div>
+            <button id="g" style="border-bottom: 0.1px solid white;" class="collapsible">Technology and Research</button>
+            <div class="content">
+                <ul>
+                    <li id="35">
+                        <span>Biotechnology Design</span>
+                        <div></div>
+                    </li>
+                    <li id="36">
+                        <span>Forensic Science</span>
+                        <div></div>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <p id="debug"></p>
+                        <div id="opened" style="background-color: white; z-index: 1000000; position: fixed; display: none; top:30px;right:30px; left: 15px;bottom: 80px; height:90%; width: 97%;  padding-top: 1%; color: black; text-align: center;">
+                            <button  onclick="closePop()" style="position: absolute; right: 0px; top: -1px; color: white; background-color: red;zoom: 150%; height: 30px;"> X </button>
+                            <div id="append_iframe">	</div>
+                        </div>
+                        <script>
+                            function open1(numA) {
+                            	let indexA = [49,103,111,265,87,127,163,241,97,0,0,249,257,275,309,317,75,169,201,233,285,119,145,183,301,0,155,295,41,67,137,175,209,217,223,59,193];
+                            	$("#opened").fadeIn();
+                            	document.getElementById("append_iframe").innerHTML = "";
+                            	  var link = "/media/CompGuidelines.pdf#page=" + indexA[numA];
+                            		var iframe = document.createElement('iframe');
+                            		iframe.frameBorder=0;
+                            		iframe.width="300px";
+                            		iframe.height="600px";
+                            		iframe.setAttribute("src", link);
+                            		document.getElementById("append_iframe").appendChild(iframe);
+                            
+                            	
+                            
+                            	
+                            }
+                            var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; ++i) {
+
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+	let id = $(this).attr("id");
+	let list = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
+	for(let m=0; m<list.length; m++) {
+		if(id==list[m]) {
+			let cons = [0, 4, 8, 16, 21, 26, 35];
+			document.getElementById(cons[m]).click();
+		}
+	}
+	//document.getElementById("content").click();
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + 300 + "px";
+    } 
+  });
+}
+
+function closePop() {
+	$("#opened").fadeOut();
+}
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginRight = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginRight= "0";
+}
+
+
+$(document).ready(function () {
+  $('li').click(function () {
+	let choose = $(this).attr('id');
+    if ($(this).hasClass('expand')) {
+      $(this).removeClass('expand');
+      $(this).find('div').text('');
+    } else {
+      // Remove all expand classes from list items
+      $('li').removeClass('expand');
+      $('li').find('div').text('');
+      // Add to the newly clicked list item
+      $(this).addClass('expand');
+      $(this).find('div').html(function () {
+        list = "https://tsa.roydero.com/images/slides/" + choose + ".jpg";
+        return "<ol class=\"clean\"><img src=\"" + list + "\"/><br><br><button onclick=\"open1(" + choose + ")\"> Read More </button></ol>";
+      });
+    }
+  });
+
+  $('.expand').click(function () {
+    // Remove all expand classes from list items
+    $('li').removeClass('expand');
+  });
+});
+
+                        </script>
+</div>
+</div>
+            <footer  class="site-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <h6>About</h6>
+                            <p class="text-justify">TSA, standing for Technology Student Association, is a national student organization created to develop skills in science, mathematics, as well as business education. Further enhancing personal development, leadership, and STEM carrier opportunities.   </p>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <h6>Our Chapter</h6>
+                            <ul class="footer-links">
+                                <li><a href="../Chapter/Officers.html">Officers</a></li>
+                                <li><a href="../Chapter/Members.html">All Members</a></li>
+                                <li><a href="../Chapter/MeetingInfo.html">Meeting Info</a></li>
+                                <li><a href="../Chapter/FAQs.html">FAQs</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <h6>Competition</h6>
+                            <ul class="footer-links">
+                                <li><a href="../Competition/Levels.html">Conferences</a></li>
+                                <li><a href="../Competition/Timeline.html">Timeline</a></li>
+                                <li><a href="../Competition/EventInformation.html">Event Information</a></li>
+                                <li><a href="../Competition/EventThemes.html">Event Themes</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                            <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by 
+                                <a href="../index.html">SFHS TSA</a>.
+                            </p>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <ul style="left: 44%;position: relative;" class="social-icons">
+                                <!-- <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>-->
+                                <li><a class="dribbble" href="https://www.forsyth.k12.ga.us/Page/22491"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a class="linkedin" href="https://www.instagram.com/sfhs.tsa/"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+       </div>
+       </div>
+       
+           <!--Total-->
+         <button onclick="aDerv()" style='z-index: 10000000;background-color: lightblue; color: white;font-size:40px; border-radius: 20px;position: fixed;bottom:7px;right:7px;'> <i class='fa fa-comments'></i></button>
+         <header  style="font-family: sans-serif;position: fixed; bottom: 68px; font-size: 15px;right: 7px;z-index: 1000000;background-color: white;font-weight: normal;">
+             <div style="display: none;" id="peekobot-container">  
+             <div id="peekobot-inner">
+                 <div id="peekobot"></div>
+             </div>
+             </div>
+         </header>
+         <script>
+             let click = 0;
+             function aDerv() {
+                 click++;
+                 if(click % 2 == 1) {
+                     $("#peekobot-container").fadeIn();
+                 } else {
+                     $("#peekobot-container").fadeOut();
+                 }
+             }
+             window.addEventListener("scroll", function (event) {
+    var scroll = this.scrollY;
+    /*
+	id = elem
+	 <polyline points="0,0 0,200 220,200 300, 90 12241,150 12241,0"
+  style="fill: #485D71;stroke:white;stroke-width:4" />
+  */
+  if((200 -scroll) > 85) {
+  	document.getElementById("elem_fix").innerHTML = ("<polyline points=\"0,0 0," + (200-scroll) + " " + (200-scroll) + "," + (200-scroll) + " 300,90 12241,150 12241,0\" style=\"fill:lightblue;stroke:pink;stroke-width:4\"/>");
+	  document.getElementById("elem_fix").style.height = "250";
+  } else {
+	document.getElementById("elem_fix").innerHTML = ("<polyline points=\"0,0 0,90  300, 90 12241,150 12241,0\" style=\"fill: lightblue;stroke:pink;stroke-width:4\" />");
+	 document.getElementById("elem_fix").style.height = "100";
+  }
+  if(scroll > 270) {
+	 $( "#searchBar" ).fadeIn(800);
+  } else {
+	 $( "#searchBar" ).fadeOut(100);
+  }
+
+})
+         </script>
+         <script src="../bot.js"></script>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Unique Site Data-->
+        <!-- Load Script Imports-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://s.electerious.com/basicScroll/dist/basicScroll.min.js"></script>
+        <script src="../slideshow.js"></script>
+        <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+    </body>
+</html>
