@@ -256,3 +256,4 @@ setInterval(function(){
   document.getElementById("confetti").append(div);
   clearnode(div.id);
 }, 10);
+
