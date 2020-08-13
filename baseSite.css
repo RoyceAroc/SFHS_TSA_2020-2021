@@ -248,7 +248,9 @@ html {
   height: 50px;
 
 }
-
+#append_iframe iframe {
+  width: 1000px;
+}
 .orange  .active, .orange  .collapsible:hover {
   background-color: #555;
 }
