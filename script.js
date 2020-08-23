@@ -28,7 +28,13 @@ function resize() {
 	//alert(width);
 	console.log("Screen Width: " + width + " | Height: " + height);
 	document.getElementById("create").innerHTML = "<polygon points=\"0,0 " + width + ",0 " + width + ",250 0,170\" style=\"fill:#0E355F;\" />";	
-
+	if(width > 1950) {
+		document.getElementById("col_A").style.display = "none";
+	} else {
+		document.getElementById("col_A").style.display = "block";
+	}
+	document.getElementById("main_logo").style.left = ((width * 0.259737) + 299.7010308) + "px";
+	document.getElementById("col_A").style.left = (width * 0.0259737917) + 59.97010318 + "vh";
 	//Linear Regression Formulas for Building SVG Change
 	document.getElementById("intern").style.zoom = ((width * 0.0450463) + 70.67075) + "%";
 	document.getElementById("intro_b").style.zoom = ((width * 0.100316) - 12.93772394) + "%";
