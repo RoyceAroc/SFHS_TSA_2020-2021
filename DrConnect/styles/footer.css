@@ -18,6 +18,12 @@ footer p, footer a{
     display:flex;
     flex-direction: column;
 }
+.socialmedia{
+    border-radius: 50%;
+    padding: 2px;
+    background-color: white;
+    color:#444444;
+}
 .middle{
     border-right: 1px solid #B2B2B2;
     border-left: 1px solid #B2B2B2;
