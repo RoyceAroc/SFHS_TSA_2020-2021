@@ -7,10 +7,10 @@
   style="fill: #485D71;stroke:white;stroke-width:4" />
   */
   if((200 -scroll) > 85) {
-  	document.getElementById("elem_fix").innerHTML = ("<polyline points=\"0,0 0," + (200-scroll) + " " + (200-scroll) + "," + (200-scroll) + " 300,90 12241,150 12241,0\" style=\"fill:lightblue;stroke:pink;stroke-width:4\"/>");
+  	document.getElementById("elem_fix").innerHTML = ("<polyline points=\"0,0 0," + (200-scroll) + " " + (200-scroll) + "," + (200-scroll) + " 300,90 12241,150 12241,0\" style=\"fill:#a1253a;stroke:silver;stroke-width:4\"/>");
 	  document.getElementById("elem_fix").style.height = "250";
   } else {
-	document.getElementById("elem_fix").innerHTML = ("<polyline points=\"0,0 0,90  300, 90 12241,150 12241,0\" style=\"fill: lightblue;stroke:pink;stroke-width:4\" />");
+	document.getElementById("elem_fix").innerHTML = ("<polyline points=\"0,0 0,90  300, 90 12241,150 12241,0\" style=\"fill: #a1253a;stroke:silver;stroke-width:4\" />");
 	 document.getElementById("elem_fix").style.height = "100";
   }
   if(scroll > 270) {
@@ -204,7 +204,8 @@ $(document).ready(function () {
 
 function join() {
 	$("#confetti").fadeIn();
-    $("#modalA").fadeIn();
+	$("#modalA").fadeIn();
+	next();
 }
 function popClose() {
 		$("#confetti").fadeOut();
@@ -241,19 +242,19 @@ function clearnode(node){
      _(node).parentNode.removeChild(_(node));
   }, 1000*2);
 }
-
-setInterval(function(){
-  if (inc < 999999999999999) inc++;
-  else reset(inc);
-  var div = document.createElement('div');
-  let temp = Math.floor((Math.random() * 7) + 1 );
-  div.id = 'paper'+inc;
-  div.style.webkitAnimationDuration = (Math.random()*1+1.5)+'s, 0.5s';
-  div.style.height = eval(7*1+Math.floor((Math.random() * 7) + 1 )-2)+'px';
-  div.style.width = div.style.height;
-  div.className = 'paper paper'+temp;
-  div.style.left = Math.floor((Math.random() * 100) + 1)+'%';
-  document.getElementById("confetti").append(div);
-  clearnode(div.id);
-}, 10);
-
+function next() {
+	setInterval(function(){
+	if (inc < 999999999999999) inc++;
+	else reset(inc);
+	var div = document.createElement('div');
+	let temp = Math.floor((Math.random() * 7) + 1 );
+	div.id = 'paper'+inc;
+	div.style.webkitAnimationDuration = (Math.random()*1+1.5)+'s, 0.5s';
+	div.style.height = eval(7*1+Math.floor((Math.random() * 7) + 1 )-2)+'px';
+	div.style.width = div.style.height;
+	div.className = 'paper paper'+temp;
+	div.style.left = Math.floor((Math.random() * 100) + 1)+'%';
+	document.getElementById("confetti").append(div);
+	clearnode(div.id);
+	}, 10);
+}
