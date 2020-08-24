@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles/index.css">
+        <link rel="stylesheet" type="text/css" href="styles/footer.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a class="active" href="index.html">Home</a>
+                <a href="index.html">About</a>
+                <a href="index.html">Contact</a>
+                <a href="index.html">Dashboard</a>
+                <a href="index.html">Messages</a>
+				<a href="index.html">Payment</a>
+            </nav>
+		</header>
+		<h1>Make a Payment<h1>
+		<h3><span><img src="images/payment/TSomhLS.png" class="icon"></span>Cardholder Billing Information</h3>
+    <div style = "position:relative; left:80px; top:2px;margin">Last Name<sup>*</sup></div>
+	<div style = "position:relative; left:80px; top:2px;margin"><input type="text" name="UMbillfname" size="25" value="" id="lName" ></div>
+	<div style = "position:relative; left:80px; top:2px;">First Name<sup>*</sup></div>
+	<div style = "position:relative; left:80px; top:2px;margin"><input type="text" name="UMbillfname" size="25" value="" id="fName" ></div>
+	<div style = "position:relative; left:80px; top:2px;">Preferred #<sup>*</sup></div>
+	<div style = "position:relative; left:80px; top:2px;margin"><input type="text" name="UMbillfname" size="25" value="" id="pName" ></div>
+    <div style = "position:relative; left:80px; top:2px;margin">Email Address<sup>*</sup></div>
+    <div style = "position:relative; left:80px; top:2px;margin"><input type="email" name="UMemail" size="25" value="" class="txtField reqd"></div>
+    <div style = "position:relative; left:80px; top:2px;margin">Billing Street Address <sup>*</sup></div>
+    <div style = "position:relative; left:80px; top:2px;margin"><input type="text" name="UMbillstreet" size="25" value="" ></div>
+    <div style = "position:relative; left:80px; top:2px;margin">City <sup>*</sup></div>
+    <div style = "position:relative; left:80px; top:2px;margin"><input type="text" name="UMbillcity" size="25" value="" ></div>
+    <div style = "position:relative; left:80px; top:2px;margin">State/Province <sup>*</sup></div>
+    <div style = "position:relative; left:80px; top:2px;margin"><input type="text" name="UMbillstate" size="25" value="" style="text-transform:uppercase;" ></div>
+	<div style = "position:relative; left:80px; top:2px;margin">Postal/Zip<sup>*</sup></div>
+	<div style = "position:relative; left:80px; top:2px;margin"><input type="text" name="UMbillzip" size="25" value="" class="txtField reqd"></div>
+    <div style = "position:relative; left:80px; top:2px;margin">Company Name <sup>*</sup></div>
+    <div style = "position:relative; left:80px; top:2px;margin"><input type="text" name="UMbillcompany" size="25" value="" ></div>
+     
+<h3><span><img src="images/payment/AGwL1FT.png" class="icon"></span>Order Summary</h3>
+    	<div style = "position:relative; left:80px; top:2px;margin">Amount<sup>*</sup></div>
+		<div style = "position:relative; left:80px; top:2px;margin"><input type="text" name="amount" size="25" value="" id="amount" ></div>
+		<div style = "position:relative; left:80px; top:2px;margin">Charges summary:</div>
+		<div style = "position:relative; left:80px; top:2px;margin">TSA Rodyero Hospital $135.00</div>
+		<div style = "position:relative; left:80px; top:2px;margin">______________________________________________________</div>
+		<div style = "position:relative; left:80px; top:2px;margin">Products Purchased:</div>
+		<div style = "position:relative; left:80px; top:2px;margin">Quantity (1): dr.connect special pulse oximeter $19.95</div>
+		<div style = "position:relative; left:80px; top:2px;margin">Quantity (2): dr.connect special acetaminophen $9.98 </div>
+		<div style = "position:relative; left:80px; top:2px;margin">______________________________________________________</div>
+		<div style = "position:relative; left:80px; top:2px;margin">Total dues: $164.93</div>
+
+<h3><span><img src="images/payment/q7aiJUB.png" class="icon"></span>Payment Information <span class="ccsAllowed"></span></h3>
+  <div >
+    <ul class="paymentTypesList">
+      <li class="paymentTypeCtr paymentType-selected">
+        <input type="radio" name="paymentType" class="paymentType" value="credit">
+        <img src="images/payment/DcQN32m.png" class="cardPic" card="mastercard" style="display: inline;">
+        <img src="images/payment/jz76keI.png" class="cardPic" card="discover" style="display: inline;">
+        <img src="images/payment/amexlogo.png" style="border-radius: 3px; display: inline;" class="cardPic" card="amex">
+      </li>
+      <li class="paymentTypeCtr">
+        <input type="radio" name="paymentType" class="paymentType" value="check">
+        <img src="images/payment/3DCE7hV.png">
+      </li>
+    </ul>
+  </div>
+  <div class="credit-ctr">
+    <div >
+       <div class="col-xs-12 col-sm-5 col-md-6">
+        <div style = "position:relative; left:80px; top:2px;margin">Card Number</div>
+        <div style = "position:relative; left:80px; top:2px;margin">
+          <div class="col-xs-12 col-sm-12" style="padding:0">
+            <input type="tel" name="UMcard" class="cc-mask txtField" id="cc" size="17" style="position:relative">
+        </div>  
+        </div>
+      </div>  
+     <div style = "position:relative; left:80px; top:2px;margin">
+        <div >Expiration Date (MMYY) <span><img src="images/payment/MI49U5S.png" class="help-icon" title="Expiration"></span></div>
+        <div> 
+          <input class="txtField exp-mask" id="ccExpir" type="tel" name="UMexpir">          
+        </div>
+      </div>
+
+      <div style = "position:relative; left:80px; top:2px;margin">
+        <div >CVV <span><img src="images/payment/MI49U5S.png" class="help-icon" title="CVV"></span></div>
+        <div><input class="txtField cvv-mask" type="tel" name="UMcvv2"></div>
+      </div>
+    </div>
+
+
+  </div><!-- credit-ctr end -->
+      
+<div >
+      
+      <div style = "position:relative; left:80px; top:2px;margin">
+        <input type="checkbox" name="" value="" align="left" class="terms"> 
+        <b class="termsTxt">
+          I agree to make this payment.
+        </b>
+      </div>
+    </div>
+  <div  style = "position:relative; left:80px; top:2px;margin">
+    <input type="submit" class="btn btn-primary submitBtn" name="submitbutton" value="Process Payment">
+  </div>
+    <p>&nbsp;</p>
+    <footer>
+        <section class="footersection">
+        <h4>
+            About
+        </h4>
+            <p>
+                Dr.Connect is a medical telecommunications company that focuses on connecting patients with their doctors easily. It was created in 2008 and has been serving users.
+            </p>
+        </section>
+        <section class="footersection middle">
+        <h4>
+            Quick Links
+        </h4>
+            <section class="quicklink">
+                <a href="index.html">Home</a>
+                <a href="index.html">Contact</a>
+                <a href="index.html">About</a>
+                <a href="index.html">Terms of Service</a>
+            </section>
+        </section>
+        <section class="footersection">
+        <h4>
+            Social Media
+        </h4>
+            <a class="hyperlink" href="https://twitter.com/"><a href="https://twitter.com/" class="fab fa-twitter socialmedia"></a></a>
+            <a class="hyperlink" href="https://www.facebook.com/"><a href="https://www.facebook.com/" class="socialmedia fab fa-facebook-f socialmedia"></a></a>
+            <a class="hyperlink" href="https://www.linkedin.com/"><a href="https://www.linkedin.com/" class="fab fa-linkedin-in socialmedia"></a></a>
+        </section>
+    </footer>
+    </body>
+</html>
