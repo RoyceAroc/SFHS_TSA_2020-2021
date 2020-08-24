@@ -712,9 +712,9 @@ body {
 <div id="fb-root"></div>
 	<script>
 		window.onload = function() {
-			if(localStorage.getItem("logout") != false || typeof(localStorage.getItem("logout")) == undefined) {
+		/* BUG	if(localStorage.getItem("logout") != false || typeof(localStorage.getItem("logout")) == undefined) {
 				window.location.href = "login.html";
-			}
+			}*/
 		}
   function signOut() {
 	  localStorage.setItem("logout", true);
