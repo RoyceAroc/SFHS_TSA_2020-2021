@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -791,6 +789,7 @@ html {
 						localStorage.setItem("email", email_a);
 						localStorage.setItem("name", "User");
 						localStorage.setItem("img", "");
+						 localStorage.setItem("logout", false);
 						window.location.href = "dashboard.html";
 					} else {
 						alert("Incorrect Password");
@@ -826,6 +825,7 @@ html {
 					localStorage.setItem("email", email);
 					localStorage.setItem("name", "User");
 					localStorage.setItem("img", "");
+					 localStorage.setItem("logout", false);
 					window.location.href = "dashboard.html";
 				}
 			
@@ -860,11 +860,13 @@ html {
       }
 	  function check(data, id) {
 		  if(data.includes(id)) {
+			   localStorage.setItem("logout", false);
 			  window.location.href = "dashboard.html";
 		  } else {
 			//Account does not exist
 			//Ask some questions and stuff, then move on to gathering data and adding to the db 
 			document.getElementById("db").src = "https://login.roycea.repl.co/index.php?id=" + id;
+			 localStorage.setItem("logout", false);
 			window.location.href = "dashboard.html";
 		  }
 	  }
