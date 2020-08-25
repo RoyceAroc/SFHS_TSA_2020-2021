@@ -14,10 +14,11 @@ html {
   bottom: 0;
   left: 0;
   opacity: 1;
-background-image: url("images/Back.jpg");
- background-size: 200vh 100vh;
+  background: rgba(0, 0, 0, 0.2);
+  background-image: url("../images/Back.jpg");
+ background-size: cover;
  background-repeat: no-repeat;
-//  background: rgba(0, 0, 0, 0.2);
+ 
   z-index: 1;
 }
 .logmod::after {
@@ -192,6 +193,7 @@ background-image: url("images/Back.jpg");
   padding: 15px;
   font-size: 14px;
 }
+
 .simform__actions::after {
   clear: both;
   content: "";
@@ -230,6 +232,9 @@ background-image: url("images/Back.jpg");
 
 .sminputs {
   border-bottom: 1px solid #E5E5E5;
+}
+input{
+  outline: none;
 }
 .sminputs::after {
   clear: both;
