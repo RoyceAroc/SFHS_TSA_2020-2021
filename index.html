@@ -17,18 +17,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <img id="main_logo" style="z-index: 1000; position: absolute; height: 30vh; width: 30vh; top: 12vh;" src="images/SFHS.png"></img>
+        <img id="main_logo" style="opacity:0;z-index: 1000; position: absolute; height: 30vh; width: 30vh; top: 12vh;" src="images/SFHS.png"></img>
         <header id="confetti" style="display: none;position; fixed; top:0; right: 0; left:0; bottom:0; width: 100%; height: 100%; z-index: 100000000000000000;"></header>
         <!-- Compatibility and Site Development in Progress-->
         <div class="example3">
             <nav class="navbar-primary navbar-static-top">
                 <a class="navbar-brand" id="size" href="index.html">
                     <div style="width: 30%; position: relative; left: -3%; top: -30px; z-index: 1004;" >
-                        <img src="images/Logo.gif" style="width: 200px;transform: scaleX(-1);" alt="SFHS TSA Logo">
+                        <img style="width: 200px; left: 20px;position: relative" alt="SFHS TSA Logo" src="images/SFHS.png"></img>
+                       <!-- <img src="images/Logo.gif" style="width: 200px;transform: scaleX(-1);" alt="SFHS TSA Logo">
                         <div style="position: absolute; left: 100px; margin-top: -100px; color: white; font-size: 60px;font-family: myFirstFont;">
                             TSA<br><br>
                             <p style="font-size: 12px;font-family: Arial, Helvetica, sans-serif; margin-left: -17px;"> LEAD  •  INSPIRE  •  INNOVATE</p>
-                        </div>
+                        </div>-->
                 </a>
                 <div id="searchBar" style="display: none;width: 300vh; left: -50%;position: fixed;  z-index: 1005; color: white; top: 44px; " >
                 <div class="wrap">
@@ -55,7 +56,7 @@
                    
                     
                 </div>
-                <div style="position: fixed; background-color: #0E355F; top:0; left:0; right:0; width: 100%; z-index: 1001; height: 95px;"></div>
+                <div id="fix" style="position: fixed; background-color: #0E355F; top:0; left:0; right:0; width: 100%; z-index: 1001; height: 95px;"></div>
                 <div id="intern" style="color:white; z-index: 999; position: relative; left:5vh; top: 20vh; background-color: #0E355F; width: 90%;">
                     <p  style="font-size:50px; font-family: "Comic Sans MS", cursive, sans-serif;"> SFHS TSA</p>
                 </div>
@@ -80,7 +81,7 @@
                     <section class="columns">
                         <div class="column">
                             <h3>GroupMe</h3>
-                            <a style="color: black; fon-size: 40px;" target="_blank" href="https://groupme.com/join_group/61087657/3akL7jbm">
+                            <a style="color: black; font-size: 40px;" target="_blank" href="https://groupme.com/join_group/61087657/3akL7jbm">
                             <button id="GroupMe" style="width: 350px; height: 50px; background-color: lightblue; color: green; border-radius: 10px;font-size: 30px;">JOIN </button></a>
                         </div>
                        
@@ -104,7 +105,7 @@
                 </div>
                 <header id="phone">
                     <div style="z-index: 100000;position: fixed" id="mySidebar" class="sidebar">
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                       <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>-->
                         <a href="index.html">Home</a>
                         <a href="Chapter/FAQs.html">FAQs</a>
                         <a href="Chapter/Officers.html">Officers</a>
@@ -335,7 +336,7 @@
             </div>
         </div>
          <!--Total-->
-         <button onclick="aDerv()" style='z-index: 10000000;background-color: #a1253a; color: white;font-size:40px; border-radius: 20px;position: fixed;bottom:10px;right:10px;'> <i class='fa fa-comments'></i></button>
+         <button onclick="aDerv()" id="chat" style='z-index: 10000000;background-color: #a1253a; color: white;'> <i class='fa fa-comments'></i></button>
          <header  style="font-family: sans-serif;position: fixed; bottom: 68px; font-size: 15px;right: 7px;z-index: 1000000;background-color: white;font-weight: normal;">
              <div style="display: none;" id="peekobot-container">  
              <div id="peekobot-inner">

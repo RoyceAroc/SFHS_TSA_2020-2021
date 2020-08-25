@@ -1,13 +1,13 @@
 /* Mobile Compatibility Check */
 @media only screen and (min-width: 300px) and (max-width: 991px)  {
 	html, body {
+		
 		zoom: 50%;
 	}
 	#officerPlaque {
 		position: absolute;
 		top:12%;
 		left: 36%;
-		//font-size: 40px;
 	}
 	.orange  ol > button {
 		text-align: center;
@@ -104,12 +104,39 @@ body::-webkit-scrollbar {
 	#cool {
 		padding-right: 0px;
 	}
+	#col_A {
+		opacity:0;
+		display: none;
+	}
+	#fix {
+		opacity:0;
+	}
+	#chat {
+		zoom: 150%;
+		font-size:40px;
+		border-color: white;
+		border-radius: 20px;
+		position: fixed;
+		bottom:10px;
+		right:10px;
+	}
 }
 /* Laptop Compatibility Check */
 @media only screen and (min-width:  992px) and (min-height: 400px)  {
 	.content ul{
 	left: 30%;
 	position: relative;
+}
+#chat {
+	font-size:40px;
+	border-color: white;
+	border-radius: 20px;
+	position: fixed;
+	bottom:10px;
+	right:10px;
+}
+#col_A {
+	display: block;
 }
 .new1 {
 		padding-right: 40%;

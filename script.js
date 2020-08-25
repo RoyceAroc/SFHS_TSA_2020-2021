@@ -220,14 +220,17 @@ function popClose() {
 function closePop() {
 	$("#opened").fadeOut();
 }
+let num = 0;
 function openNav() {
-  document.getElementById("mySidebar").style.width = "250px";
-  document.getElementById("main").style.marginRight = "250px";
-}
+	num++;
+  if(num % 2 == 0 ) {
+	document.getElementById("mySidebar").style.width = "0";
+	document.getElementById("main").style.marginRight= "0";
+  } else {
+	document.getElementById("mySidebar").style.width = "250px";
+	document.getElementById("main").style.marginRight = "250px";
+  }
 
-function closeNav() {
-  document.getElementById("mySidebar").style.width = "0";
-  document.getElementById("main").style.marginRight= "0";
 }
 
 

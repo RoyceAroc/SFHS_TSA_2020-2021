@@ -64,12 +64,12 @@ const chat = {
 		{
 		text: "Event Themes",
 		url: "../Competition/EventThemes.html" },
-		{
+		/*{
 		text: "Guidelines Booklet",
-		url: "../media/CompGuidelines.pdf" }] },
+		url: "../media/CompGuidelines.pdf" }*/] },
   
 		8: {
-	  text: 'TSA Chapter meetings are held Tuesday mornings at 7:45 AM in both the Engineering rooms. Both Virtual and Face-to-Face students are welcomed.   ',
+	  text: 'TSA Chapter meetings are held Tuesday mornings at 7:45 AM Virtually across a Microsoft Teams Meeting. ',
 	  },
 	  9: {
 	  text: 'To keep our members actively participated, the point system was introduced in our SFHS TSA Chapter.',
@@ -92,7 +92,7 @@ const chat = {
 	  text: 'Points can be used for <ul><li>Attending the Banquet</li><li>Person with the highest points earns a prize</li> <li> More TBA</li></ul>',
 	   },
 	   13: {
-	  text: 'Registration for the 2020-2021 TSA is pretty simple. First complete the Google Forms Questionnaire. Then pay the dues. Last but not least, join us on Social Media.',
+	  text: 'Registration for the 2020-2021 TSA is pretty simple. First complete the Google Forms Questionnaire. Then pay the dues. Next, join us on Social Media.',
 	  options: [
 	  {
 		text: "Questionnaire",
