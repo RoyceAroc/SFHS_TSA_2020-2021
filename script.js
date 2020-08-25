@@ -7,10 +7,10 @@
   style="fill: #485D71;stroke:white;stroke-width:4" />
   */
   if((200 -scroll) > 85) {
-  	document.getElementById("elem_fix").innerHTML = ("<polyline points=\"0,0 0," + (200-scroll) + " " + (200-scroll) + "," + (200-scroll) + " 300,90 12241,150 12241,0\" style=\"fill:#a1253a;stroke:silver;stroke-width:4\"/>");
+  	document.getElementById("elem_fix").innerHTML = ("<polyline points=\"0,0 0," + (200-scroll) + " " + (200-scroll) + "," + (200-scroll) + " 300,90 12241,150 12241,0\" style=\"fill:white;stroke:#8C92AC;stroke-width:4\"/>");
 	  document.getElementById("elem_fix").style.height = "250";
   } else {
-	document.getElementById("elem_fix").innerHTML = ("<polyline points=\"0,0 0,90  300, 90 12241,150 12241,0\" style=\"fill: #a1253a;stroke:silver;stroke-width:4\" />");
+	document.getElementById("elem_fix").innerHTML = ("<polyline points=\"0,0 0,90  300, 90 12241,150 12241,0\" style=\"fill: white;stroke:#8C92AC;stroke-width:4\" />");
 	 document.getElementById("elem_fix").style.height = "100";
   }
   if(scroll > 270) {
@@ -32,6 +32,9 @@ function resize() {
 		document.getElementById("col_A").style.display = "none";
 	} else {
 		document.getElementById("col_A").style.display = "block";
+	}
+	if(width < 1000) {
+		document.getElementById("col_A").style.display = "none";
 	}
 	document.getElementById("main_logo").style.left = ((width * 0.259737) + 299.7010308) + "px";
 	document.getElementById("col_A").style.left = (width * 0.0259737917) + 59.97010318 + "vh";

@@ -385,13 +385,13 @@ nav {
 .navbar-primary {
 	background-color: #0E355F;
     //text-transform: uppercase;
-    color: white;
+    color: red;
 }
 #intro_b > button {
 	zoom: 110%;
 }
 .navbar-primary a {
-    color: white;
+    color: #0E355F;
 }
 .scene {
 	position: absolute;

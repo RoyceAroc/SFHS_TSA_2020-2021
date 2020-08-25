@@ -32,7 +32,7 @@
 		display: none;
 	}
 	.navbar-brand-mobile {
-		display: block;
+		display: none;
 		zoom: 150%;
 	}
 	#des {
@@ -119,6 +119,9 @@ body::-webkit-scrollbar {
 		position: fixed;
 		bottom:10px;
 		right:10px;
+	}
+	#ear {
+		display: none;
 	}
 }
 /* Laptop Compatibility Check */
