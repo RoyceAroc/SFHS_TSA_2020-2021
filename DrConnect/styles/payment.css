@@ -128,6 +128,7 @@ background-color: rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction:column;
     justify-content: center;
+    border-left: 1px solid #D4D4D4;
 }
 .surveycontentsection{
     display:flex;
