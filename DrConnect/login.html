@@ -98,7 +98,7 @@
 </div>
 <div class="simform__actions">
 <input class="sumbit" onclick="log()" type="sumbit" value="Log In" />
-<span class="simform__actions-sidetext"><a class="special" role="link" href="#">Forgot your password?</a></span>
+<span class="simform__actions-sidetext"><a class="special" role="link" onclick="terms()" href="#">Forgot your password?</a></span>
  
 </div>
 </form>
@@ -146,6 +146,9 @@
 </div>
 </div>
 <script>
+	function terms() {
+		alert("Test!");
+	}
 	function log() {
 		let email_a = document.getElementById("user-email1").value;
 		let pwd_b =  document.getElementById("user-pw1").value;
