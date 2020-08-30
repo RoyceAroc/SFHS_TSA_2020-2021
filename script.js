@@ -14,7 +14,7 @@
 	 document.getElementById("elem_fix").style.height = "100";
   }
   if(scroll > 270) {
-	document.getElementById("elem_fix").innerHTML = ("<polyline points=\"0,0 0,90  300, 90 12241,150 12241,0\" style=\"fill: lightgreen;stroke:pink;stroke-width:4\" />");
+	document.getElementById("elem_fix").innerHTML = ("<polyline points=\"0,0 0,90  300, 90 12241,150 12241,0\" style=\"fill:#e9e9f2;stroke:pink;stroke-width:4\" />");
 	 $( "#searchBar" ).fadeIn(800);
   } else {
 	 $( "#searchBar" ).fadeOut(100);
