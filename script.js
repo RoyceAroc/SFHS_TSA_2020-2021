@@ -21,7 +21,15 @@
   }
 
 })
-
+$("#menu").click(function() {
+	$(".overlay").toggleClass("open");
+	$(".superlay").toggleClass("open");
+  });
+  
+  $(".cross").click(function() {
+	$(".overlay").addClass("open");
+	$(".superlay").toggleClass("open");
+  });
 function resize() {
 	//Screen Resize Function
 	const width  = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
@@ -36,6 +44,26 @@ function resize() {
 	}
 	if(width < 1000) {
 		document.getElementById("col_A").style.display = "none";
+	}
+	
+	//First remove all stylesheets
+	if(width < 1292) {
+		//Stuff for Mobile
+		$('link[rel=stylesheet]').remove();
+	addCss("compatibility.css");
+		addCss("responsive.css");
+		addCss("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css");
+		addCss("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css");
+		addCss("https://netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.min.css");
+		addCss("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css");
+		addCss("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css");
+		addCss("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css");
+		addCss("https://fonts.googleapis.com/css?family=Raleway:500");
+		addScript("https://code.jquery.com/jquery-2.2.4.min.js");
+		addScript("https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+	} else {
+		//Stuff for Laptop
+		addCss("compatibility.css");
 	}
 	document.getElementById("main_logo").style.left = ((width * 0.259737) + 299.7010308) + "px";
 	document.getElementById("col_A").style.left = (width * 0.0259737917) + 59.97010318 + "vh";
@@ -271,3 +299,18 @@ function next() {
 	clearnode(div.id);
 	}, 10);
 }
+
+function addCss(fileName) {
+	var link = $("<link />",{
+	  rel: "stylesheet",
+	  type: "text/css",
+	  href: fileName
+	})
+	$('head').append(link);
+ }
+ 
+ function addScript( src ) {
+	var s = document.createElement( 'script' );
+	s.setAttribute( 'src', src );
+	document.body.appendChild(s);
+  }

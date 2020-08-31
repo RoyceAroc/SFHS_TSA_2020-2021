@@ -1,131 +1,21 @@
 /* Mobile Compatibility Check */
-@media only screen and (min-width: 300px) and (max-width: 991px)  {
-	html, body {
-		
-		zoom: 50%;
+@media only screen and (min-width: 300px) and (max-width: 1291px)  {
+	#tab {
+		display: block;
 	}
-	#officerPlaque {
-		position: absolute;
-		top:12%;
-		left: 36%;
-	}
-	.orange  ol > button {
-		text-align: center;
-		position: absolute;
-		left: 40%;
-	  width: 100px;
-	  top: 65%;
-		height: 40px;
-		background-color: lightblue;
-		border-radius: 5px;
-	}
-	#navbar3 {
+	#laptop {
 		display: none;
 	}
-	#quote{
-		display: none;
-	}
-	.cards{
-		display: none;
-	}
-	.navbar-brand {
-		display: none;
-	}
-	.navbar-brand-mobile {
-		display: none;
-		zoom: 150%;
-	}
-	#des {
-		display: none;
-	}
-	body {
-		text-align: center;
-		zoom: 120%;
-	}
-	#navbar3 {
-		display: none;
-	}
-	svg {
-		display: none;
-	}
-	#officers {
-		left: -22vh;
-		zoom: 80%;
-	}
-html,body {
-		overflow-x: hidden;
-		position: relative;
-	}
-body::-webkit-scrollbar {
-  display: none;
-}
-.opera2 {
-	zoom: 50%;
-}
-.opera2 h1 {
-	left: 30%;
-}
-.item img {
-	display: none;
-}
-#app {
-	display: none;
-}
-#navbar3 {
-	display: none;
-}
-
-	.content ul{
-	left: 3vh;
-	position: relative;
-}
-#intro_b {
-	display: none;
-}
-#modalA {
-		top:200px;
-		right:30px;
-		 left: 60px;
-		 bottom: 80px; 
-		 height:60%; 
-		 width: 80%; 
-	}
-	#modalA a {
-		font-size: 20px;
-	}
-	#modalA button {
-		right: 0px;
-		 top: 0px;
-		border-bottom-left-radius: 15px;
-	}
-	#intern {
-		display: none;
-	}
-	#cool {
-		padding-right: 0px;
-	}
-	#col_A {
-		opacity:0;
-		display: none;
-	}
-	#fix {
-		opacity:0;
-	}
-	#chat {
-		zoom: 150%;
-		font-size:40px;
-		border-color: white;
-		border-radius: 20px;
-		position: fixed;
-		bottom:10px;
-		right:10px;
-	}
-	#ear {
-		display: none;
-	}
+	
 }
 /* Laptop Compatibility Check */
-@media only screen and (min-width:  992px) and (min-height: 400px)  {
+@media only screen and (min-width:  1292px) and (min-height: 400px)  {
+	#tab {
+		display: none;
+	}
+	#laptop {
+		display: block;
+	}
 	.content ul{
 	left: 30%;
 	position: relative;

@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-
-        <style>
-        iframe::-webkit-scrollbar {  
-            display: none;
-        } 
-        </style>
-
         <title> SFHS TSA </title>
-        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
         <link rel="icon" href="images/favicon.png">
+        <link rel="stylesheet" type="text/css" href="compatibility.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+
         <link rel="stylesheet" type="text/css" href="baseSite.css">
         <link rel="stylesheet" type="text/css"  href="calendar.css">
         <link rel="stylesheet" type="text/css" href="compatibility.css">
@@ -26,411 +22,622 @@
 <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
     </head>
     <body>
-        <img id="main_logo" style="opacity:0;z-index: 1000; position: absolute; height: 30vh; width: 30vh; top: 12vh;" src="images/SFHS.png"></img>
-        <header id="confetti" style="display: none;position: fixed; top:0; right: 0; left:0; bottom:0; width: 100%; height: 100%; z-index: 100000000000000000;"></header>
-        <!-- Compatibility and Site Development in Progress-->
-        <div class="example3">
-            <nav class="navbar-primary navbar-static-top">
-                <a class="navbar-brand" id="size" href="index.html">
-                    <div style="width: 30%; position: relative; left: -3%; top: -30px; z-index: 1004;" >
-                        <img style="width: 200px; left: 20px;position: relative" alt="SFHS TSA Logo" src="images/SFHS.png"></img>
-                       <!-- <img src="images/Logo.gif" style="width: 200px;transform: scaleX(-1);" alt="SFHS TSA Logo">
-                        <div style="position: absolute; left: 100px; margin-top: -100px; color: white; font-size: 60px;font-family: myFirstFont;">
-                            TSA<br><br>
-                            <p style="font-size: 12px;font-family: Arial, Helvetica, sans-serif; margin-left: -17px;"> LEAD  •  INSPIRE  •  INNOVATE</p>
-                        </div>-->
-                </a>
-                <div id="searchBar" style="display: none;width: 300vh; left: -50%;position: fixed;  z-index: 1005; color: white; top: 44px; " >
-                <div class="wrap">
-                <!--	<div class="search">
-                    <input type="text" class="searchTerm" placeholder="Explore...">
-                    <button type="submit" class="searchButton">
-                    	<i class="fa fa-search"></i>
-                    </button>
-                    </div>-->
-                </div> 
-                </div>
-                </img>
-       
-                </div>
-                <div style="position: relative; top:0;  left: -270px; width: 100000%;">
-                    <svg id="elem_fix" style="opacity: 1;position: fixed;z-index: 1002;" height="250" width="12242">
-                        <polyline points="0,0 0,200 220,200 300, 90 12241,150 12241,0"
-                            style="fill: white;stroke: pink;stroke-width:4" />
-                    </svg>
-                    <svg  id="col_A" style="position: absolute;  z-index: 1000;" height="1000" width="10000">
-                        <path id="ear" d="M 100 900 q 450 -2500 11100 0" stroke="white" fill="transparent" stroke-width="5" fill="none" />
-                    </svg>
-                   
-                    
-                </div>
-                <div id="fix" style="position: fixed; background-color: #0E355F; top:0; left:0; right:0; width: 100%; z-index: 1001; height: 90px;"></div>
-                <div id="intern" style="color:white; z-index: 999; position: relative; left:5vh; top: 20vh; background-color: #0E355F; width: 90%;">
-                    <p  style="font-size:50px; font-family: "Comic Sans MS", cursive, sans-serif;"> SFHS TSA</p>
-                </div>
-                <div id="intro_b" style="color: #E6DDD1; z-index: 999; position: absolute; left:5px; top: 220px; background-color: #0E355F; width: 60%; padding: 30px; padding-left: 0px;text-align: center; zoom: 100%; left: -30px;">
-                    <p  style="font-size:20px; font-family: "Comic Sans MS", cursive, sans-serif; position: relative; top: 50px; text-transform: capitalize; text-align: center;"> TSA - <i> Technology Student Association </i> - is an organization of developers, engineers, inventors, creators, designers, and masterminds. </p>
-                    <br><br>
-                    <!-- Accent-colored raised button with ripple -->
-                    <button onclick="join()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                    Join Today
-                    </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="#read">  <button onclick="scroll()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                    Learn More
-                    </button></a>
-                </div>
-                <div id="modalA" style="background-color: white; z-index: 1000000000000000001; position: fixed; display: none;  padding-top: 1%; color: black; text-align: center;">
-                    <button  onclick="popClose()" style="position: absolute;  color: white; background-color: red; zoom: 150%;"> X </button>
-                    <h1> TSA  2020-2021 Membership</h1>
-                    <h4 > Complete the Google Forms Questionnaire below:<br>
-                        <a target="_blank" style="color: red;" href="https://forms.gle/1idUPFj6g75AyS2w7">https://forms.gle/1idUPFj6g75AyS2w7 </a>
-                    </h4>
-                    <br><b>
-                    <section class="columns">
-                        <div class="column">
-                            <h3>GroupMe</h3>
-                            <a style="color: black; font-size: 40px;" target="_blank" href="https://groupme.com/join_group/61087657/3akL7jbm">
-                            <button id="GroupMe" style="width: 350px; height: 50px; background-color: lightblue; color: green; border-radius: 10px;font-size: 30px;">JOIN </button></a>
-                        </div>
-                       
-                        <div  class="column">
-                            <h3>Social Media</h3>
-                            <h2>@sfhs.tsa</h2>
-                            <div class="social-icons">
-                                <!-- <a class="social-icon social-icon--twitter">
-                                    <i class="fa fa-twitter"></i>
-                                    </a>
-                                    <a style="left: 40%;" target="_blank" href="https://www.instagram.com/sfhs.tsa/" class="social-icon social-icon--instagram">
-                                    <i class="fa fa-instagram"></i>
-                                    </a>
-                                    
-                                    <a class="social-icon social-icon--facebook">
-                                    <i class="fa fa-facebook"></i>
-                                    </a>-->
+        <claim id="tab">
+                    <header id="header">
+                        <div class="container">
+                            <nav id="menu">
+                                <span class="text-uppercase"><strong>Menu</strong></span>
+                                <span class="glyphicon glyphicon-menu-hamburger"></span>
+                            </nav>
+                        <section id="banner">
+                            <div class="logo">
+                                <span class="fa fa-diamond"></span>
                             </div>
+                            <h1 class="text-uppercase">South Forsyth <span style="zoom: 150%;">TSA</span></h1>
+                            <p class="text-uppercase">TSA - Technology Student Assosciation - is a student lead organization with innovative, smart, technical, and creative masterminds </p>
+                        </section>
                         </div>
+                    </header>  
+                    <section id="one">
+                            <div class="container">
+                                        <div class="col-sm-4 col-sm-push-8 text-right">
+                                                <a href="#"><img class="img-circle" style="width: 250px; height: 250px;" src="" alt="Picture 1 Here" /></a>
+                                        </div>
+                                        <div class="col-sm-8 col-sm-pull-4 text-right">
+                                                <h2 class="text-uppercase"><strong>What's TSA?</strong></h2>
+                                                <p>Stuff abt TSA here</p>
+                                                <div class="more">
+                                                            <a href="#">
+                                                            learn more
+                                                            </a>
+                                                </div>
+                                        </div>
+                                        
+                            </div>
                     </section>
-                </div>
-                <header id="phone">
-                    <div style="z-index: 100000;position: fixed" id="mySidebar" class="sidebar">
-                       <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>-->
-                        <a href="index.html">Home</a>
-                        <a href="Chapter/FAQs.html">FAQs</a>
-                        <a href="Chapter/Officers.html">Officers</a>
-                        <a href="Chapter/Members.html">All Members</a>
-                        <a href="Chapter/MeetingInfo.html">Meeting Info</a>
-                        <a href="Competition/Levels.html">Conferences</a>
-                        <a href="Competition/Timeline.html">Timeline</a>
-                        <a href="Competition/EventInformation.html">Event Info</a>
-                        <a href="Competition/EventThemes.html">Event Themes</a>
+                    <section id="two">
+                            <div class="container">
+                                        <div class="col-md-4">
+                                                <a href="#"><img class=" img-circle" style="width: 250px; height: 250px;" src="" alt="Picture 2 Here" /></a>
+                                        </div>
+                                        <div class="col-md-8">
+                                                    <h2 class="text-uppercase text-left">Competition</h2>
+                                        <p>Info abt Competition here</p>
+                                        <div class="more">
+                                                            <a href="#">
+                                                            learn more
+                                                            </a>
+                                                </div>
+                                        </div>
+                                        
+                            </div>
+                    </section>
+                    <section id="three">
+                            <div class="container">
+                                        <div class="col-sm-4 col-sm-push-8">
+                                        <a href="#"><img class="img-circle" style="width: 250px; height: 250px;" src="" alt="Picture 3 Here" /></a>
+                            </div>
+                            <div class="col-sm-8 text-right col-sm-pull-4">
+                                        <h2 class="text-uppercase">Our Officers</h2>
+                                        <p>Officer Text here</p>
+                                        <div class="more">
+                                                            <a href="#">
+                                                            learn more
+                                                            </a>
+                                        </div>
+                            </div>
+                            </div>
+                    </section>
+                    <section id="four">
+                            <div class="container">
+                                        <h2  class="text-uppercase">Achievements</h2>
+                                        <p>Info abt like what achievements are...</p>
+                            
+                            <div class="features">
+                            <div class="col-sm-12 nopadding-left">
+                                    <div class="col-sm-6 nopadding-left">
+                                        <article>
+                                                        <a href="#"><img src="" alt="Achievement #1" /></a>
+                                                        <h2 class="text-uppercase text-center">#1</h2>
+                                                        <p>Achievement #1 Info</p>
+                                                        <div class="more">
+                                                            <a href="#">
+                                                            learn more
+                                                            </a>
+                                                        </div>    
+                                        </article>
+                                        </div>
+                                        <div class="col-sm-6 nopadding-right">
+                                        <article>       
+                                                        
+                                            <a href="#"><img src="" alt="Achievement #2" /></a>
+                                            <h2 class="text-uppercase text-center">#2</h2>
+                                            <p>Achievement #2 Info</p>
+                                            <div class="more">
+                                                <a href="#">
+                                                learn more
+                                                </a>
+                                            </div>    
+                                                
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 nopadding-left">
+                                    <div class="col-sm-6 nopadding-left">
+                                        <article>
+                                            <a href="#"><img src="" alt="Achievement #3" /></a>
+                                            <h2 class="text-uppercase text-center">#3</h2>
+                                            <p>Achievement #3 Info</p>
+                                            <div class="more">
+                                                <a href="#">
+                                                learn more
+                                                </a>
+                                            </div>  
+                                        </article>
+                                        </div>
+                                        <div class="col-sm-6 nopadding-right">
+                                        <article>       
+                                                        
+                                            <a href="#"><img src="" alt="Achievement #4" /></a>
+                                            <h2 class="text-uppercase text-center">#4</h2>
+                                            <p>Achievement #4 Info</p>
+                                            <div class="more">
+                                                <a href="#">
+                                                learn more
+                                                </a>
+                                            </div>
+                
+                                        </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                            <div class="browse">
+                                <a href="#"><span class="text-uppercase">browse all</span></a>
+                                </div>
                     </div>
-                    <div style="float: right;z-index: 100000;position: fixed;" id="main">
-                        <button class="openbtn" onclick="openNav()">☰</button>  
+                    </section>
+                    <section id="formulaire">
+                            <div class="container">
+                                        <h2 class="text-uppercase">Questions or Concerns?</h2>
+                                        <p>Don't wait any longer to join TSA!</p>
+                            <div class="col-md-6 text-uppercase nopadding">
+                                        <form role="form">
+                    <div class="form-group">
+                                <label for="name">name</label>
+                                <input type="text" class="form-control" id="name">
                     </div>
-                    <div style="width: 100%; position: relative; left: -3%; top: -30px; z-index: 1001;" >
-                        <img style="top: 50px; zoom: 40%;left: 20px;position: relative" alt="SFHS TSA Logo" src="images/SFHS.png"></img>
-                       <!-- <img src="images/Logo.gif" style="width: 200px;transform: scaleX(-1);" alt="SFHS TSA Logo">
-                        <div style="position: relative; left: 0%; margin-top: -150px; color: white; font-size: 60px;font-family: myFirstFont;">
-                            TSA<br><br>
-                            <p style="font-size: 20px;font-family: Arial, Helvetica, sans-serif; margin-left: -17px;margin-top: -80px;"> LEAD  •  INSPIRE  •  INNOVATE</p>
-                        </div>-->
+                    <div class="form-group">
+                                <label for="email">email</label>
+                                <input type="email" class="form-control" id="email">
                     </div>
-                    <h1 style="zoom: 200%; color: white; "> SFHS TSA <br></h1>
-                    <button style="zoom: 200%;" onclick="join()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                    Join Today
-                    </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                </header>
-                <!-- Optional Quote on Top<div id="quote" style="width: 70%; top: 7px;  position: relative;"> 
-                    <div style="left: 5px; position: relative; text-align: center;font-family: Arial, Helvetica, sans-serif;text-transform: capitalize;" ><i class="fa fa-quote-left" style="font-size:36px; position: absolute; left:0;"></i><br><i>Creativity is contagious, pass it on</i><i class="fa fa-quote-right" style="font-size:36px; position: absolute; right: 1%;"></i></div>
-                    </div>-->
-                <!-- Slideshow Option<div class="cards" style="position: absolute; right:13px; top: 40px;" >
-                    <div class="cards__container">
-                    	<div class="cards__front card-1"></div>
-                    	<div class="cards__back card-2"></div>
+                    <div class="form-group">
+                                <label for="message">message</label>
+                                <textarea class="form-control" rows="5" id="message"></textarea>
                     </div>
-                    </div>-->
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar3">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
+                    <button type="submit" class=" btn btn-default text-uppercase">send message</button>
+            </form>      
+                                    </div>
+                                <div class="col-md-offset-1 col-md-5 nopadding">
+                                        <div class="social">
+                                                    <ul>
+                                                    <li><span class="icon fa fa-home">
+                                                    </span><span> South Forsyth High School<br />
+                                                    585 Peachtree Parkway<br />
+                                                   Cumming, GA 30041</span>
+                                                    </li>
+                                                    <li>
+                                                    <span class="icon fa fa-phone"></span>
+                                                    <span> 770-781-2264 ext. 100118</span>
+                                                    </li>
+                                                    <li>
+                                                    <span class="icon fa fa-envelope"></span> <span><a href="mailto:f30935@forsyth.k12.ga.us"> f30935@forsyth.k12.ga.us</a></span>
+                                                    </li>
+                                                   <li>
+                                                    <span class="icon fa fa-instagram "></span>
+                                                    <span><a href="https://www.instagram.com/sfhs.tsa/"> instagram.com/sfhs.tsa</a></span>
+                                                    </li>
+                                                    </ul>
+                                        </div>
+                                </div>
+                            </div>
+                            <footer id="footer">
+                                        <div class="container">
+                                                <ul>
+                                                    <li>Copyright © 2020 All Rights Reserved by SFHS TSA</li>
+                                                   
+                                                </ul> 
+                                        </div>
+                            </footer>
+                    </section>
+                    
+                    <div class="overlay">
+                            
+                                  <!--  <a class="cross"><span class="fa fa-times"></span></a>
+                                    <h2 class="text-uppercase">menu</h2>-->
+                                    <ul>
+                                        <li class="text-uppercase"><a href="#">Home</a></li>
+                                        <li class="text-uppercase"><a href="#">Chapter</a></li>
+                                        <li class="text-uppercase"><a href="#">Competition</a></li>
+                                        <li class="text-uppercase"><a href="#">FAQs</a></li>
+                                        <li class="text-uppercase"><a href="#">Join Now</a></li>
+                                    </ul>
+                    
+                    </div>
+                    
+                    
+                
+                
+            <div class="superlay"></div>
+        </claim>
+        <claim id="laptop">
+            <img id="main_logo" style="opacity:0;z-index: 1000; position: absolute; height: 30vh; width: 30vh; top: 12vh;" src="images/SFHS.png"></img>
+            <header id="confetti" style="display: none;position: fixed; top:0; right: 0; left:0; bottom:0; width: 100%; height: 100%; z-index: 100000000000000000;"></header>
+            <!-- Compatibility and Site Development in Progress-->
+            <div class="example3">
+                <nav class="navbar-primary navbar-static-top">
+                    <a class="navbar-brand" id="size" href="index.html">
+                        <div style="width: 30%; position: relative; left: -3%; top: -30px; z-index: 1004;" >
+                            <img style="width: 200px; left: 20px;position: relative" alt="SFHS TSA Logo" src="images/SFHS.png"></img>
+                        <!-- <img src="images/Logo.gif" style="width: 200px;transform: scaleX(-1);" alt="SFHS TSA Logo">
+                            <div style="position: absolute; left: 100px; margin-top: -100px; color: white; font-size: 60px;font-family: myFirstFont;">
+                                TSA<br><br>
+                                <p style="font-size: 12px;font-family: Arial, Helvetica, sans-serif; margin-left: -17px;"> LEAD  •  INSPIRE  •  INNOVATE</p>
+                            </div>-->
+                    </a>
+                    <div id="searchBar" style="display: none;width: 300vh; left: -50%;position: fixed;  z-index: 1005; color: white; top: 44px; " >
+                    <div class="wrap">
+                    <!--	<div class="search">
+                        <input type="text" class="searchTerm" placeholder="Explore...">
+                        <button type="submit" class="searchButton">
+                            <i class="fa fa-search"></i>
                         </button>
+                        </div>-->
+                    </div> 
                     </div>
-                </div>
-                <div id="navbar3" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li style="z-index: 10000;" ><a style="background-image: linear-gradient(180deg, rgba(0,0,0,0),rgba(0,0,0,0) 81%,pink 81.1%,pink 85%,rgba(0,0,0,0) 85.1%,rgba(0,0,0,0));font-weight: bold;"  onMouseOver="this.style.backgroundColor='transparent'"
-                            onMouseOut="this.style.color='#0E355F';this.style.backgroundColor='transparent'" href="index.html">Home</a></li>
-                        <!--<li><a  href="Officers.html">Officers&nbsp;&nbsp;</a></li>
-                            Webmaster  <li><a href="DrConnect/index.html">Company </a></li>-->
-                        <li class="dropdown">
-                            <a href="#" style="font-weight: bold;"  onMouseOver="this.style.backgroundColor='transparent'"
-                                onMouseOut="this.style.color='#0E355F';this.style.backgroundColor='transparent'"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Chapter <span class="caret"></span></a>
-                            <ul style="z-index: 1200" class="dropdown-menu" role="menu">
-                                <li><a href="Chapter/Officers.html">Officers</a></li>
-                                <li><a href="Chapter/Members.html">All Members</a></li>
-                                <li><a href="Chapter/MeetingInfo.html">Meetings Info</a></li>
-                                <li><a href="Chapter/FAQs.html">FAQs</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" style="font-weight: bold;"  onMouseOver="this.style.backgroundColor='transparent'"
-                                onMouseOut="this.style.color='#0E355F';this.style.backgroundColor='transparent'"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Competition<span class="caret"></span></a>
-                            <ul style="z-index: 1200" class="dropdown-menu" role="menu">
-                                <li><a href="Competition/Levels.html">Conferences</a></li>
-                                <li><a href="Competition/Timeline.html">Timeline</a></li>
-                                <li class="divider"></li>
-                                <li class="dropdown-header">Contest</li>
-                                <li><a href="Competition/EventInformation.html">Event Information</a></li>
-                                <li><a href="Competition/EventThemes.html">Event Themes</a></li>
-                            </ul>
-                        </li>
-                        <li style="z-index: 10000;" ><a style="font-weight: bold;"  onMouseOver="this.style.backgroundColor='transparent'"
-                            onMouseOut="this.style.color='#0E355F';this.style.backgroundColor='transparent'" href="https://forms.gle/1idUPFj6g75AyS2w7">Join Now</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <div style="z-index: 998; position: relative; width: 100%; height: 100%; top: -20px;">
-                <svg id="create" height="250" width="10000">
-                    <polygon points="0,0 10000,0 10000,150 0,150" style="fill:#0E355F;" />
-                </svg>
-              
-            </div>
-            <div style="padding-top: 0%;  position: absolute;line-height: 3px;" id="content">
-                <div  style="padding-left: 10%; padding-right: 10%;">
-                    <div id="read" style="position: absolute; top: -100px;"></div>
-                    <h1>What's TSA?</h1>
-                    <br><br>
-                    <div>
-                        <h4 id="cool" style="line-height: 2;">The Technology Student Association (TSA) is a national, non-profit career and technical student organization (CTSO) of middle and high school students who are engaged in science, technology, engineering, and mathematics (STEM). TSA chapters take the study of STEM beyond the classroom and give students the chance to pursue academic challenges among friends with similar goals and interests. Together, TSA chapter members work on competitive events, learn and apply leadership skills, and may attend conferences at the state, regional, and national levels. TSA chapters are also committed to a national service project and are among the most service-oriented groups in the community.</h4>
-                        <img id="app" data-aos="fade-left" style="zoom: 50%; padding-left:200vh; position: absolute; top: 5vh;" src="images/Pic1.png"></img>
+                    </img>
+        
                     </div>
-                    <br>
-                    <header>
+                    <div style="position: relative; top:0;  left: -270px; width: 100000%;">
+                        <svg id="elem_fix" style="opacity: 1;position: fixed;z-index: 1002;" height="250" width="12242">
+                            <polyline points="0,0 0,200 220,200 300, 90 12241,150 12241,0"
+                                style="fill: white;stroke: pink;stroke-width:4" />
+                        </svg>
+                        <svg  id="col_A" style="position: absolute;  z-index: 1000;" height="1000" width="10000">
+                            <path id="ear" d="M 100 900 q 450 -2500 11100 0" stroke="white" fill="transparent" stroke-width="5" fill="none" />
+                        </svg>
+                    
+                        
                     </div>
-                       <div style="padding-top: 10%;">
-                   <!-- <h1> Upcoming Dates</h1>-->
-                   <div style=background-color:#0E355F;width:100%;height:500px;position:relative;">
-                        <div  style="padding-left: 10%; padding-right: 10%; padding-top: 2%;">
-                            <h1 style="position: absolute;color: white;right: 160px;zoom: 130%;">Upcoming Dates</h1>
-                            <div style="position: relative; top: 120px;" class="container mt-2">
-                                <!--   <div class="card card-block mb-2">
-                                    <h4 class="card-title">Card 1</h4>
-                                    <p class="card-text">Welcom to bootstrap card styles</p>
-                                    <a href="#" class="btn btn-primary">Submit</a>
-                                  </div>   -->
-                                  <div class="row">
-                                    <div class="col-md-3 col-sm-6">
-                                      <div class="card card-block">
-                                
-                                    <img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSbPCRvLDOxJ3cyo5uA2BvH8BpFraX3xn5gWg&usqp=CAU">
-                                    <h3 style="position: absolute; left: 27%; top: 13%;">Date Here</h3>
-                                      </img>
-                                        <h5 class="card-title mt-3 mb-3"><b style="zoom: 200%">Club Blitz</b></h5>
-                                        <p class="card-text">Info TBD</p> 
-                                  </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-                                      <div class="card card-block">
-                                      
-                                        <img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSbPCRvLDOxJ3cyo5uA2BvH8BpFraX3xn5gWg&usqp=CAU">
-                                        <h3 style="position: absolute; left: 27%; top: 13%;">Date Here</h3>
-                                          </img>
-                                        <h5 class="card-title  mt-3 mb-3"><b style="zoom: 200%">TBD</b></h5>
-                                        <p class="card-text">Info TBD</p> 
-                                  </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-                                      <div class="card card-block">
-                                      
-                                        <img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSbPCRvLDOxJ3cyo5uA2BvH8BpFraX3xn5gWg&usqp=CAU">
-                                        <h3 style="position: absolute; left: 27%; top: 13%;">Date Here</h3>
-                                          </img>
-                                        <h5 class="card-title  mt-3 mb-3"><b style="zoom: 200%">TBD</b></h5>
-                                        <p class="card-text">Info TBD</p> 
-                                  </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-                                      <div class="card card-block">
-                                    
-                                        <img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSbPCRvLDOxJ3cyo5uA2BvH8BpFraX3xn5gWg&usqp=CAU">
-                                        <h3 style="position: absolute; left: 27%; top: 13%;">Date Here</h3>
-                                          </img>
-                                        <h5 class="card-title  mt-3 mb-3"><b style="zoom: 200%">TBD</b></h5>
-                                        <p class="card-text">Info TBD</p> 
-                                  </div>
-                                    </div>    
-                                  </div>
-                                  
-                                </div>
-                                
-                        </div>
+                    <div id="fix" style="position: fixed; background-color: #0E355F; top:0; left:0; right:0; width: 100%; z-index: 1001; height: 90px;"></div>
+                    <div id="intern" style="color:white; z-index: 999; position: relative; left:5vh; top: 20vh; background-color: #0E355F; width: 90%;">
+                        <p  style="font-size:50px; font-family: "Comic Sans MS", cursive, sans-serif;"> SFHS TSA</p>
                     </div>
-                   <div  style="padding-left: 10%; padding-top: 4%; padding-right: 10%;"> <center> <h1 style="zoom: 150%;">We Compete! We Win!</h1></center> 
-                  <div class="containerA">
-                  
-                    <div class="gallery-wrap">
-                      <div class="itemA item-1"></div>
-                      <div class="itemA item-2"></div>
-                      <div class="itemA item-3"></div>
-                      <div class="itemA item-4"></div>
-                      <div class="itemA item-5"></div>
+                    <div id="intro_b" style="color: #E6DDD1; z-index: 999; position: absolute; left:5px; top: 220px; background-color: #0E355F; width: 60%; padding: 30px; padding-left: 0px;text-align: center; zoom: 100%; left: -30px;">
+                        <p  style="font-size:20px; font-family: "Comic Sans MS", cursive, sans-serif; position: relative; top: 50px; text-transform: capitalize; text-align: center;"> TSA - <i> Technology Student Association </i> - is an organization of developers, engineers, inventors, creators, designers, and masterminds. </p>
+                        <br><br>
+                        <!-- Accent-colored raised button with ripple -->
+                        <button onclick="join()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                        Join Today
+                        </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="#read">  <button onclick="scroll()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                        Learn More
+                        </button></a>
                     </div>
-                   </div>
-                  
-                </div>
-              
-               <!--
-                    <h1 id="officers">Officer Team</h1>
-                    <div class="containera">
-                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                             Indicators
-                            <ol class="carousel-indicators">
-                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                <li data-target="#myCarousel" data-slide-to="1"></li>
-                                <li data-target="#myCarousel" data-slide-to="2"></li>
-                            </ol>
-                             Wrapper for slides 
-                            <div class="carousel-inner">
-                                <div class="item active">
-                                    <img src="images/obj1.jpg"  alt="Los Angeles" style="width:100%; height: 450px;">
-                                    <div class="carousel-caption">
-                                        <img style="float: left;width: 200px; height: 250px;" src="https://tsa.roydero.com/images/pictures/A.jpg"></img>
-                                        <h2 style="color: white;">Co-President</h2>
-                                        <h6>Prabhanjan Nayak</h6>
-                                        <p style="color: white; text-decoration: none; text-align: left;">I am the current 2020-21 TSA State Secretary and the SFHS Co-President. I have previously worked on social media outreach and competition organization. I also have experience in over 10 events in our various conferences. I am a part of VEX Robotics division of TSA. The SFHS TSA Officer Team is looking forward to another great year!</p>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <img src="images/obj1.jpg"  alt="Los Angeles" style="width:100%; height: 450px;">
-                                    <div class="carousel-caption">
-                                        <img style="float: left;width: 200px; height: 250px;" src="https://tsa.roydero.com/images/pictures/B.jpg"></img>
-                                        <h2 style="color: white;">Co-President</h2>
-                                        <h6>Siva Appana</h6>
-                                        <p style="color: white;text-decoration: none; text-align: left;">Impassioned student with a focus in the computer science and mechanical engineering. IB Diploma Programme candidate. As co-President of our TSA chapter, I work to motivate and inspire individuals to strive for greater success in their events and to fulfill our ultimate goal of reclaiming first place at the State Leadership Conference (SLC). I also work with my team to provide more opportunities to chapter members and to create a cohesive group.</p>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <img src="images/obj1.jpg"  alt="Los Angeles" style="width:100%; height: 450px;">
-                                    <div class="carousel-caption">
-                                        <h3> Officer Info TBD</h3>
-                                    </div>
+                    <div id="modalA" style="background-color: white; z-index: 1000000000000000001; position: fixed; display: none;  padding-top: 1%; color: black; text-align: center;">
+                        <button  onclick="popClose()" style="position: absolute;  color: white; background-color: red; zoom: 150%;"> X </button>
+                        <h1> TSA  2020-2021 Membership</h1>
+                        <h4 > Complete the Google Forms Questionnaire below:<br>
+                            <a target="_blank" style="color: red;" href="https://forms.gle/1idUPFj6g75AyS2w7">https://forms.gle/1idUPFj6g75AyS2w7 </a>
+                        </h4>
+                        <br><b>
+                        <section class="columns">
+                            <div class="column">
+                                <h3>GroupMe</h3>
+                                <a style="color: black; font-size: 40px;" target="_blank" href="https://groupme.com/join_group/61087657/3akL7jbm">
+                                <button id="GroupMe" style="width: 350px; height: 50px; background-color: lightblue; color: green; border-radius: 10px;font-size: 30px;">JOIN </button></a>
+                            </div>
+                        
+                            <div  class="column">
+                                <h3>Social Media</h3>
+                                <h2>@sfhs.tsa</h2>
+                                <div class="social-icons">
+                                    <!-- <a class="social-icon social-icon--twitter">
+                                        <i class="fa fa-twitter"></i>
+                                        </a>
+                                        <a style="left: 40%;" target="_blank" href="https://www.instagram.com/sfhs.tsa/" class="social-icon social-icon--instagram">
+                                        <i class="fa fa-instagram"></i>
+                                        </a>
+                                        
+                                        <a class="social-icon social-icon--facebook">
+                                        <i class="fa fa-facebook"></i>
+                                        </a>-->
                                 </div>
                             </div>
-                             Left and right controls 
-                            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left"></span>
-                            <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right"></span>
-                            <span class="sr-only">Next</span>
-                            </a>
+                        </section>
+                    </div>
+                    <header id="phone">
+                        <div style="z-index: 100000;position: fixed" id="mySidebar" class="sidebar">
+                        <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>-->
+                            <a href="index.html">Home</a>
+                            <a href="Chapter/FAQs.html">FAQs</a>
+                            <a href="Chapter/Officers.html">Officers</a>
+                            <a href="Chapter/Members.html">All Members</a>
+                            <a href="Chapter/MeetingInfo.html">Meeting Info</a>
+                            <a href="Competition/Levels.html">Conferences</a>
+                            <a href="Competition/Timeline.html">Timeline</a>
+                            <a href="Competition/EventInformation.html">Event Info</a>
+                            <a href="Competition/EventThemes.html">Event Themes</a>
                         </div>
-                    </div>-->
-                    <!--<iframe  height="600px" scrolling="no" style="left: -400px;position: fixed;background-color: white;overflow: hidden;" width="100%"   frameborder="0" src="https://www.123formbuilder.com/my-contact-form-5617122.html">
-                        </iframe>-->
-                    <!--Actually I was thinking we make a custom Concerns page-->
-                </div>
-                <svg style="position: absolute; " height="250" width="10000">
-                    <polygon points="0,250 10000,0 10000,250 0,250" style="fill:#0E355F;" />
-                 </svg>
-                 <div style="background-color:#0E355F; top: 250px;position: relative; width: 100%; height: 100px;"></div>
-                <!-- Site footer -->
-                <footer style="position: relative; top: 200px;" class="site-footer">
+                        <div style="float: right;z-index: 100000;position: fixed;" id="main">
+                            <button class="openbtn" onclick="openNav()">☰</button>  
+                        </div>
+                        <div style="width: 100%; position: relative; left: -3%; top: -30px; z-index: 1001;" >
+                            <img style="top: 50px; zoom: 40%;left: 20px;position: relative" alt="SFHS TSA Logo" src="images/SFHS.png"></img>
+                        <!-- <img src="images/Logo.gif" style="width: 200px;transform: scaleX(-1);" alt="SFHS TSA Logo">
+                            <div style="position: relative; left: 0%; margin-top: -150px; color: white; font-size: 60px;font-family: myFirstFont;">
+                                TSA<br><br>
+                                <p style="font-size: 20px;font-family: Arial, Helvetica, sans-serif; margin-left: -17px;margin-top: -80px;"> LEAD  •  INSPIRE  •  INNOVATE</p>
+                            </div>-->
+                        </div>
+                        <h1 style="zoom: 200%; color: white; "> SFHS TSA <br></h1>
+                        <button style="zoom: 200%;" onclick="join()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                        Join Today
+                        </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </header>
+                    <!-- Optional Quote on Top<div id="quote" style="width: 70%; top: 7px;  position: relative;"> 
+                        <div style="left: 5px; position: relative; text-align: center;font-family: Arial, Helvetica, sans-serif;text-transform: capitalize;" ><i class="fa fa-quote-left" style="font-size:36px; position: absolute; left:0;"></i><br><i>Creativity is contagious, pass it on</i><i class="fa fa-quote-right" style="font-size:36px; position: absolute; right: 1%;"></i></div>
+                        </div>-->
+                    <!-- Slideshow Option<div class="cards" style="position: absolute; right:13px; top: 40px;" >
+                        <div class="cards__container">
+                            <div class="cards__front card-1"></div>
+                            <div class="cards__back card-2"></div>
+                        </div>
+                        </div>-->
                     <div class="container">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-6">
-                                <h6>About</h6>
-                                <p class="text-justify">TSA, standing for Technology Student Association, is a national student organization created to develop skills in science, mathematics, as well as business education. Further enhancing personal development, leadership, and STEM carrier opportunities.   </p>
-                            </div>
-                            <div class="col-xs-6 col-md-3">
-                                <h6>Our Chapter</h6>
-                                <ul class="footer-links">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar3">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="navbar3" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li style="z-index: 10000;" ><a style="background-image: linear-gradient(180deg, rgba(0,0,0,0),rgba(0,0,0,0) 81%,pink 81.1%,pink 85%,rgba(0,0,0,0) 85.1%,rgba(0,0,0,0));font-weight: bold;"  onMouseOver="this.style.backgroundColor='transparent'"
+                                onMouseOut="this.style.color='#0E355F';this.style.backgroundColor='transparent'" href="index.html">Home</a></li>
+                            <!--<li><a  href="Officers.html">Officers&nbsp;&nbsp;</a></li>
+                                Webmaster  <li><a href="DrConnect/index.html">Company </a></li>-->
+                            <li class="dropdown">
+                                <a href="#" style="font-weight: bold;"  onMouseOver="this.style.backgroundColor='transparent'"
+                                    onMouseOut="this.style.color='#0E355F';this.style.backgroundColor='transparent'"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Chapter <span class="caret"></span></a>
+                                <ul style="z-index: 1200" class="dropdown-menu" role="menu">
                                     <li><a href="Chapter/Officers.html">Officers</a></li>
                                     <li><a href="Chapter/Members.html">All Members</a></li>
-                                    <li><a href="Chapter/MeetingInfo.html">Meeting Info</a></li>
+                                    <li><a href="Chapter/MeetingInfo.html">Meetings Info</a></li>
                                     <li><a href="Chapter/FAQs.html">FAQs</a></li>
                                 </ul>
-                            </div>
-                            <div class="col-xs-6 col-md-3">
-                                <h6>Competition</h6>
-                                <ul class="footer-links">
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" style="font-weight: bold;"  onMouseOver="this.style.backgroundColor='transparent'"
+                                    onMouseOut="this.style.color='#0E355F';this.style.backgroundColor='transparent'"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Competition<span class="caret"></span></a>
+                                <ul style="z-index: 1200" class="dropdown-menu" role="menu">
                                     <li><a href="Competition/Levels.html">Conferences</a></li>
                                     <li><a href="Competition/Timeline.html">Timeline</a></li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown-header">Contest</li>
                                     <li><a href="Competition/EventInformation.html">Event Information</a></li>
                                     <li><a href="Competition/EventThemes.html">Event Themes</a></li>
                                 </ul>
-                            </div>
-                        </div>
-                        <hr>
+                            </li>
+                            <li style="z-index: 10000;" ><a style="font-weight: bold;"  onMouseOver="this.style.backgroundColor='transparent'"
+                                onMouseOut="this.style.color='#0E355F';this.style.backgroundColor='transparent'" href="https://forms.gle/1idUPFj6g75AyS2w7">Join Now</a></li>
+                        </ul>
                     </div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-8 col-sm-6 col-xs-12">
-                                <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by 
-                                    <a href="index.html">SFHS TSA</a>.
-                                </p>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xs-12">
-                                <ul style="left: 44%;position: relative;" class="social-icons">
-                                    <!-- <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>-->
-                                    <li><a class="dribbble" href="https://www.forsyth.k12.ga.us/Page/22491"><i class="fa fa-dribbble"></i></a></li>
-                                    <li><a class="linkedin" href="https://www.instagram.com/sfhs.tsa/"><i class="fa fa-linkedin"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
+                </nav>
+                <div style="z-index: 998; position: relative; width: 100%; height: 100%; top: -20px;">
+                    <svg id="create" height="250" width="10000">
+                        <polygon points="0,0 10000,0 10000,150 0,150" style="fill:#0E355F;" />
+                    </svg>
                 
-            </div>
-            <div class="build">
-                <svg id="building" style="position: relative; top:0; zoom: 200%;" class="building" width="1000px" height="520px" viewbox="0 0 1139 772" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-                <!-- Optional single down line for base bottom improvement <line x1="-1000000" y1="772" x2="1295" y2="772" style="stroke:white;stroke-width:8" />-->
-                <desc></desc>
-                <defs></defs>
-                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-                    <g id="Artboard-1" sketch:type="MSArtboardGroup" transform="translate(-117.000000, -93.000000)">
-                        <g id="Group" sketch:type="MSLayerGroup" transform="translate(119.000000, 95.000000)">
-                            <path id="2-inside" d="M512.59761,317.5 L384.496032,317.5 L512.59761,317.5 Z M488.672474,694.5 L384.403747,694.5 L488.672474,694.5 Z M488.672474,681.5 L384.403747,681.5 L488.672474,681.5 Z M488.672474,668.5 L384.403747,668.5 L488.672474,668.5 Z M488.672474,655.5 L384.403747,655.5 L488.672474,655.5 Z M488.672474,642.5 L384.403747,642.5 L488.672474,642.5 Z M488.672474,629.5 L384.403747,629.5 L488.672474,629.5 Z M488.672474,616.5 L384.403747,616.5 L488.672474,616.5 Z M488.672474,603.5 L384.403747,603.5 L488.672474,603.5 Z M488.672474,590.5 L384.403747,590.5 L488.672474,590.5 Z M488.672474,577.5 L384.403747,577.5 L488.672474,577.5 Z M512.59761,564.5 L384.496032,564.5 L512.59761,564.5 Z M512.59761,551.5 L384.496032,551.5 L512.59761,551.5 Z M512.59761,538.5 L384.496032,538.5 L512.59761,538.5 Z M512.59761,525.5 L384.496032,525.5 L512.59761,525.5 Z M512.59761,512.5 L384.496032,512.5 L512.59761,512.5 Z M512.59761,499.5 L384.496032,499.5 L512.59761,499.5 Z M512.59761,486.5 L384.496032,486.5 L512.59761,486.5 Z M512.59761,473.5 L384.496032,473.5 L512.59761,473.5 Z M512.59761,460.5 L384.496032,460.5 L512.59761,460.5 Z M512.59761,447.5 L384.496032,447.5 L512.59761,447.5 Z M512.59761,434.5 L384.496032,434.5 L512.59761,434.5 Z M512.59761,421.5 L384.496032,421.5 L512.59761,421.5 Z M512.59761,408.5 L384.496032,408.5 L512.59761,408.5 Z M512.59761,395.5 L384.496032,395.5 L512.59761,395.5 Z M512.59761,382.5 L384.496032,382.5 L512.59761,382.5 Z M512.59761,369.5 L384.496032,369.5 L512.59761,369.5 Z M512.59761,356.5 L384.496032,356.5 L512.59761,356.5 Z M512.59761,343.5 L384.496032,343.5 L512.59761,343.5 Z M512.59761,330.5 L384.496032,330.5 L512.59761,330.5 Z M475,291 L511,291 L511,304 L475,304 L475,291 Z M386,291 L422,291 L422,304 L386,304 L386,291 Z M404.5,249.5 L383.5,249.5 L404.5,249.5 Z M404.5,241.5 L383.5,241.5 L404.5,241.5 Z M512.5,241.5 L491.5,241.5 L512.5,241.5 Z M512.5,249.5 L491.5,249.5 L512.5,249.5 Z M512.5,257.5 L491.5,257.5 L512.5,257.5 Z M525.5,277.5 L478.234791,277.5 L525.5,277.5 Z M404.5,257.5 L383.5,257.5 L404.5,257.5 Z M418.5,277.5 L371.234791,277.5 M490,619 L490,619 C491.104569,609.611159 503.192048,602 516.421053,602 L516.421053,602 L540,602 L540,770 M490,760 L490,760 C491.104569,750.611159 503.192048,743 516.421053,743 L516.421053,743 L540,743 M490,740 L490,740 C491.104569,730.611159 503.192048,723 516.421053,723 L516.421053,723 L540,723 M490,720 L490,720 C491.104569,710.611159 503.192048,703 516.421053,703 L516.421053,703 L540,703 M490,700 L490,700 C491.104569,690.611159 503.192048,683 516.421053,683 L516.421053,683 L540,683 M490,680 L490,680 C491.104569,670.611159 503.192048,663 516.421053,663 L516.421053,663 L540,663 M490,660 L490,660 C491.104569,650.611159 503.192048,643 516.421053,643 L516.421053,643 L540,643 M490,640 L490,640 C491.104569,630.611159 503.192048,623 516.421053,623 L516.421053,623 L540,623" stroke="#c58a36" stroke-width="3" sketch:type="MSShapeGroup"></path>
-                            <path id="2" d="M370,771.697379 L370,258 L382,258 L382,240 L394,230 L406,240 L406,258 L418.999999,258 L418.999999,278 L477.000004,278 L477.000004,258 L490,258 L490,240 L502,230 L514,240 L514,258 L526.750252,258 L526.750252,575.697379 M490,770 L490,575 L565,575 L565,770 M525.250252,267.5 L477.985043,267.5 M418.5,267.5 L371.234791,267.5 M502.5,229.309524 L502.5,114.690476 L502.5,229.309524 Z M394.5,229.309524 L394.5,114.690476 L394.5,229.309524 Z M448.5,418.5 L448.5,769.55127 L448.5,418.5 Z" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
-                            <rect id="Rectangle-50" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="#C58A36" sketch:type="MSShapeGroup" x="437" y="300" width="22.7027338" height="118.05134"></rect>
-                            <path id="Rectangle-127" d="M598,770.5 L598,471.5 L605.709302,471.5 L605.709302,452.5 L613.418605,452.5 L613.418605,439.5 M574,770.5 L574,471.5 L591,471.5 L591,452.5 L608,452.5 L608,439.5 L629,439.5 L629,452.5 L644,452.5 L644,471.5 L660,471.5 L660,770.5 M618.5,439 L618.5,427 L618.5,439" stroke="#E9EEFF" stroke-width="3" sketch:type="MSShapeGroup"></path>
-                            <path id="3" d="M644,770 C644,770 661,0 739,0 C817,0 833,770 833,770 M700,148 L775,148 L775,159 L700,159 L700,148 Z M667,617 L810,617 L810,628 L667,628 L667,617 Z M679,457 L798,457 L798,468 L679,468 L679,457 Z M679,446 L798,446 L798,457 L679,457 L679,446 Z M691,290 L786,290 L786,301 L691,301 L691,290 Z M691,279 L786,279 L786,290 L691,290 L691,279 Z M700,159 L775,159 L775,170 L700,170 L700,159 Z M667,628 L810,628 L810,639 L667,639 L667,628 Z" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
-                            <path id="Oval-11" d="M160.064449,206 L150.043101,206 L150.043101,206 C150.057285,205.668437 150.064449,205.335055 150.064449,205 C150.064449,192.297451 139.766998,182 127.064449,182 C116.802698,182 108.110565,188.720335 105.149055,198 L95.1914984,198 C96.3826883,195.940789 97.0644491,193.550012 97.0644491,191 C97.0644491,183.268014 90.7964356,177 83.0644491,177 C78.1289046,177 73.7898746,179.553982 71.296866,183.41244 L71.296866,183.41244 C67.8158242,179.479473 62.7296926,177 57.0644491,177 C47.943205,177 40.3231433,183.427326 38.4862429,192 L16,192" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
-                            <path id="Oval-15" d="M337,145 L307.652746,145 C310.978025,141.284705 313,136.378481 313,131 C313,119.40202 303.59798,110 292,110 C283.510938,110 276.198341,115.037046 272.887935,122.285411 L272.887935,122.285411 C272.048735,115.916086 266.598474,111 260,111 C259.310517,111 258.63357,111.053676 257.973111,111.157077 C257.538759,104.370227 251.896522,99 245,99 C237.820298,99 232,104.820298 232,112 C232,113.859875 232.390571,115.628526 233.094167,117.228411 L233.094167,117.228411 C229.596033,118.083316 227,121.23849 227,125 C219.820298,125 214,130.820298 214,138 C214,140.577285 214.749993,142.979399 216.043636,145 L194,145" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
-                            <path id="Rectangle-50" d="M1131.8217,288.317589 C1127.50105,286.193151 1122.63986,285 1117.5,285 C1105.67778,285 1095.32989,291.312338 1089.64287,300.750473 C1085.45882,293.71469 1077.78,289 1069,289 C1067.98368,289 1066.98211,289.063173 1065.99901,289.185805 C1066,279.611159 1058.38884,272 1049,272 C1039.61116,272 1032,279.611159 1032,289 C1032,291.911322 1032.73182,294.651716 1034.02155,297.047259 C1028.9579,297.538984 1025,301.807283 1025,307 C1015.05887,307 1007,315.058875 1007,325 C1007,329.610127 1008.73312,333.815461 1011.58336,337 L974,337" stroke="#c58a36" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
-                            <path id="-2" d="M96.812437,653.985864 L96.812437,389 L106.812437,324 L136,324 L136.000002,264 L233.999998,264 L234,324 L262.812437,324 L272.812437,389 L272.812437,653.985864 M48,772 L48,536 L97,536 L97,772 M97,772 L97,654 L294,654 L294,772" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
-                            <path id="Line-34" d="M784.5,638.784483 L784.5,773.752003 L784.5,638.784483 Z M771.5,638.784483 L771.5,773.752003 L771.5,638.784483 Z M758.5,638.784483 L758.5,773.752003 L758.5,638.784483 Z M745.5,638.784483 L745.5,773.752003 L745.5,638.784483 Z M732.5,638.784483 L732.5,773.752003 L732.5,638.784483 Z M719.5,638.784483 L719.5,773.752003 L719.5,638.784483 Z M706.5,638.784483 L706.5,773.752003 L706.5,638.784483 Z M693.5,638.784483 L693.5,773.752003 L693.5,638.784483 Z" stroke="#c58a36" stroke-width="3" sketch:type="MSShapeGroup" transform="translate(739.000000, 706.250000) rotate(-90.000000) translate(-739.000000, -706.250000) "></path>
-                            <path id="Line-31" d="M790.5,473.784483 L790.5,608.752003 L790.5,473.784483 Z M777.5,473.784483 L777.5,608.752003 L777.5,473.784483 Z M764.5,473.784483 L764.5,608.752003 L764.5,473.784483 Z M751.5,473.784483 L751.5,608.752003 L751.5,473.784483 Z M738.5,473.784483 L738.5,608.752003 L738.5,473.784483 Z M725.5,473.784483 L725.5,608.752003 L725.5,473.784483 Z M712.5,473.784483 L712.5,608.752003 L712.5,473.784483 Z M699.5,473.784483 L699.5,608.752003 L699.5,473.784483 Z M686.5,473.784483 L686.5,608.752003 L686.5,473.784483 Z" stroke="#c58a36" stroke-width="3" sketch:type="MSShapeGroup" transform="translate(738.500000, 541.250000) rotate(-90.000000) translate(-738.500000, -541.250000) "></path>
-                            <path id="Line-32" d="M790.5,315.683908 L790.5,433.3479 L790.5,315.683908 Z M777.5,315.683908 L777.5,433.3479 L777.5,315.683908 Z M764.5,315.683908 L764.5,433.3479 L764.5,315.683908 Z M751.5,315.683908 L751.5,433.3479 L751.5,315.683908 Z M738.5,315.683908 L738.5,433.3479 L738.5,315.683908 Z M725.5,315.683908 L725.5,433.3479 L725.5,315.683908 Z M712.5,315.683908 L712.5,433.3479 L712.5,315.683908 Z M699.5,315.683908 L699.5,433.3479 L699.5,315.683908 Z M686.5,315.683908 L686.5,433.3479 L686.5,315.683908 Z" stroke="#c58a36" stroke-width="3" sketch:type="MSShapeGroup" transform="translate(738.500000, 374.500000) rotate(-90.000000) translate(-738.500000, -374.500000) "></path>
-                            <path id="Line-33" d="M771.5,182.514368 L771.5,271.009555 L771.5,182.514368 Z M758.5,182.514368 L758.5,271.009555 L758.5,182.514368 Z M745.5,182.514368 L745.5,271.009555 L745.5,182.514368 Z M732.5,182.514368 L732.5,271.009555 L732.5,182.514368 Z M719.5,182.514368 L719.5,271.009555 L719.5,182.514368 Z M706.5,182.514368 L706.5,271.009555 L706.5,182.514368 Z" stroke="#c58a36" stroke-width="3" sketch:type="MSShapeGroup" transform="translate(739.000000, 226.750000) rotate(-90.000000) translate(-739.000000, -226.750000) "></path>
-                            <path id="Line-35" d="M771.5,72.2677537 L771.5,118.333851 L771.5,72.2677537 Z M758.5,72.2677537 L758.5,118.333851 L758.5,72.2677537 Z M745.5,72.2677537 L745.5,118.333851 L745.5,72.2677537 Z M732.5,72.2677537 L732.5,118.333851 L732.5,72.2677537 Z M719.5,72.2677537 L719.5,118.333851 L719.5,72.2677537 Z M706.5,72.2677537 L706.5,118.333851 L706.5,72.2677537 Z" stroke="#c58a36" stroke-width="3" sketch:type="MSShapeGroup" transform="translate(739.000000, 95.294576) rotate(-90.000000) translate(-739.000000, -95.294576) "></path>
-                            <path id="3" d="M739,543 L692.5,485.610526 L739,543 L785.5,485.610526 L739,543 Z M739,543 L785.5,600.389474 L739,543 L692.5,600.389474 L739,543 Z M738.5,370.5 L701.398936,323.5 L738.5,370.5 L775.601064,323.5 L738.5,370.5 Z M738.5,370.5 L775.601064,417.5 L738.5,370.5 L701.398936,417.5 L738.5,370.5 Z M738.5,227.5 L766.696809,197.321053 L738.5,227.5 L710.303191,197.321053 L738.5,227.5 Z M738.5,227.5 L710.303191,257.678947 L738.5,227.5 L766.696809,257.678947 L738.5,227.5 Z M738.5,704.5 L669.739362,657.5 L738.5,704.5 L807.260638,657.5 L738.5,704.5 L738.5,704.5 Z M738.5,704.5 L807.260638,751.5 L738.5,704.5 L669.739362,751.5 L738.5,704.5 L738.5,704.5 Z" stroke="#C58A36" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
-                            <path id="Line-36" d="M907.01624,435.98376 L943.981757,435.98376 L907.01624,435.98376 L907.01624,435.98376 Z M907.01624,448.98376 L949.981759,448.98376 L907.01624,448.98376 L907.01624,448.98376 Z M907.01624,461.98376 L955.98376,461.98376 L907.01624,461.98376 L907.01624,461.98376 Z M907.01624,474.98376 L961.98376,474.98376 L907.01624,474.98376 L907.01624,474.98376 Z M907.01624,487.98376 L968.98376,487.98376 L907.01624,487.98376 L907.01624,487.98376 Z M907.01624,500.98376 L975.98376,500.98376 L907.01624,500.98376 L907.01624,500.98376 Z M907.01624,513.98376 L981.98376,513.98376 L907.01624,513.98376 L907.01624,513.98376 Z M907.01624,526.98376 L988.98376,526.98376 L907.01624,526.98376 L907.01624,526.98376 Z M907.01624,539.98376 L995.98376,539.98376 L907.01624,539.98376 L907.01624,539.98376 Z M907.01624,552.98376 L1002.98376,552.98376 L907.01624,552.98376 L907.01624,552.98376 Z M907.01624,565.98376 L1009.98376,565.98376 L907.01624,565.98376 L907.01624,565.98376 Z M907.01624,578.98376 L1015.98376,578.98376 L907.01624,578.98376 L907.01624,578.98376 Z" stroke="#c58a36" stroke-width="3" sketch:type="MSShapeGroup"></path>
-                            <path id="Line-37" d="M907.01624,611.98376 L1033.98176,611.98376 L907.01624,611.98376 L907.01624,611.98376 Z M907.01624,624.98376 L1039.98176,624.98376 L907.01624,624.98376 L907.01624,624.98376 Z M907.01624,637.98376 L1045.98376,637.98376 L907.01624,637.98376 L907.01624,637.98376 Z M907.01624,650.98376 L1051.98376,650.98376 L907.01624,650.98376 L907.01624,650.98376 Z M907.01624,663.98376 L1058.98376,663.98376 L907.01624,663.98376 L907.01624,663.98376 Z M907.01624,676.98376 L1065.98376,676.98376 L907.01624,676.98376 L907.01624,676.98376 Z M907.01624,689.98376 L1071.98376,689.98376 L907.01624,689.98376 L907.01624,689.98376 Z M907.01624,702.98376 L1078.98376,702.98376 L907.01624,702.98376 L907.01624,702.98376 Z M907.01624,715.98376 L1085.98376,715.98376 L907.01624,715.98376 L907.01624,715.98376 Z M907.01624,728.98376 L1092.98376,728.98376 L907.01624,728.98376 L907.01624,728.98376 Z M907.01624,741.98376 L1099.98376,741.98376 L907.01624,741.98376 L907.01624,741.98376 Z M907.01624,754.98376 L1105.98376,754.98376 L907.01624,754.98376 L907.01624,754.98376 Z" stroke="#c58a36" stroke-width="3" sketch:type="MSShapeGroup"></path>
-                            <path id="Line-18" d="M948,417 L1131.5,769.5" stroke="#c58a36" stroke-width="3" sketch:type="MSShapeGroup"></path>
-                            <path id="4" d="M891,418 L891,275 M892.5,309.5 L948.81179,418.353754 M912.5,351.5 L892.5,392.5 L935.026462,392.5 M1038.5,595.5 L891.333428,595.5 M994.5,419.5 L1135,686 M891,771 L891,419 L994.784452,419 L994.784452,507.40553 L1039.02827,507.40553 L1039.02827,595 L1087.01413,595 L1087.01413,683.40553 L1135,683.40553 L1135,771" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
-                            <path id="5" d="M838,770 L838,636 L864,636 L864,502 L890,502 M0,770 L0,674 L46,674 M323,770 L323,575 L369,575" stroke="#CCE1FF" stroke-width="3" sketch:type="MSShapeGroup"></path>
-                            <path id="6" d="M853,635 L853,430.977942 L819.865907,430.977942 M303,618 L303,429 L341,429 L341,573 M274.5,619.5 L321.542534,619.5" stroke="#E9EEFF" stroke-width="3" sketch:type="MSShapeGroup"></path>
-                            <path id="1-insede" d="M142.632605,583 L152.632605,583 L152.632605,593 L142.632605,593 L142.632605,583 M194.632605,618 L204.632605,618 L204.632605,628 L194.632605,628 L194.632605,618 M168.632605,618 L178.632605,618 L178.632605,628 L168.632605,628 L168.632605,618 M194.632605,583 L204.632605,583 L204.632605,593 L194.632605,593 L194.632605,583 M168.632605,583 L178.632605,583 L178.632605,593 L168.632605,593 L168.632605,583 M194.632605,549 L204.632605,549 L204.632605,559 L194.632605,559 L194.632605,549 M168.632605,549 L178.632605,549 L178.632605,559 L168.632605,559 L168.632605,549 M194.632605,514 L204.632605,514 L204.632605,524 L194.632605,524 L194.632605,514 M168.632605,514 L178.632605,514 L178.632605,524 L168.632605,524 L168.632605,514 M194.632605,480 L204.632605,480 L204.632605,490 L194.632605,490 L194.632605,480 M168.632605,480 L178.632605,480 L178.632605,490 L168.632605,490 L168.632605,480 M194.632605,446 L204.632605,446 L204.632605,456 L194.632605,456 L194.632605,446 M168.632605,446 L178.632605,446 L178.632605,456 L168.632605,456 L168.632605,446 M194.632605,411 L204.632605,411 L204.632605,421 L194.632605,421 L194.632605,411 M168.632605,411 L178.632605,411 L178.632605,421 L168.632605,421 L168.632605,411 M246.632605,618 L256.632605,618 L256.632605,628 L246.632605,628 L246.632605,618 M220.632605,618 L230.632605,618 L230.632605,628 L220.632605,628 L220.632605,618 M142.632605,618 L152.632605,618 L152.632605,628 L142.632605,628 L142.632605,618 M116.632605,618 L126.632605,618 L126.632605,628 L116.632605,628 L116.632605,618 M246.632605,583 L256.632605,583 L256.632605,593 L246.632605,593 L246.632605,583 M220.632605,583 L230.632605,583 L230.632605,593 L220.632605,593 L220.632605,583 M116.632605,583 L126.632605,583 L126.632605,593 L116.632605,593 L116.632605,583 M246.632605,549 L256.632605,549 L256.632605,559 L246.632605,559 L246.632605,549 M220.632605,549 L230.632605,549 L230.632605,559 L220.632605,559 L220.632605,549 M142.632605,549 L152.632605,549 L152.632605,559 L142.632605,559 L142.632605,549 M116.632605,549 L126.632605,549 L126.632605,559 L116.632605,559 L116.632605,549 M246.632605,514 L256.632605,514 L256.632605,524 L246.632605,524 L246.632605,514 M220.632605,514 L230.632605,514 L230.632605,524 L220.632605,524 L220.632605,514 M142.632605,514 L152.632605,514 L152.632605,524 L142.632605,524 L142.632605,514 M116.632605,514 L126.632605,514 L126.632605,524 L116.632605,524 L116.632605,514 M246.632605,480 L256.632605,480 L256.632605,490 L246.632605,490 L246.632605,480 M220.632605,480 L230.632605,480 L230.632605,490 L220.632605,490 L220.632605,480 M142.632605,480 L152.632605,480 L152.632605,490 L142.632605,490 L142.632605,480 M116.632605,480 L126.632605,480 L126.632605,490 L116.632605,490 L116.632605,480 M246.632605,446 L256.632605,446 L256.632605,456 L246.632605,456 L246.632605,446 M220.632605,446 L230.632605,446 L230.632605,456 L220.632605,456 L220.632605,446 M142.632605,446 L152.632605,446 L152.632605,456 L142.632605,456 L142.632605,446 M116.632605,446 L126.632605,446 L126.632605,456 L116.632605,456 L116.632605,446 M246.632605,411 L256.632605,411 L256.632605,421 L246.632605,421 L246.632605,411 M220.632605,411 L230.632605,411 L230.632605,421 L220.632605,421 L220.632605,411 M142.632605,411 L152.632605,411 L152.632605,421 L142.632605,421 L142.632605,411 M116.632605,411 L126.632605,411 L126.632605,421 L116.632605,421 L116.632605,411 M223.632605,372 L237.632605,372 L237.632605,379 L223.632605,379 L223.632605,372 M196.632605,372 L203.632605,372 L203.632605,379 L196.632605,379 L196.632605,372 M166.632605,372 L173.632605,372 L173.632605,379 L166.632605,379 L166.632605,372 M133.632605,372 L147.632605,372 L147.632605,379 L133.632605,379 L133.632605,372 M223.632605,345 L237.632605,345 L237.632605,359 L223.632605,359 L223.632605,345 M193.632605,335 L207.632605,335 L207.632605,359 L193.632605,359 L193.632605,335 M163.632605,335 L177.632605,335 L177.632605,359 L163.632605,359 L163.632605,335 M133.632605,345 L147.632605,345 L147.632605,359 L133.632605,359 L133.632605,345 M154.632605,308 L219.632605,308 L219.632605,316 L154.632605,316 L154.632605,308 M185.632605,301 C191.155452,301 195.632605,296.522847 195.632605,291 C195.632605,285.477153 191.155452,281 185.632605,281 C180.109757,281 175.632605,285.477153 175.632605,291 C175.632605,296.522847 180.109757,301 185.632605,301 M68.6326046,555 L78.6326046,555 L78.6326046,565 L68.6326046,565 L68.6326046,555 M68.6326046,713 L78.6326046,713 L78.6326046,723 L68.6326046,723 L68.6326046,713 M68.6326046,673 L78.6326046,673 L78.6326046,683 L68.6326046,683 L68.6326046,673 M68.6326046,653 L78.6326046,653 L78.6326046,663 L68.6326046,663 L68.6326046,653 M68.6326046,613 L78.6326046,613 L78.6326046,623 L68.6326046,623 L68.6326046,613 M68.6326046,576 L78.6326046,576 L78.6326046,586 L68.6326046,586 L68.6326046,576 M68.6326046,770 L68.6326046,735 L78.6326046,735 L78.6326046,770 M96.1326046,697.5 L50.8673954,697.5 L96.1326046,697.5 M96.1326046,638.5 L50.8673954,638.5 L96.1326046,638.5 M96.1326046,599.5 L50.8673954,599.5 L96.1326046,599.5 M275.132605,670.5 L275.132605,756.523254 L275.132605,670.5 M262.132605,670.5 L262.132605,756.523254 L262.132605,670.5 M249.132605,670.5 L249.132605,756.523254 L249.132605,670.5 M236.132605,670.5 L236.132605,756.523254 L236.132605,670.5 M223.132605,670.5 L223.132605,756.523254 L223.132605,670.5 M210.132605,670.5 L210.132605,756.523254 L210.132605,670.5 M197.132605,670.5 L197.132605,756.523254 L197.132605,670.5 M184.132605,670.5 L184.132605,756.523254 L184.132605,670.5 M171.132605,670.5 L171.132605,756.523254 L171.132605,670.5 M158.132605,670.5 L158.132605,756.523254 L158.132605,670.5 M145.132605,670.5 L145.132605,756.523254 L145.132605,670.5 M132.132605,670.5 L132.132605,756.523254 L132.132605,670.5 M119.132605,670.5 L119.132605,756.523254 L119.132605,670.5" stroke="#c58a36" stroke-width="3" sketch:type="MSShapeGroup"></path>
+                </div>
+                <div style="padding-top: 0%;  position: absolute;line-height: 3px;" id="content">
+                    <div  style="padding-left: 10%; padding-right: 10%;">
+                        <div id="read" style="position: absolute; top: -100px;"></div>
+                        <h1>What's TSA?</h1>
+                        <br><br>
+                        <div>
+                            <h4 id="cool" style="line-height: 2;">The Technology Student Association (TSA) is a national, non-profit career and technical student organization (CTSO) of middle and high school students who are engaged in science, technology, engineering, and mathematics (STEM). TSA chapters take the study of STEM beyond the classroom and give students the chance to pursue academic challenges among friends with similar goals and interests. Together, TSA chapter members work on competitive events, learn and apply leadership skills, and may attend conferences at the state, regional, and national levels. TSA chapters are also committed to a national service project and are among the most service-oriented groups in the community.</h4>
+                            <img id="app" data-aos="fade-left" style="zoom: 50%; padding-left:200vh; position: absolute; top: 5vh;" src="images/Pic1.png"></img>
+                        </div>
+                        <br>
+                        <header>
+                        </div>
+                        <div style="padding-top: 10%;">
+                    <!-- <h1> Upcoming Dates</h1>-->
+                    <div style=background-color:#0E355F;width:100%;height:500px;position:relative;">
+                            <div  style="padding-left: 10%; padding-right: 10%; padding-top: 2%;">
+                                <h1 style="position: absolute;color: white;right: 160px;zoom: 130%;">Upcoming Dates</h1>
+                                <div style="position: relative; top: 120px;" class="container mt-2">
+                                    <!--   <div class="card card-block mb-2">
+                                        <h4 class="card-title">Card 1</h4>
+                                        <p class="card-text">Welcom to bootstrap card styles</p>
+                                        <a href="#" class="btn btn-primary">Submit</a>
+                                    </div>   -->
+                                    <div class="row">
+                                        <div class="col-md-3 col-sm-6">
+                                        <div class="card card-block">
+                                    
+                                        <img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSbPCRvLDOxJ3cyo5uA2BvH8BpFraX3xn5gWg&usqp=CAU">
+                                        <h3 style="position: absolute; left: 27%; top: 13%;">Date Here</h3>
+                                        </img>
+                                            <h5 class="card-title mt-3 mb-3"><b style="zoom: 200%">Club Blitz</b></h5>
+                                            <p class="card-text">Info TBD</p> 
+                                    </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6">
+                                        <div class="card card-block">
+                                        
+                                            <img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSbPCRvLDOxJ3cyo5uA2BvH8BpFraX3xn5gWg&usqp=CAU">
+                                            <h3 style="position: absolute; left: 27%; top: 13%;">Date Here</h3>
+                                            </img>
+                                            <h5 class="card-title  mt-3 mb-3"><b style="zoom: 200%">TBD</b></h5>
+                                            <p class="card-text">Info TBD</p> 
+                                    </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6">
+                                        <div class="card card-block">
+                                        
+                                            <img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSbPCRvLDOxJ3cyo5uA2BvH8BpFraX3xn5gWg&usqp=CAU">
+                                            <h3 style="position: absolute; left: 27%; top: 13%;">Date Here</h3>
+                                            </img>
+                                            <h5 class="card-title  mt-3 mb-3"><b style="zoom: 200%">TBD</b></h5>
+                                            <p class="card-text">Info TBD</p> 
+                                    </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6">
+                                        <div class="card card-block">
+                                        
+                                            <img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSbPCRvLDOxJ3cyo5uA2BvH8BpFraX3xn5gWg&usqp=CAU">
+                                            <h3 style="position: absolute; left: 27%; top: 13%;">Date Here</h3>
+                                            </img>
+                                            <h5 class="card-title  mt-3 mb-3"><b style="zoom: 200%">TBD</b></h5>
+                                            <p class="card-text">Info TBD</p> 
+                                    </div>
+                                        </div>    
+                                    </div>
+                                    
+                                    </div>
+                                    
+                            </div>
+                        </div>
+                    <div  style="padding-left: 10%; padding-top: 4%; padding-right: 10%;"> <center> <h1 style="zoom: 150%;">We Compete! We Win!</h1></center> 
+                    <div class="containerA">
+                    
+                        <div class="gallery-wrap">
+                        <div class="itemA item-1"></div>
+                        <div class="itemA item-2"></div>
+                        <div class="itemA item-3"></div>
+                        <div class="itemA item-4"></div>
+                        <div class="itemA item-5"></div>
+                        </div>
+                    </div>
+                    
+                    </div>
+                
+                <!--
+                        <h1 id="officers">Officer Team</h1>
+                        <div class="containera">
+                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                Indicators
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                </ol>
+                                Wrapper for slides 
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img src="images/obj1.jpg"  alt="Los Angeles" style="width:100%; height: 450px;">
+                                        <div class="carousel-caption">
+                                            <img style="float: left;width: 200px; height: 250px;" src="https://tsa.roydero.com/images/pictures/A.jpg"></img>
+                                            <h2 style="color: white;">Co-President</h2>
+                                            <h6>Prabhanjan Nayak</h6>
+                                            <p style="color: white; text-decoration: none; text-align: left;">I am the current 2020-21 TSA State Secretary and the SFHS Co-President. I have previously worked on social media outreach and competition organization. I also have experience in over 10 events in our various conferences. I am a part of VEX Robotics division of TSA. The SFHS TSA Officer Team is looking forward to another great year!</p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/obj1.jpg"  alt="Los Angeles" style="width:100%; height: 450px;">
+                                        <div class="carousel-caption">
+                                            <img style="float: left;width: 200px; height: 250px;" src="https://tsa.roydero.com/images/pictures/B.jpg"></img>
+                                            <h2 style="color: white;">Co-President</h2>
+                                            <h6>Siva Appana</h6>
+                                            <p style="color: white;text-decoration: none; text-align: left;">Impassioned student with a focus in the computer science and mechanical engineering. IB Diploma Programme candidate. As co-President of our TSA chapter, I work to motivate and inspire individuals to strive for greater success in their events and to fulfill our ultimate goal of reclaiming first place at the State Leadership Conference (SLC). I also work with my team to provide more opportunities to chapter members and to create a cohesive group.</p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/obj1.jpg"  alt="Los Angeles" style="width:100%; height: 450px;">
+                                        <div class="carousel-caption">
+                                            <h3> Officer Info TBD</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                Left and right controls 
+                                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                                <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>-->
+                        <!--<iframe  height="600px" scrolling="no" style="left: -400px;position: fixed;background-color: white;overflow: hidden;" width="100%"   frameborder="0" src="https://www.123formbuilder.com/my-contact-form-5617122.html">
+                            </iframe>-->
+                        <!--Actually I was thinking we make a custom Concerns page-->
+                    </div>
+                    <svg style="position: absolute; " height="250" width="10000">
+                        <polygon points="0,250 10000,0 10000,250 0,250" style="fill:#0E355F;" />
+                    </svg>
+                    <div style="background-color:#0E355F; top: 250px;position: relative; width: 100%; height: 100px;"></div>
+                    <!-- Site footer -->
+                    <footer style="position: relative; top: 200px;" class="site-footer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                    <h6>About</h6>
+                                    <p class="text-justify">TSA, standing for Technology Student Association, is a national student organization created to develop skills in science, mathematics, as well as business education. Further enhancing personal development, leadership, and STEM carrier opportunities.   </p>
+                                </div>
+                                <div class="col-xs-6 col-md-3">
+                                    <h6>Our Chapter</h6>
+                                    <ul class="footer-links">
+                                        <li><a href="Chapter/Officers.html">Officers</a></li>
+                                        <li><a href="Chapter/Members.html">All Members</a></li>
+                                        <li><a href="Chapter/MeetingInfo.html">Meeting Info</a></li>
+                                        <li><a href="Chapter/FAQs.html">FAQs</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-6 col-md-3">
+                                    <h6>Competition</h6>
+                                    <ul class="footer-links">
+                                        <li><a href="Competition/Levels.html">Conferences</a></li>
+                                        <li><a href="Competition/Timeline.html">Timeline</a></li>
+                                        <li><a href="Competition/EventInformation.html">Event Information</a></li>
+                                        <li><a href="Competition/EventThemes.html">Event Themes</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8 col-sm-6 col-xs-12">
+                                    <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by 
+                                        <a href="index.html">SFHS TSA</a>.
+                                    </p>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <ul style="left: 44%;position: relative;" class="social-icons">
+                                        <!-- <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>-->
+                                        <li><a class="dribbble" href="https://www.forsyth.k12.ga.us/Page/22491"><i class="fa fa-dribbble"></i></a></li>
+                                        <li><a class="linkedin" href="https://www.instagram.com/sfhs.tsa/"><i class="fa fa-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                    
+                </div>
+                <div class="build">
+                    <svg id="building" style="position: relative; top:0; zoom: 200%;" class="building" width="1000px" height="520px" viewbox="0 0 1139 772" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                    <!-- Optional single down line for base bottom improvement <line x1="-1000000" y1="772" x2="1295" y2="772" style="stroke:white;stroke-width:8" />-->
+                    <desc></desc>
+                    <defs></defs>
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                        <g id="Artboard-1" sketch:type="MSArtboardGroup" transform="translate(-117.000000, -93.000000)">
+                            <g id="Group" sketch:type="MSLayerGroup" transform="translate(119.000000, 95.000000)">
+                                <path id="2-inside" d="M512.59761,317.5 L384.496032,317.5 L512.59761,317.5 Z M488.672474,694.5 L384.403747,694.5 L488.672474,694.5 Z M488.672474,681.5 L384.403747,681.5 L488.672474,681.5 Z M488.672474,668.5 L384.403747,668.5 L488.672474,668.5 Z M488.672474,655.5 L384.403747,655.5 L488.672474,655.5 Z M488.672474,642.5 L384.403747,642.5 L488.672474,642.5 Z M488.672474,629.5 L384.403747,629.5 L488.672474,629.5 Z M488.672474,616.5 L384.403747,616.5 L488.672474,616.5 Z M488.672474,603.5 L384.403747,603.5 L488.672474,603.5 Z M488.672474,590.5 L384.403747,590.5 L488.672474,590.5 Z M488.672474,577.5 L384.403747,577.5 L488.672474,577.5 Z M512.59761,564.5 L384.496032,564.5 L512.59761,564.5 Z M512.59761,551.5 L384.496032,551.5 L512.59761,551.5 Z M512.59761,538.5 L384.496032,538.5 L512.59761,538.5 Z M512.59761,525.5 L384.496032,525.5 L512.59761,525.5 Z M512.59761,512.5 L384.496032,512.5 L512.59761,512.5 Z M512.59761,499.5 L384.496032,499.5 L512.59761,499.5 Z M512.59761,486.5 L384.496032,486.5 L512.59761,486.5 Z M512.59761,473.5 L384.496032,473.5 L512.59761,473.5 Z M512.59761,460.5 L384.496032,460.5 L512.59761,460.5 Z M512.59761,447.5 L384.496032,447.5 L512.59761,447.5 Z M512.59761,434.5 L384.496032,434.5 L512.59761,434.5 Z M512.59761,421.5 L384.496032,421.5 L512.59761,421.5 Z M512.59761,408.5 L384.496032,408.5 L512.59761,408.5 Z M512.59761,395.5 L384.496032,395.5 L512.59761,395.5 Z M512.59761,382.5 L384.496032,382.5 L512.59761,382.5 Z M512.59761,369.5 L384.496032,369.5 L512.59761,369.5 Z M512.59761,356.5 L384.496032,356.5 L512.59761,356.5 Z M512.59761,343.5 L384.496032,343.5 L512.59761,343.5 Z M512.59761,330.5 L384.496032,330.5 L512.59761,330.5 Z M475,291 L511,291 L511,304 L475,304 L475,291 Z M386,291 L422,291 L422,304 L386,304 L386,291 Z M404.5,249.5 L383.5,249.5 L404.5,249.5 Z M404.5,241.5 L383.5,241.5 L404.5,241.5 Z M512.5,241.5 L491.5,241.5 L512.5,241.5 Z M512.5,249.5 L491.5,249.5 L512.5,249.5 Z M512.5,257.5 L491.5,257.5 L512.5,257.5 Z M525.5,277.5 L478.234791,277.5 L525.5,277.5 Z M404.5,257.5 L383.5,257.5 L404.5,257.5 Z M418.5,277.5 L371.234791,277.5 M490,619 L490,619 C491.104569,609.611159 503.192048,602 516.421053,602 L516.421053,602 L540,602 L540,770 M490,760 L490,760 C491.104569,750.611159 503.192048,743 516.421053,743 L516.421053,743 L540,743 M490,740 L490,740 C491.104569,730.611159 503.192048,723 516.421053,723 L516.421053,723 L540,723 M490,720 L490,720 C491.104569,710.611159 503.192048,703 516.421053,703 L516.421053,703 L540,703 M490,700 L490,700 C491.104569,690.611159 503.192048,683 516.421053,683 L516.421053,683 L540,683 M490,680 L490,680 C491.104569,670.611159 503.192048,663 516.421053,663 L516.421053,663 L540,663 M490,660 L490,660 C491.104569,650.611159 503.192048,643 516.421053,643 L516.421053,643 L540,643 M490,640 L490,640 C491.104569,630.611159 503.192048,623 516.421053,623 L516.421053,623 L540,623" stroke="#c58a36" stroke-width="3" sketch:type="MSShapeGroup"></path>
+                                <path id="2" d="M370,771.697379 L370,258 L382,258 L382,240 L394,230 L406,240 L406,258 L418.999999,258 L418.999999,278 L477.000004,278 L477.000004,258 L490,258 L490,240 L502,230 L514,240 L514,258 L526.750252,258 L526.750252,575.697379 M490,770 L490,575 L565,575 L565,770 M525.250252,267.5 L477.985043,267.5 M418.5,267.5 L371.234791,267.5 M502.5,229.309524 L502.5,114.690476 L502.5,229.309524 Z M394.5,229.309524 L394.5,114.690476 L394.5,229.309524 Z M448.5,418.5 L448.5,769.55127 L448.5,418.5 Z" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+                                <rect id="Rectangle-50" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="#C58A36" sketch:type="MSShapeGroup" x="437" y="300" width="22.7027338" height="118.05134"></rect>
+                                <path id="Rectangle-127" d="M598,770.5 L598,471.5 L605.709302,471.5 L605.709302,452.5 L613.418605,452.5 L613.418605,439.5 M574,770.5 L574,471.5 L591,471.5 L591,452.5 L608,452.5 L608,439.5 L629,439.5 L629,452.5 L644,452.5 L644,471.5 L660,471.5 L660,770.5 M618.5,439 L618.5,427 L618.5,439" stroke="#E9EEFF" stroke-width="3" sketch:type="MSShapeGroup"></path>
+                                <path id="3" d="M644,770 C644,770 661,0 739,0 C817,0 833,770 833,770 M700,148 L775,148 L775,159 L700,159 L700,148 Z M667,617 L810,617 L810,628 L667,628 L667,617 Z M679,457 L798,457 L798,468 L679,468 L679,457 Z M679,446 L798,446 L798,457 L679,457 L679,446 Z M691,290 L786,290 L786,301 L691,301 L691,290 Z M691,279 L786,279 L786,290 L691,290 L691,279 Z M700,159 L775,159 L775,170 L700,170 L700,159 Z M667,628 L810,628 L810,639 L667,639 L667,628 Z" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+                                <path id="Oval-11" d="M160.064449,206 L150.043101,206 L150.043101,206 C150.057285,205.668437 150.064449,205.335055 150.064449,205 C150.064449,192.297451 139.766998,182 127.064449,182 C116.802698,182 108.110565,188.720335 105.149055,198 L95.1914984,198 C96.3826883,195.940789 97.0644491,193.550012 97.0644491,191 C97.0644491,183.268014 90.7964356,177 83.0644491,177 C78.1289046,177 73.7898746,179.553982 71.296866,183.41244 L71.296866,183.41244 C67.8158242,179.479473 62.7296926,177 57.0644491,177 C47.943205,177 40.3231433,183.427326 38.4862429,192 L16,192" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                                <path id="Oval-15" d="M337,145 L307.652746,145 C310.978025,141.284705 313,136.378481 313,131 C313,119.40202 303.59798,110 292,110 C283.510938,110 276.198341,115.037046 272.887935,122.285411 L272.887935,122.285411 C272.048735,115.916086 266.598474,111 260,111 C259.310517,111 258.63357,111.053676 257.973111,111.157077 C257.538759,104.370227 251.896522,99 245,99 C237.820298,99 232,104.820298 232,112 C232,113.859875 232.390571,115.628526 233.094167,117.228411 L233.094167,117.228411 C229.596033,118.083316 227,121.23849 227,125 C219.820298,125 214,130.820298 214,138 C214,140.577285 214.749993,142.979399 216.043636,145 L194,145" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                                <path id="Rectangle-50" d="M1131.8217,288.317589 C1127.50105,286.193151 1122.63986,285 1117.5,285 C1105.67778,285 1095.32989,291.312338 1089.64287,300.750473 C1085.45882,293.71469 1077.78,289 1069,289 C1067.98368,289 1066.98211,289.063173 1065.99901,289.185805 C1066,279.611159 1058.38884,272 1049,272 C1039.61116,272 1032,279.611159 1032,289 C1032,291.911322 1032.73182,294.651716 1034.02155,297.047259 C1028.9579,297.538984 1025,301.807283 1025,307 C1015.05887,307 1007,315.058875 1007,325 C1007,329.610127 1008.73312,333.815461 1011.58336,337 L974,337" stroke="#c58a36" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                                <path id="-2" d="M96.812437,653.985864 L96.812437,389 L106.812437,324 L136,324 L136.000002,264 L233.999998,264 L234,324 L262.812437,324 L272.812437,389 L272.812437,653.985864 M48,772 L48,536 L97,536 L97,772 M97,772 L97,654 L294,654 L294,772" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+                                <path id="Line-34" d="M784.5,638.784483 L784.5,773.752003 L784.5,638.784483 Z M771.5,638.784483 L771.5,773.752003 L771.5,638.784483 Z M758.5,638.784483 L758.5,773.752003 L758.5,638.784483 Z M745.5,638.784483 L745.5,773.752003 L745.5,638.784483 Z M732.5,638.784483 L732.5,773.752003 L732.5,638.784483 Z M719.5,638.784483 L719.5,773.752003 L719.5,638.784483 Z M706.5,638.784483 L706.5,773.752003 L706.5,638.784483 Z M693.5,638.784483 L693.5,773.752003 L693.5,638.784483 Z" stroke="#c58a36" stroke-width="3" sketch:type="MSShapeGroup" transform="translate(739.000000, 706.250000) rotate(-90.000000) translate(-739.000000, -706.250000) "></path>
+                                <path id="Line-31" d="M790.5,473.784483 L790.5,608.752003 L790.5,473.784483 Z M777.5,473.784483 L777.5,608.752003 L777.5,473.784483 Z M764.5,473.784483 L764.5,608.752003 L764.5,473.784483 Z M751.5,473.784483 L751.5,608.752003 L751.5,473.784483 Z M738.5,473.784483 L738.5,608.752003 L738.5,473.784483 Z M725.5,473.784483 L725.5,608.752003 L725.5,473.784483 Z M712.5,473.784483 L712.5,608.752003 L712.5,473.784483 Z M699.5,473.784483 L699.5,608.752003 L699.5,473.784483 Z M686.5,473.784483 L686.5,608.752003 L686.5,473.784483 Z" stroke="#c58a36" stroke-width="3" sketch:type="MSShapeGroup" transform="translate(738.500000, 541.250000) rotate(-90.000000) translate(-738.500000, -541.250000) "></path>
+                                <path id="Line-32" d="M790.5,315.683908 L790.5,433.3479 L790.5,315.683908 Z M777.5,315.683908 L777.5,433.3479 L777.5,315.683908 Z M764.5,315.683908 L764.5,433.3479 L764.5,315.683908 Z M751.5,315.683908 L751.5,433.3479 L751.5,315.683908 Z M738.5,315.683908 L738.5,433.3479 L738.5,315.683908 Z M725.5,315.683908 L725.5,433.3479 L725.5,315.683908 Z M712.5,315.683908 L712.5,433.3479 L712.5,315.683908 Z M699.5,315.683908 L699.5,433.3479 L699.5,315.683908 Z M686.5,315.683908 L686.5,433.3479 L686.5,315.683908 Z" stroke="#c58a36" stroke-width="3" sketch:type="MSShapeGroup" transform="translate(738.500000, 374.500000) rotate(-90.000000) translate(-738.500000, -374.500000) "></path>
+                                <path id="Line-33" d="M771.5,182.514368 L771.5,271.009555 L771.5,182.514368 Z M758.5,182.514368 L758.5,271.009555 L758.5,182.514368 Z M745.5,182.514368 L745.5,271.009555 L745.5,182.514368 Z M732.5,182.514368 L732.5,271.009555 L732.5,182.514368 Z M719.5,182.514368 L719.5,271.009555 L719.5,182.514368 Z M706.5,182.514368 L706.5,271.009555 L706.5,182.514368 Z" stroke="#c58a36" stroke-width="3" sketch:type="MSShapeGroup" transform="translate(739.000000, 226.750000) rotate(-90.000000) translate(-739.000000, -226.750000) "></path>
+                                <path id="Line-35" d="M771.5,72.2677537 L771.5,118.333851 L771.5,72.2677537 Z M758.5,72.2677537 L758.5,118.333851 L758.5,72.2677537 Z M745.5,72.2677537 L745.5,118.333851 L745.5,72.2677537 Z M732.5,72.2677537 L732.5,118.333851 L732.5,72.2677537 Z M719.5,72.2677537 L719.5,118.333851 L719.5,72.2677537 Z M706.5,72.2677537 L706.5,118.333851 L706.5,72.2677537 Z" stroke="#c58a36" stroke-width="3" sketch:type="MSShapeGroup" transform="translate(739.000000, 95.294576) rotate(-90.000000) translate(-739.000000, -95.294576) "></path>
+                                <path id="3" d="M739,543 L692.5,485.610526 L739,543 L785.5,485.610526 L739,543 Z M739,543 L785.5,600.389474 L739,543 L692.5,600.389474 L739,543 Z M738.5,370.5 L701.398936,323.5 L738.5,370.5 L775.601064,323.5 L738.5,370.5 Z M738.5,370.5 L775.601064,417.5 L738.5,370.5 L701.398936,417.5 L738.5,370.5 Z M738.5,227.5 L766.696809,197.321053 L738.5,227.5 L710.303191,197.321053 L738.5,227.5 Z M738.5,227.5 L710.303191,257.678947 L738.5,227.5 L766.696809,257.678947 L738.5,227.5 Z M738.5,704.5 L669.739362,657.5 L738.5,704.5 L807.260638,657.5 L738.5,704.5 L738.5,704.5 Z M738.5,704.5 L807.260638,751.5 L738.5,704.5 L669.739362,751.5 L738.5,704.5 L738.5,704.5 Z" stroke="#C58A36" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                                <path id="Line-36" d="M907.01624,435.98376 L943.981757,435.98376 L907.01624,435.98376 L907.01624,435.98376 Z M907.01624,448.98376 L949.981759,448.98376 L907.01624,448.98376 L907.01624,448.98376 Z M907.01624,461.98376 L955.98376,461.98376 L907.01624,461.98376 L907.01624,461.98376 Z M907.01624,474.98376 L961.98376,474.98376 L907.01624,474.98376 L907.01624,474.98376 Z M907.01624,487.98376 L968.98376,487.98376 L907.01624,487.98376 L907.01624,487.98376 Z M907.01624,500.98376 L975.98376,500.98376 L907.01624,500.98376 L907.01624,500.98376 Z M907.01624,513.98376 L981.98376,513.98376 L907.01624,513.98376 L907.01624,513.98376 Z M907.01624,526.98376 L988.98376,526.98376 L907.01624,526.98376 L907.01624,526.98376 Z M907.01624,539.98376 L995.98376,539.98376 L907.01624,539.98376 L907.01624,539.98376 Z M907.01624,552.98376 L1002.98376,552.98376 L907.01624,552.98376 L907.01624,552.98376 Z M907.01624,565.98376 L1009.98376,565.98376 L907.01624,565.98376 L907.01624,565.98376 Z M907.01624,578.98376 L1015.98376,578.98376 L907.01624,578.98376 L907.01624,578.98376 Z" stroke="#c58a36" stroke-width="3" sketch:type="MSShapeGroup"></path>
+                                <path id="Line-37" d="M907.01624,611.98376 L1033.98176,611.98376 L907.01624,611.98376 L907.01624,611.98376 Z M907.01624,624.98376 L1039.98176,624.98376 L907.01624,624.98376 L907.01624,624.98376 Z M907.01624,637.98376 L1045.98376,637.98376 L907.01624,637.98376 L907.01624,637.98376 Z M907.01624,650.98376 L1051.98376,650.98376 L907.01624,650.98376 L907.01624,650.98376 Z M907.01624,663.98376 L1058.98376,663.98376 L907.01624,663.98376 L907.01624,663.98376 Z M907.01624,676.98376 L1065.98376,676.98376 L907.01624,676.98376 L907.01624,676.98376 Z M907.01624,689.98376 L1071.98376,689.98376 L907.01624,689.98376 L907.01624,689.98376 Z M907.01624,702.98376 L1078.98376,702.98376 L907.01624,702.98376 L907.01624,702.98376 Z M907.01624,715.98376 L1085.98376,715.98376 L907.01624,715.98376 L907.01624,715.98376 Z M907.01624,728.98376 L1092.98376,728.98376 L907.01624,728.98376 L907.01624,728.98376 Z M907.01624,741.98376 L1099.98376,741.98376 L907.01624,741.98376 L907.01624,741.98376 Z M907.01624,754.98376 L1105.98376,754.98376 L907.01624,754.98376 L907.01624,754.98376 Z" stroke="#c58a36" stroke-width="3" sketch:type="MSShapeGroup"></path>
+                                <path id="Line-18" d="M948,417 L1131.5,769.5" stroke="#c58a36" stroke-width="3" sketch:type="MSShapeGroup"></path>
+                                <path id="4" d="M891,418 L891,275 M892.5,309.5 L948.81179,418.353754 M912.5,351.5 L892.5,392.5 L935.026462,392.5 M1038.5,595.5 L891.333428,595.5 M994.5,419.5 L1135,686 M891,771 L891,419 L994.784452,419 L994.784452,507.40553 L1039.02827,507.40553 L1039.02827,595 L1087.01413,595 L1087.01413,683.40553 L1135,683.40553 L1135,771" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+                                <path id="5" d="M838,770 L838,636 L864,636 L864,502 L890,502 M0,770 L0,674 L46,674 M323,770 L323,575 L369,575" stroke="#CCE1FF" stroke-width="3" sketch:type="MSShapeGroup"></path>
+                                <path id="6" d="M853,635 L853,430.977942 L819.865907,430.977942 M303,618 L303,429 L341,429 L341,573 M274.5,619.5 L321.542534,619.5" stroke="#E9EEFF" stroke-width="3" sketch:type="MSShapeGroup"></path>
+                                <path id="1-insede" d="M142.632605,583 L152.632605,583 L152.632605,593 L142.632605,593 L142.632605,583 M194.632605,618 L204.632605,618 L204.632605,628 L194.632605,628 L194.632605,618 M168.632605,618 L178.632605,618 L178.632605,628 L168.632605,628 L168.632605,618 M194.632605,583 L204.632605,583 L204.632605,593 L194.632605,593 L194.632605,583 M168.632605,583 L178.632605,583 L178.632605,593 L168.632605,593 L168.632605,583 M194.632605,549 L204.632605,549 L204.632605,559 L194.632605,559 L194.632605,549 M168.632605,549 L178.632605,549 L178.632605,559 L168.632605,559 L168.632605,549 M194.632605,514 L204.632605,514 L204.632605,524 L194.632605,524 L194.632605,514 M168.632605,514 L178.632605,514 L178.632605,524 L168.632605,524 L168.632605,514 M194.632605,480 L204.632605,480 L204.632605,490 L194.632605,490 L194.632605,480 M168.632605,480 L178.632605,480 L178.632605,490 L168.632605,490 L168.632605,480 M194.632605,446 L204.632605,446 L204.632605,456 L194.632605,456 L194.632605,446 M168.632605,446 L178.632605,446 L178.632605,456 L168.632605,456 L168.632605,446 M194.632605,411 L204.632605,411 L204.632605,421 L194.632605,421 L194.632605,411 M168.632605,411 L178.632605,411 L178.632605,421 L168.632605,421 L168.632605,411 M246.632605,618 L256.632605,618 L256.632605,628 L246.632605,628 L246.632605,618 M220.632605,618 L230.632605,618 L230.632605,628 L220.632605,628 L220.632605,618 M142.632605,618 L152.632605,618 L152.632605,628 L142.632605,628 L142.632605,618 M116.632605,618 L126.632605,618 L126.632605,628 L116.632605,628 L116.632605,618 M246.632605,583 L256.632605,583 L256.632605,593 L246.632605,593 L246.632605,583 M220.632605,583 L230.632605,583 L230.632605,593 L220.632605,593 L220.632605,583 M116.632605,583 L126.632605,583 L126.632605,593 L116.632605,593 L116.632605,583 M246.632605,549 L256.632605,549 L256.632605,559 L246.632605,559 L246.632605,549 M220.632605,549 L230.632605,549 L230.632605,559 L220.632605,559 L220.632605,549 M142.632605,549 L152.632605,549 L152.632605,559 L142.632605,559 L142.632605,549 M116.632605,549 L126.632605,549 L126.632605,559 L116.632605,559 L116.632605,549 M246.632605,514 L256.632605,514 L256.632605,524 L246.632605,524 L246.632605,514 M220.632605,514 L230.632605,514 L230.632605,524 L220.632605,524 L220.632605,514 M142.632605,514 L152.632605,514 L152.632605,524 L142.632605,524 L142.632605,514 M116.632605,514 L126.632605,514 L126.632605,524 L116.632605,524 L116.632605,514 M246.632605,480 L256.632605,480 L256.632605,490 L246.632605,490 L246.632605,480 M220.632605,480 L230.632605,480 L230.632605,490 L220.632605,490 L220.632605,480 M142.632605,480 L152.632605,480 L152.632605,490 L142.632605,490 L142.632605,480 M116.632605,480 L126.632605,480 L126.632605,490 L116.632605,490 L116.632605,480 M246.632605,446 L256.632605,446 L256.632605,456 L246.632605,456 L246.632605,446 M220.632605,446 L230.632605,446 L230.632605,456 L220.632605,456 L220.632605,446 M142.632605,446 L152.632605,446 L152.632605,456 L142.632605,456 L142.632605,446 M116.632605,446 L126.632605,446 L126.632605,456 L116.632605,456 L116.632605,446 M246.632605,411 L256.632605,411 L256.632605,421 L246.632605,421 L246.632605,411 M220.632605,411 L230.632605,411 L230.632605,421 L220.632605,421 L220.632605,411 M142.632605,411 L152.632605,411 L152.632605,421 L142.632605,421 L142.632605,411 M116.632605,411 L126.632605,411 L126.632605,421 L116.632605,421 L116.632605,411 M223.632605,372 L237.632605,372 L237.632605,379 L223.632605,379 L223.632605,372 M196.632605,372 L203.632605,372 L203.632605,379 L196.632605,379 L196.632605,372 M166.632605,372 L173.632605,372 L173.632605,379 L166.632605,379 L166.632605,372 M133.632605,372 L147.632605,372 L147.632605,379 L133.632605,379 L133.632605,372 M223.632605,345 L237.632605,345 L237.632605,359 L223.632605,359 L223.632605,345 M193.632605,335 L207.632605,335 L207.632605,359 L193.632605,359 L193.632605,335 M163.632605,335 L177.632605,335 L177.632605,359 L163.632605,359 L163.632605,335 M133.632605,345 L147.632605,345 L147.632605,359 L133.632605,359 L133.632605,345 M154.632605,308 L219.632605,308 L219.632605,316 L154.632605,316 L154.632605,308 M185.632605,301 C191.155452,301 195.632605,296.522847 195.632605,291 C195.632605,285.477153 191.155452,281 185.632605,281 C180.109757,281 175.632605,285.477153 175.632605,291 C175.632605,296.522847 180.109757,301 185.632605,301 M68.6326046,555 L78.6326046,555 L78.6326046,565 L68.6326046,565 L68.6326046,555 M68.6326046,713 L78.6326046,713 L78.6326046,723 L68.6326046,723 L68.6326046,713 M68.6326046,673 L78.6326046,673 L78.6326046,683 L68.6326046,683 L68.6326046,673 M68.6326046,653 L78.6326046,653 L78.6326046,663 L68.6326046,663 L68.6326046,653 M68.6326046,613 L78.6326046,613 L78.6326046,623 L68.6326046,623 L68.6326046,613 M68.6326046,576 L78.6326046,576 L78.6326046,586 L68.6326046,586 L68.6326046,576 M68.6326046,770 L68.6326046,735 L78.6326046,735 L78.6326046,770 M96.1326046,697.5 L50.8673954,697.5 L96.1326046,697.5 M96.1326046,638.5 L50.8673954,638.5 L96.1326046,638.5 M96.1326046,599.5 L50.8673954,599.5 L96.1326046,599.5 M275.132605,670.5 L275.132605,756.523254 L275.132605,670.5 M262.132605,670.5 L262.132605,756.523254 L262.132605,670.5 M249.132605,670.5 L249.132605,756.523254 L249.132605,670.5 M236.132605,670.5 L236.132605,756.523254 L236.132605,670.5 M223.132605,670.5 L223.132605,756.523254 L223.132605,670.5 M210.132605,670.5 L210.132605,756.523254 L210.132605,670.5 M197.132605,670.5 L197.132605,756.523254 L197.132605,670.5 M184.132605,670.5 L184.132605,756.523254 L184.132605,670.5 M171.132605,670.5 L171.132605,756.523254 L171.132605,670.5 M158.132605,670.5 L158.132605,756.523254 L158.132605,670.5 M145.132605,670.5 L145.132605,756.523254 L145.132605,670.5 M132.132605,670.5 L132.132605,756.523254 L132.132605,670.5 M119.132605,670.5 L119.132605,756.523254 L119.132605,670.5" stroke="#c58a36" stroke-width="3" sketch:type="MSShapeGroup"></path>
+                            </g>
                         </g>
                     </g>
-                </g>
+                </div>
             </div>
-        </div>
-         <!--Total-->
-         <button onclick="aDerv()" id="chat" style='z-index: 10000000;background-color: pink; color: white;'> <i class='fa fa-comments'></i></button>
-         <header  style="font-family: sans-serif;position: fixed; bottom: 68px; font-size: 15px;right: 7px;z-index: 1000000;background-color: white;font-weight: normal;">
-             <div style="display: none;" id="peekobot-container">  
-             <div id="peekobot-inner">
-                 <div id="peekobot"></div>
-             </div>
-             </div>
-         </header>
+            <!--Total-->
+            <button onclick="aDerv()" id="chat" style='z-index: 10000000;background-color: pink; color: white;'> <i class='fa fa-comments'></i></button>
+            <header  style="font-family: sans-serif;position: fixed; bottom: 68px; font-size: 15px;right: 7px;z-index: 1000000;background-color: white;font-weight: normal;">
+                <div style="display: none;" id="peekobot-container">  
+                <div id="peekobot-inner">
+                    <div id="peekobot"></div>
+                </div>
+                </div>
+            </header>
+        </claim>
          <script>
              let click = 0;
              function aDerv() {
@@ -442,7 +649,7 @@
                  }
              }
          </script>
-         <script src="../bot.js"></script>
+         <script src="bot.js"></script>
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <!-- Load Script Imports-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

@@ -1,0 +1,364 @@
+body {
+  font-family: Raleway, Helvetica, sans-serif;
+}
+.nopadding {
+  padding: 0;
+}
+.nopadding-left {
+  padding-left: 0;
+}
+.nopadding-right {
+  padding-right: 0;
+}
+#header {
+  background-color: #2e3141;
+  color: white;
+  padding: 24.1em 0;
+  background-image: linear-gradient(to top, rgba(46, 49, 65, 0.5), rgba(46, 49, 65, 0.5)), url("https://res.cloudinary.com/henix/image/upload/v1466483567/473154_buohn0.jpg");
+  background-size: auto,cover;
+  background-position: center center;
+}
+.text-uppercase {
+    color: white;
+}
+.icon {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  width: 1.5em;
+  display: inline-block;
+  height: 1.5em;
+  border-radius: 100%;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 5px;
+  transition: background-color 0.2s ease-in-out;
+  font-size: 1.7em;
+}
+#menu {
+  position: fixed;
+  display: block;
+  right: 0;
+  top: 0;
+  padding: 8px 15px;
+  margin: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.125);
+  border-radius: 5px;
+  z-index: 1;
+  transition: background-color 0.2s ease-in-out;
+}
+nav#menu:hover {
+  background: rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+}
+#menu span {
+  color: white;
+  margin: 0 5px 0 0;
+}
+#menu a {
+  text-decoration: none;
+}
+.logo {
+  font-size: 2em;
+  border: 2px solid rgba(255, 255, 255, 0.125);
+  display: block;
+  width: 2.25em;
+  text-align: center;
+  height: 2.25em;
+  border-radius: 100%;
+  line-height: 2.3em;
+  cursor: pointer;
+  text-indent: 0;
+}
+.more a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-family: Raleway, Helvetica, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  display: block;
+  font-size: 11px;
+  margin: 0 3em;
+}
+.more a:before {
+  content: "\f105";
+  font-family: "FontAwesome";
+  border: 2px solid rgba(255, 255, 255, 0.125);
+  width: 1.5em;
+  display: inline-block;
+  height: 1.5em;
+  border-radius: 100%;
+  text-align: center;
+  vertical-align: middle;
+  text-indent: 2px;
+  line-height: 23px;
+  margin-right: 5px;
+  transition: background-color 0.2s ease-in-out;
+  font-size: 1.7em;
+}
+.more a:hover:before {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.learn {
+  margin: 5px;
+  font-size: 0.8em;
+  color: white;
+}
+h1 {
+  font-size: 3em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 0.5em 0 0.5em;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.125);
+  width: 90%;
+}
+h2 {
+  font-size: 1.5em;
+  padding: 1em 0;
+  letter-spacing: 0.2em;
+  color: white;
+}
+p {
+  color: white;
+  font-size: 14px;
+  padding: 1.8em 0;
+  letter-spacing: 0.1em;
+  font-size: 13px;
+  border-top: 2px solid rgba(255, 255, 255, 0.125);
+}
+#header p {
+  padding: 1em 0;
+  letter-spacing: 0.1em;
+  border: none;
+}
+#one {
+  background: #4c5c96;
+  padding: 10em 0 13.5em;
+  color: white;
+  -webkit-clip-path: polygon(-631% 100%, 100% 0%, 100% 100%, 0 100%);
+  clip-path: polygon(-631% 100%, 100% 0%, 100% 100%, 0 100%);
+  margin-top: -125px;
+}
+#two {
+  background-color: #45558d;
+  padding: 10em 0 13.5em;
+  margin-top: -136px;
+  -webkit-clip-path: polygon(0 0px, 100% 14%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0px, 100% 14%, 100% 100%, 0 100%);
+}
+#three {
+  background-color: #3f4e85;
+  padding: 10em 0 19.5em;
+  -webkit-clip-path: polygon(-631% 100%, 100% 0%, 100% 100%, 0 100%);
+  clip-path: polygon(-631% 100%, 100% 0%, 100% 100%, 0 100%);
+  margin-top: -140px;
+}
+#four {
+  background-color: #2e3141;
+  padding: 9em 0 14em;
+  -webkit-clip-path: polygon(0 0px, 100% 5%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0px, 100% 5%, 100% 100%, 0 100%);
+  margin-top: -205px;
+}
+.features article {
+  background-color: #353849;
+  padding-bottom: 2em;
+  border-radius: 2%;
+  margin-bottom: 3em;
+}
+.features article img {
+  width: 100%;
+  border-radius: 2% 2% 0 0;
+}
+.features article p {
+  margin: 0 3em;
+}
+.browse {
+  display: block;
+  padding: 10px 25px;
+  border: 2px solid rgba(255, 255, 255, 0.125);
+  border-radius: 5px;
+  z-index: 1;
+  width: 12em;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  font-weight: 900;
+  transition: background-color 0.2s ease-in-out;
+}
+.browse:hover {
+  background: rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+}
+.browse a {
+  color: white;
+  text-decoration: none;
+}
+#formulaire {
+  background-color: #2e3141;
+  color: white;
+  padding: 17em 0 5em;
+  background-image: linear-gradient(to top, rgba(46, 49, 65, 0.5), rgba(46, 49, 65, 0.5)), url("https://res.cloudinary.com/henix/image/upload/v1466483567/473154_buohn0.jpg");
+  background-size: auto,cover;
+  background-position: center center;
+  -webkit-clip-path: polygon(-900% 100%, 100% 0%, 100% 100%, 0 100%);
+  clip-path: polygon(-900% 100%, 100% 0%, 100% 100%, 0 100%);
+  margin-top: -165px;
+}
+.form-control {
+  background: rgba(255, 255, 255, 0.025);
+  border: solid 2px rgba(255, 255, 255, 0.5);
+  padding: 1.5em 1em;
+  color: white;
+}
+.form-group label {
+  letter-spacing: 0.1em;
+  font-size: 0.9em;
+}
+.btn-default {
+  background: transparent;
+  border: solid 2px rgba(255, 255, 255, 0.5);
+  color: white;
+  font-size: 0.9em;
+  letter-spacing: 0.1em;
+  padding: 1em 2em;
+  transition: background-color 0.2s ease-in-out;
+}
+.btn-default:hover,
+.btn-default:focus {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: white !important;
+  border: solid 2px rgba(255, 255, 255, 0.125);
+}
+.social ul {
+  padding: 0;
+  display: block;
+}
+.social ul li {
+  display: block;
+  text-decoration: none;
+  list-style: none;
+  padding: 0.8em 0;
+}
+.social ul li span a {
+  color: white;
+  text-decoration: none;
+  border-bottom: dotted 1px rgba(255, 255, 255, 0.6);
+  transition: border-bottom-color 0.2s ease-in-out;
+}
+.social ul li span a:hover {
+  border-bottom-color: transparent;
+}
+.icon.fa {
+  font-size: 1.1em;
+  line-height: 1.8em;
+  width: 2em;
+  height: 2em;
+}
+footer#footer ul {
+  padding: 3em 0 0 0;
+  margin-top: 10em;
+  border-top: 2px solid rgba(255, 255, 255, 0.5);
+}
+footer#footer ul > li {
+  list-style: none;
+  display: inline-block;
+  border-right: 2px solid rgba(255, 255, 255, 0.5);
+  padding-right: 10px;
+  margin-right: 10px;
+  color: rgba(255, 255, 255, 0.5);
+}
+footer#footer ul > li:nth-of-type(3) {
+  border-right: none;
+}
+.overlay {
+  background: #4c5c96;
+  position: absolute;
+  padding: 5em;
+  top: 20%;
+  left: 40%;
+  bottom: 20%;
+  border-radius: 2%;
+  width: 20em;
+  right: 20%;
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  z-index: 1;
+  height: 25em;
+  opacity: 0;
+  transform: translateY(1m);
+  transition: opacity 0.25s ease-in-out, visibility 0.3s ease-out, transform 0.1s ease;
+}
+.overlay.open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+.overlay .fa {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+.overlay h2 {
+  position: absolute;
+  top: 0;
+  margin: 2em 0 0 1.5em;
+  font-weight: 900;
+}
+.overlay ul {
+  position: absolute;
+  top: 8em;
+  border-top: 2px solid rgba(255, 255, 255, 0.5);
+  left: 10%;
+  right: 10%;
+  text-align: center;
+  padding: 0;
+}
+.overlay ul > li {
+  list-style: none;
+  padding: 0.8em 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  font-family: Raleway, Helvetica, sans-serif;
+  display: block;
+}
+.overlay ul > li:hover {
+  background: #45558d;
+  cursor: pointer;
+}
+.overlay ul > li:first-of-type {
+  margin-top: 2em;
+}
+.overlay a {
+  color: white;
+  text-decoration: none;
+}
+.superlay {
+  position: fixed;
+  background-color: rgba(46, 49, 65, 0.8);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out, visibility 0.3s ease-out;
+}
+.superlay.open {
+  visibility: visible;
+  opacity: 1;
+}
+/*MEDIA---------------------------------------------------*/
+@media screen and (max-width: 990px) {
+  .social ul li:first-child {
+    margin-top: 4em;
+  }
+}
+@media screen and (max-width: 767px) {
+  .nopadding-right {
+    padding-left: 0;
+  }
+}
