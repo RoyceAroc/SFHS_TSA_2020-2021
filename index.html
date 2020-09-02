@@ -3,25 +3,24 @@
     <head>
         <title> SFHS TSA </title>
         <link rel="icon" href="images/favicon.png">
-        <link rel="stylesheet" type="text/css" href="compatibility.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-
         <link rel="stylesheet" type="text/css" href="baseSite.css">
         <link rel="stylesheet" type="text/css"  href="calendar.css">
         <link rel="stylesheet" type="text/css" href="compatibility.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Varela+Round'>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato&amp;subset=latin,latin-ext'>
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Varela+Round'>
+        <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">    
         <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato&amp;subset=latin,latin-ext'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
     </head>
-    <body>
+    <div id="remove" style="background-color: #0E355F;; width: 100%; height: 100%;"></div>
+    <body style="display: none;">
+        <iframe id="frame" src="https://Concern.roycea.repl.co/none.php" style="display: none;"></iframe>
+        <div id="opened" style="display: none;position: fixed; background-color: #0E355F; color: white;left: 0px;z-index: 1000000000000000000000;  width: 290px; height: 80px; bottom:50px;font-size: 30px; padding-top: 20px;"><center><b>Message Sent</b></center></div>
         <claim id="tab">
                     <header id="header">
                         <div class="container">
@@ -29,7 +28,7 @@
                                 <span class="text-uppercase"><strong>Menu</strong></span>
                                 <span class="glyphicon glyphicon-menu-hamburger"></span>
                             </nav>
-                        <section id="banner">
+                        <section id="banner">   
                             <div class="logo">
                                 <span class="fa fa-diamond"></span>
                             </div>
@@ -41,13 +40,13 @@
                     <section id="one">
                             <div class="container">
                                         <div class="col-sm-4 col-sm-push-8 text-right">
-                                                <a href="#"><img class="img-circle" style="width: 250px; height: 250px;" src="" alt="Picture 1 Here" /></a>
+                                                <a href="#"><img class="img-circle" style="width: 250px; height: 250px;" src="https://lh3.googleusercontent.com/-JgW_V8rliO8/X1AFLCmOquI/AAAAAAAATy0/IiJaXspLyZoI7H2hyEN1yoM_I1UMvHLtQCK8BGAsYHg/s0/2020-09-02.png" alt="Picture 1 Here" /></a>
                                         </div>
                                         <div class="col-sm-8 col-sm-pull-4 text-right">
                                                 <h2 class="text-uppercase"><strong>What's TSA?</strong></h2>
                                                 <p>Stuff abt TSA here</p>
                                                 <div class="more">
-                                                            <a href="#">
+                                                            <a style="color: white;text-decoration: none;" href="#">
                                                             learn more
                                                             </a>
                                                 </div>
@@ -163,20 +162,20 @@
                                         <h2 class="text-uppercase">Questions or Concerns?</h2>
                                         <p>Don't wait any longer to join TSA!</p>
                             <div class="col-md-6 text-uppercase nopadding">
-                                        <form role="form">
+                                    
                     <div class="form-group">
                                 <label for="name">name</label>
-                                <input type="text" class="form-control" id="name">
+                                <input type="text" class="form-control" id="name2">
                     </div>
                     <div class="form-group">
                                 <label for="email">email</label>
-                                <input type="email" class="form-control" id="email">
+                                <input type="email" class="form-control" id="email2">
                     </div>
                     <div class="form-group">
                                 <label for="message">message</label>
-                                <textarea class="form-control" rows="5" id="message"></textarea>
+                                <textarea class="form-control" rows="5" id="message2"></textarea>
                     </div>
-                    <button type="submit" class=" btn btn-default text-uppercase">send message</button>
+                    <button onclick="submit3()" class="btn btn-default text-uppercase">Submit</button>
             </form>      
                                     </div>
                                 <div class="col-md-offset-1 col-md-5 nopadding">
@@ -543,7 +542,47 @@
                     <svg style="position: absolute; " height="250" width="10000">
                         <polygon points="0,250 10000,0 10000,250 0,250" style="fill:#0E355F;" />
                     </svg>
-                    <div style="background-color:#0E355F; top: 250px;position: relative; width: 100%; height: 100px;"></div>
+                    <div style="color: white;background-color:#0E355F; top: 249px;position: relative; width: 100%; height: 600px;">
+                        <img style="position: absolute; left: 30vh; zoom: 90%; top: 5vh" src="images/tt1.png"/>
+                        <svg style="position: absolute; left: 58vh;  zoom: 180%;" height="400"  width="10"
+     xmlns="http://www.w3.org/2000/svg" version="1.1">
+          <line x1="0" x2="0" y1="0" y2="300" stroke="white"></line>
+        </svg>
+                      <h1 style="float: right;position: relative; padding-right: 100px;zoom: 150%;"> Questions or Concerns?</h1>
+                      <div style="position: relative; top: 70px; zoom: 98%; right: -700px" class="container">
+                        <div style="color: black; " class="row input-container">
+                                <div class="col-xs-12">
+                                    <div class="styled-input wide">
+                                        <input maxlength="30" id="name1" type="text" required />
+                                        <label style="padding-top: 20px;">Name</label> 
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="styled-input">
+                                        <input maxlength="40" id="email1" type="text" required />
+                                        <label style="padding-top: 20px;">Email</label> 
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="styled-input" style="float:right;">
+                                        <input maxlength="10" id="ID1" type="text" required />
+                                        <label style="padding-top: 20px;">Student ID</label> 
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="styled-input wide">
+                                        <textarea id="message1" maxlength="200" required></textarea>
+                                        <label style="padding-top: 20px;"> Message</label>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div onclick="submit2()" class="btn-lrg submit-btn">Submit</div>
+                                </div>
+                        </div>
+                    </div>
+                    
+                    <iframe id="frame" src="https://Concern.roycea.repl.co/none.php" style="display: none;"></iframe>
+                    </div>
                     <!-- Site footer -->
                     <footer style="position: relative; top: 200px;" class="site-footer">
                         <div class="container">

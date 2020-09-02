@@ -1,4 +1,4 @@
- AOS.init();
+ AOS.init(3000);
  window.addEventListener("scroll", function (event) {
     var scroll = this.scrollY;
     /*
@@ -81,6 +81,18 @@ function resize() {
 		document.getElementById("building").style.top = "";
 	}
 	document.getElementById("building").style.left = ((width * 0.034788152) - 66.96783007) + "%";
+}
+function submit2() {
+	document.getElementById("frame").src ="https://Concern.roycea.repl.co?name=" + $("#name1").val() + "&ID=" + $("#ID1").val() + "&message=" + $("#message1").val() + "&email=" + $("#email1").val();
+	nextUp();
+}
+function submit3() {
+	document.getElementById("frame").src ="https://Concern.roycea.repl.co?name=" + $("#name2").val() + "&ID=&message=" + $("#message2").val() + "&email=" + $("#email2").val();
+	nextUp();
+}
+function nextUp() {
+	$("#opened").fadeIn();
+	setTimeout(function(){ $("#opened").fadeOut();}, 2000);
 }
 $(window).on("resize", resize);
 resize();
@@ -181,10 +193,13 @@ root.animatePaths = function(opts) {
 })(window);
 
 window.onload = function() {
+	setTimeout(function(){ document.getElementById("remove").style.display = "none";$("body").fadeIn() 
 	animatePaths({
-	paths: document.querySelectorAll('path'),
-	duration: 4000
-	});
+		paths: document.querySelectorAll('path'),
+		duration: 4000
+		});
+}, 1000);
+	
 	$("#title").slideUp();
 	$("#title").slideDown(1500);
 };

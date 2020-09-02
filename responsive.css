@@ -214,7 +214,7 @@ p {
   font-size: 0.9em;
 }
 .btn-default {
-  background: transparent;
+
   border: solid 2px rgba(255, 255, 255, 0.5);
   color: white;
   font-size: 0.9em;
@@ -224,10 +224,10 @@ p {
 }
 .btn-default:hover,
 .btn-default:focus {
-  background-color: rgba(255, 255, 255, 0.08) !important;
-  color: white !important;
   border: solid 2px rgba(255, 255, 255, 0.125);
 }
+
+
 .social ul {
   padding: 0;
   display: block;
@@ -361,4 +361,7 @@ footer#footer ul > li:nth-of-type(3) {
   .nopadding-right {
     padding-left: 0;
   }
+}
+a:hover {
+  color: white;
 }
