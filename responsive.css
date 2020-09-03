@@ -273,17 +273,17 @@ footer#footer ul > li:nth-of-type(3) {
   background: #4c5c96;
   position: absolute;
   padding: 5em;
+  padding-top: 0em;
   top: 20%;
-  left: 40%;
+  right: 0px;
   bottom: 20%;
   border-radius: 2%;
-  width: 20em;
-  right: 20%;
+  width: 15em;
   display: block;
   position: fixed;
   visibility: hidden;
   z-index: 1;
-  height: 25em;
+  height: 15em;
   opacity: 0;
   transform: translateY(1m);
   transition: opacity 0.25s ease-in-out, visibility 0.3s ease-out, transform 0.1s ease;
@@ -304,14 +304,13 @@ footer#footer ul > li:nth-of-type(3) {
 }
 .overlay h2 {
   position: absolute;
-  top: 0;
+  top: 0em;
   margin: 2em 0 0 1.5em;
   font-weight: 900;
 }
 .overlay ul {
   position: absolute;
-  top: 8em;
-  border-top: 2px solid rgba(255, 255, 255, 0.5);
+  top: 0em;
   left: 10%;
   right: 10%;
   text-align: center;
@@ -329,11 +328,21 @@ footer#footer ul > li:nth-of-type(3) {
 .overlay ul > li:hover {
   background: #45558d;
   cursor: pointer;
+  color: white;
+  text-decoration: none;
 }
 .overlay ul > li:first-of-type {
   margin-top: 2em;
 }
 .overlay a {
+  color: white;
+  text-decoration: none;
+}
+.overlay a:hover {
+  color: white;
+  text-decoration: none;
+}
+.overlay a:active {
   color: white;
   text-decoration: none;
 }
