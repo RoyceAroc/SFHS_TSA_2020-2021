@@ -1,4 +1,4 @@
- AOS.init(3000);
+ AOS.init();
  window.addEventListener("scroll", function (event) {
     var scroll = this.scrollY;
     /*
@@ -45,9 +45,9 @@ function resize() {
 	if(width < 1000) {
 		document.getElementById("col_A").style.display = "none";
 	}
-	
+	var change = 0;
 	//First remove all stylesheets
-	if(width < 1292) {
+	if(width < 1340) {
 		//Stuff for Mobile
 		$('link[rel=stylesheet]').remove();
 	addCss("compatibility.css");
@@ -62,6 +62,9 @@ function resize() {
 		addScript("https://code.jquery.com/jquery-2.2.4.min.js");
 		addScript("https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
 	} else {
+		if (!$("link[href='https://unpkg.com/aos@2.3.1/dist/aos.css']").length)
+		location.reload();
+
 		//Stuff for Laptop
 		addCss("compatibility.css");
 	}

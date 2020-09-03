@@ -869,7 +869,7 @@ button {
 }
 :root {
   --peekobot-height: 60vh;
-  --peekobot-avatar: url("Bot.PNG");
+ 
 }
 body {
 font-family: sans-serif;
