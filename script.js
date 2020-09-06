@@ -53,26 +53,28 @@ function resize() {
 	}
 	var change = 0;
 	//First remove all stylesheets
-	if(width < 1340) {
-		//Stuff for Mobile
-		$('link[rel=stylesheet]').remove();
-	addCss("compatibility.css");
-		addCss("responsive.css");
-		addCss("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css");
-		addCss("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css");
-		addCss("https://netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.min.css");
-		addCss("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css");
-		addCss("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css");
-		addCss("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css");
-		addCss("https://fonts.googleapis.com/css?family=Raleway:500");
-		addScript("https://code.jquery.com/jquery-2.2.4.min.js");
-		addScript("https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
-	} else {
-		if (!$("link[href='https://unpkg.com/aos@2.3.1/dist/aos.css']").length)
-		location.reload();
+	if(document.getElementById("main_logo")) {
+		if(width < 1340) {
+			//Stuff for Mobile
+			$('link[rel=stylesheet]').remove();
+		addCss("../compatibility.css");
+			addCss("../responsive.css");
+			addCss("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css");
+			addCss("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css");
+			addCss("https://netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.min.css");
+			addCss("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css");
+			addCss("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css");
+			addCss("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css");
+			addCss("https://fonts.googleapis.com/css?family=Raleway:500");
+			addScript("https://code.jquery.com/jquery-2.2.4.min.js");
+			addScript("https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+		} else {
+			if (!$("link[href='https://unpkg.com/aos@2.3.1/dist/aos.css']").length)
+			location.reload();
 
-		//Stuff for Laptop
-		addCss("compatibility.css");
+			//Stuff for Laptop
+			addCss("../compatibility.css");
+		}
 	}
 	if(document.getElementById("main_logo")) {
 		document.getElementById("main_logo").style.left = ((width * 0.259737) + 299.7010308) + "px";
