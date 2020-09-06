@@ -6,19 +6,22 @@
 	 <polyline points="0,0 0,200 220,200 300, 90 12241,150 12241,0"
   style="fill: #485D71;stroke:white;stroke-width:4" />
   */
-  if((200 -scroll) > 85) {
-  	document.getElementById("elem_fix").innerHTML = ("<polyline points=\"0,0 0," + (200-scroll) + " " + (200-scroll) + "," + (200-scroll) + " 300,90 12241,150 12241,0\" style=\"fill:white;stroke:pink;stroke-width:4\"/>");
-	  document.getElementById("elem_fix").style.height = "250";
-  } else {
-	document.getElementById("elem_fix").innerHTML = ("<polyline points=\"0,0 0,90  300, 90 12241,150 12241,0\" style=\"fill: white;stroke:pink;stroke-width:4\" />");
-	 document.getElementById("elem_fix").style.height = "100";
-  }
-  if(scroll > 270) {
-	document.getElementById("elem_fix").innerHTML = ("<polyline points=\"0,0 0,90  300, 90 12241,150 12241,0\" style=\"fill:#e9e9f2;stroke:pink;stroke-width:4\" />");
-	 $( "#searchBar" ).fadeIn(800);
-  } else {
-	 $( "#searchBar" ).fadeOut(100);
-  }
+ if(document.getElementById("elem_fix")) {
+	if((200 -scroll) > 85) {
+		document.getElementById("elem_fix").innerHTML = ("<polyline points=\"0,0 0," + (200-scroll) + " " + (200-scroll) + "," + (200-scroll) + " 300,90 12241,150 12241,0\" style=\"fill:white;stroke:pink;stroke-width:4\"/>");
+		document.getElementById("elem_fix").style.height = "250";
+	} else {
+	  document.getElementById("elem_fix").innerHTML = ("<polyline points=\"0,0 0,90  300, 90 12241,150 12241,0\" style=\"fill: white;stroke:pink;stroke-width:4\" />");
+	   document.getElementById("elem_fix").style.height = "100";
+	}
+	if(scroll > 270) {
+		document.getElementById("elem_fix").innerHTML = ("<polyline points=\"0,0 0,90  300, 90 12241,150 12241,0\" style=\"fill:#e9e9f2;stroke:pink;stroke-width:4\" />");
+		 $( "#searchBar" ).fadeIn(800);
+	  } else {
+		 $( "#searchBar" ).fadeOut(100);
+	  }
+ } 
+
 
 })
 $("#menu").click(function() {
@@ -36,14 +39,17 @@ function resize() {
 	const height = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
 	//alert(width);
 	console.log("Screen Width: " + width + " | Height: " + height);
-	document.getElementById("create").innerHTML = "<polygon points=\"0,0 " + width + ",0 " + width + ",250 0,170\" style=\"fill:#0E355F;\" />";	
-	if(width > 1950) {
-		document.getElementById("col_A").style.display = "none";
-	} else {
-		document.getElementById("col_A").style.display = "block";
-	}
-	if(width < 1000) {
-		document.getElementById("col_A").style.display = "none";
+	if(document.getElementById("create")) {
+	document.getElementById("create").innerHTML = "<polygon points=\"0,0 " + width + ",0 " + width + ",250 0,170\" style=\"fill:#0E355F;\" />";	}
+	if(document.getElementById("col_A")) {
+		if(width > 1950) {
+			document.getElementById("col_A").style.display = "none";
+		} else {
+			document.getElementById("col_A").style.display = "block";
+		}
+		if(width < 1000) {
+			document.getElementById("col_A").style.display = "none";
+		}
 	}
 	var change = 0;
 	//First remove all stylesheets
@@ -68,22 +74,28 @@ function resize() {
 		//Stuff for Laptop
 		addCss("compatibility.css");
 	}
-	document.getElementById("main_logo").style.left = ((width * 0.259737) + 299.7010308) + "px";
-	document.getElementById("col_A").style.left = (width * 0.0259737917) + 59.97010318 + "vh";
+	if(document.getElementById("main_logo")) {
+		document.getElementById("main_logo").style.left = ((width * 0.259737) + 299.7010308) + "px";
+	}
+	if(document.getElementById("col_A")) {
+	document.getElementById("col_A").style.left = (width * 0.0259737917) + 59.97010318 + "vh";}
 	//Linear Regression Formulas for Building SVG Change
+	if(document.getElementById("intern")) {
 	document.getElementById("intern").style.zoom = ((width * 0.0450463) + 70.67075) + "%";
-	document.getElementById("intro_b").style.zoom = ((width * 0.100316) - 12.93772394) + "%";
+	document.getElementById("intro_b").style.zoom = ((width * 0.100316) - 12.93772394) + "%";}
 	document.getElementById("size").style.height = ((width * 0.434965) - 278.0782412) + 140 + "px";
 	//alert(document.getElementById("size").style.height);
 	//document.getElementById("navbar3").style.top = ((((width * 0.434965) - 278.0782412) * -1) + 18) + "px";
-	if(width < 1919) {
-		document.getElementById("building").style.zoom = ((width * 0.076969) - 41.373) + "%";
-		document.getElementById("building").style.top = ((width * -0.04678) + 90.432845) + "%";
-	} else {
-		document.getElementById("building").style.zoom = ((width * 0.0043) + 93) + "%";
-		document.getElementById("building").style.top = "";
+	if(document.getElementById("building")) {
+		if(width < 1919) {
+			document.getElementById("building").style.zoom = ((width * 0.076969) - 41.373) + "%";
+			document.getElementById("building").style.top = ((width * -0.04678) + 90.432845) + "%";
+		} else {
+			document.getElementById("building").style.zoom = ((width * 0.0043) + 93) + "%";
+			document.getElementById("building").style.top = "";
+		}
+		document.getElementById("building").style.left = ((width * 0.034788152) - 66.96783007) + "%";
 	}
-	document.getElementById("building").style.left = ((width * 0.034788152) - 66.96783007) + "%";
 }
 function submit2() {
 	document.getElementById("frame").src ="https://Concern.roycea.repl.co?name=" + $("#name1").val() + "&ID=" + $("#ID1").val() + "&message=" + $("#message1").val() + "&email=" + $("#email1").val();
