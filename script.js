@@ -85,7 +85,8 @@ function resize() {
 	if(document.getElementById("intern")) {
 	document.getElementById("intern").style.zoom = ((width * 0.0450463) + 70.67075) + "%";
 	document.getElementById("intro_b").style.zoom = ((width * 0.100316) - 12.93772394) + "%";}
-	document.getElementById("size").style.height = ((width * 0.434965) - 278.0782412) + 140 + "px";
+	if(document.getElementById("size")) {
+	document.getElementById("size").style.height = ((width * 0.434965) - 278.0782412) + 140 + "px";}
 	//alert(document.getElementById("size").style.height);
 	//document.getElementById("navbar3").style.top = ((((width * 0.434965) - 278.0782412) * -1) + 18) + "px";
 	if(document.getElementById("building")) {
