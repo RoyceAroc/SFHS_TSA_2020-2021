@@ -8,14 +8,14 @@
   */
  if(document.getElementById("elem_fix")) {
 	if((200 -scroll) > 85) {
-		document.getElementById("elem_fix").innerHTML = ("<polyline points=\"0,0 0," + (200-scroll) + " " + (200-scroll) + "," + (200-scroll) + " 300,90 12241,150 12241,0\" style=\"fill: #C40026;stroke: #A2AAAD;stroke-width:4\"/>");
+		document.getElementById("elem_fix").innerHTML = ("<polyline points=\"0,0 0," + (200-scroll) + " " + (200-scroll) + "," + (200-scroll) + " 300,90 12241,150 12241,0\" style=\"fill: #9F001F;stroke: #A2AAAD;stroke-width:4\"/>");
 		document.getElementById("elem_fix").style.height = "250";
 	} else {
-	  document.getElementById("elem_fix").innerHTML = ("<polyline points=\"0,0 0,90  300, 90 12241,150 12241,0\" style=\"fill: #C40026;stroke: #A2AAAD;stroke-width:4\" />");
+	  document.getElementById("elem_fix").innerHTML = ("<polyline points=\"0,0 0,90  300, 90 12241,150 12241,0\" style=\"fill:#9F001F;stroke: #A2AAAD;stroke-width:4\" />");
 	   document.getElementById("elem_fix").style.height = "100";
 	}
 	if(scroll > 270) {
-		document.getElementById("elem_fix").innerHTML = ("<polyline points=\"0,0 0,90  300, 90 12241,150 12241,0\" style=\"fill: #C40026;stroke: #A2AAAD;stroke-width:4\" />");
+		document.getElementById("elem_fix").innerHTML = ("<polyline points=\"0,0 0,90  300, 90 12241,150 12241,0\" style=\"fill: #9F001F;stroke: #A2AAAD;stroke-width:4\" />");
 		 $( "#searchBar" ).fadeIn(800);
 	  } else {
 		 $( "#searchBar" ).fadeOut(100);
