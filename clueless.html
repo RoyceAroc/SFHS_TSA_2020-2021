@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> FAQs | SFHS TSA </title>
+        <title> Meetings | SFHS TSA </title>
         <link rel="icon" href="../images/favicon.png">
         <link rel="stylesheet" type="text/css" href="../baseSite.css">
         <link rel="stylesheet" type="text/css"  href="../calendar.css">
@@ -32,186 +32,10 @@
 	bottom:10px;
 	right:10px;
 }
-.c-faq__answer {
-  position: absolute;
-  opacity: 0;
-  z-index: -1;
-}
-
-body {
-  box-sizing: border-box;
-  font-family: "ABeeZee", sans-serif;
-  line-height: 1.48;
-  font-size: 16px;
-  color: #333;
-}
-
-body *,
-body *::after,
-body *::before {
-  box-sizing: inherit;
-}
-
-.container {
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.section__headline {
-  font-family: "Varela Round", sans-serif;
-  font-size: 62px;
-  font-weight: light;
-  color: #1e88e5;
-  padding-left: 15px;
-  padding-top: 30px;
-}
-
-.c-faqs__headline {
-  font-family: "Varela Round", sans-serif;
-  text-align: left;
-  padding-left: 15px;
-  font-size: 1.5em;
-  margin-top: 1.5em;
-  font-weight: bold;
-}
-
-.c-faqs {
-  margin: 15px 0;
-  padding: 0 15px;
-  border-top: 1px solid transparent;
-  border-bottom: 1px solid transparent;
-}
-
-.c-faq {
-  font-family: "Varela Round", sans-serif;
-  list-style: none;
-  margin: 10px 0 5px;
-}
-
-.c-faq__title {
-  cursor: pointer;
-  font-weight: 500;
-  background: transparent;
-  z-index: 10;
-  position: relative;
-  font-size: 1.1em;
-}
-.c-faq__title:hover {
-  text-decoration: underline;
-}
-.c-faq__title::after {
-  white-space: nowrap;
-  font-weight: 300;
-  padding-left: 5px;
-  opacity: 0;
-  -webkit-transform-origin: 11px;
-          transform-origin: 11px;
-  -webkit-transform: rotateZ(90deg);
-          transform: rotateZ(90deg);
-  display: none;
-  content: "👉";
-}
-
-.c-faq--active .c-faq__title {
-  color: #1e88e5;
-}
-.c-faq--active .c-faq__title::after {
-  opacity: 1;
-  -webkit-transform: rotateZ(90deg);
-          transform: rotateZ(90deg);
-  display: inline-block;
-}
-
-.c-faq__answer {
-  font-weight: normal;
-  margin-top: -10%;
-  -webkit-transition: all 0.1s;
-  transition: all 0.1s;
-  z-index: 1;
-  font-size: 0.9em;
-  color: #505050;
-  background-color: white;
-}
-
-.c-faq--active .c-faq__answer {
-  opacity: 1;
-  position: relative;
-  top: 0;
-  left: 0;
-  font-weight: 300;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  border-radius: 3px;
-  border: 1px solid #f1f2f3;
-  border-top: 1px solid #1e88e5;
-  padding: 20px;
-}
-
-@media (min-width: 780px) {
-  .c-faqs {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
-  }
-
-  .c-faqs::before {
-    opacity: 0.2;
-  }
-
-  .c-faq {
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
-  .c-faq .c-faq__title {
-    width: 50%;
-    padding-right: 40px;
-    display: inline-block;
-  }
-  .c-faq .c-faq__title::after {
-    display: none;
-  }
-  .c-faq .c-faq__answer {
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    left: 50%;
-    width: 50%;
-    border-left-color: #1e88e5;
-    border-top-color: #f1f2f3;
-  }
-}
-.c-note {
-  font-size: 0.8em;
-  padding-left: 15px;
-  opacity: 0.5;
-  -webkit-transition: opacity 0.2s ease-in-out;
-  transition: opacity 0.2s ease-in-out;
-}
-.c-note:hover {
-  opacity: 1;
-  -webkit-transition: opacity 0.2s ease-in-out;
-  transition: opacity 0.2s ease-in-out;
-}
-.c-note a {
-  color: #1e88e5;
-}
 /* Mobile Compatibility Check */
 @media only screen and (min-width: 300px) and (max-width: 1340px)  {
   .remove {
       display: none;
-  }
-  #main_title {
-    position: absolute; 
-    top:4vh; 
-    left: 12vh; 
-    color: white; 
-    font-weight: bold;
-    zoom: 240%;
   }
  html {
 	zoom: 70%;
@@ -228,19 +52,12 @@ body *::before {
     #do {
         display: none;
     }
-    #main_title {
-    position: absolute; 
-    top:7vh; 
-    left: 20vh; 
-    color: white; 
-    font-weight: bold;
-    zoom: 400%;
-  }
+
 }
 #main_title1 {
     position: absolute; 
-    top:15vh; 
-    left: 40%; 
+    top:5vh; 
+    left: 30%; 
     color: white; 
     font-weight: bold;
     font-size: 20vh;
@@ -304,79 +121,12 @@ body *::before {
                 </nav>
                 <!--Video start-->
                 <section style="top: 90px;position: relative; width: 100%;">
-                    <video style="width: 100%;position: relative; top:-10vh;left:0;" playsinline autoplay muted loop>
-                        <source src="https://tsa.roydero.com/media/Video_Competition.mp4" type="video/mp4">
-                    </video>
-                    <h1 id="main_title1"> FAQs</h1>
+                    <img style="width: 100%;position: relative; top:-10vh; height: 80vh" src="https://lh3.googleusercontent.com/-NAoubgPbJA0/X1U8dSFrxUI/AAAAAAAAT5o/wLNMwZ1cgokja3LIfxG-OJ9AfM8SmrxMQCK8BGAsYHg/s512/2020-09-06.png"></img>
+                    <h1 id="main_title1"> Meetings</h1>
                 </section>
                <!--Image start-->
-               <div style="position: relative; top: 100px; height: 800px;z-index: 1001;">
-                    <div class="container">
-                    <h2 class="c-faqs__headline">smtg</h2>
-                    <ul class="c-faqs">
-                    <li class="c-faq c-faq--active">
-                        <span class="c-faq__title">smtg</span>
-                        <div class="c-faq__answer">smtg</div>
-                    </li>
-                    <li class="c-faq">
-                        <span class="c-faq__title">smtg</span>
-                        <div class="c-faq__answer">smtg</div>
-                    </li>
-                    <li class="c-faq">
-                        <span class="c-faq__title">smtg</span>
-                        <div class="c-faq__answer">smtg</div>
-                    </li>
-                    </ul>  <!-- /end c-faqs -->
-                    
-                    <h2 class="c-faqs__headline">smtg</h2>
-                    <ul class="c-faqs">
-                    <li class="c-faq">
-                        <span class="c-faq__title">smtg</span>
-                        <div class="c-faq__answer">smtg</div>
-                    </li>
-                    <li class="c-faq">
-                        <span class="c-faq__title">smtg</span>
-                        <div class="c-faq__answer">smtg
-                <br />
-                smtg
-                        <br />
-                smtg
-                        <br/ >
-                smtg
-                </div>
-                    </li>
-                    <li class="c-faq">
-                        <span class="c-faq__title">smtg</span>
-                        <div class="c-faq__answer">smtg</div>
-                    </li>
-                    <li class="c-faq">
-                        <span class="c-faq__title">smtg</span>
-                        <div class="c-faq__answer">smtg</div>
-                    </li>
-                    <li class="c-faq c-faq">
-                        <span class="c-faq__title">smtg</span>
-                        <div class="c-faq__answer">smtg</div>
-                    </li>
-                    </ul>  <!-- /end c-faqs -->
-                    
-                    <h2 class="c-faqs__headline">Other questions</h2>
-                    <ul class="c-faqs">
-                    <li class="c-faq">
-                        <span class="c-faq__title">smtg</span>
-                        <div class="c-faq__answer">smtg
-                
-                </div>
-                    </li>
-                    <li class="c-faq">
-                        <span class="c-faq__title">smtg</span>
-                        <div class="c-faq__answer">smtg</div>
-                    </li>
-                    <li class="c-faq">
-                        <span class="c-faq__title">smtg</span>
-                        <div class="c-faq__answer">smtg</div>
-                    </li>
-                    </ul>  
-                </div>
+               <div style="position: relative; top: 100px; height: 300px;z-index: 1001;">
+              <center>  <p style="font-weight: bold;font-size: 50px; position: relative;line-height: 50px"  >Meetings will be held on Tuesday mornings at 7:45 AM across a Teams meeting. Meetings are held Virtually.</p></center>
                </div>
                
                     <svg class="remove" style="position: relative;  " height="250" width="10000">
