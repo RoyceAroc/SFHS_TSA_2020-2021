@@ -2,8 +2,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Officers | SFHS TSA </title>
+        <title> Event Timelines | SFHS TSA </title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
         <link rel="icon" href="../images/favicon.png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="../baseSite.css">
         <link rel="stylesheet" type="text/css" href="../compatibility.css">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -13,107 +15,254 @@
         <style>
             .containerA {
             padding: 20px;
+            }        
+           .container {
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
             }
-            .profile-card {
-            background-color: #222222;
-            margin-bottom: 20px;
-            }
-            .profile-pic {
-            
-            border-radius: 50%;
-            position: absolute;
-            top: -65px;
-            left: 0;
-            right: 0;
-            margin: auto;
-            z-index: 1;
-            max-width: 100px;
-            -webkit-transition: all 0.4s;
-            transition: all 0.4s;
-            }
-            .profile-info {
-            color: #BDBDBD;
-            padding: 25px;
-            position: relative;
-            margin-top: 15px;
-            }
-            .profile-info h2 {
-            color: #E8E8E8;
-            letter-spacing: 4px;
-            padding-bottom: 12px;
-            }
+            .section__headline {
+            font-family: "Varela Round", sans-serif;
+            font-size: 62px;
+            font-weight: light;
+            color: #1e88e5;
+            padding-left: 15px;
+            padding-top: 30px;
+            }        
+            @import "https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700";
+header:after, #timeline .timeline-item:after, header:before, #timeline .timeline-item:before {
+  content: '';
+  display: block;
+  width: 100%;
+  clear: both;
+}
 
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+}
+
+body {
+  background: #f9f9f9;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: helvetica, arial, tahoma, verdana;
+  line-height: 20px;
+  font-size: 14px;
+  color: #726f77;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
 
 .container {
   max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
-.section__headline {
-  font-family: "Varela Round", sans-serif;
-  font-size: 62px;
-  font-weight: light;
-  color: #1e88e5;
-  padding-left: 15px;
-  padding-top: 30px;
+h1, h2, h3, h4 {
+  font-family: "Dosis", arial, tahoma, verdana;
+  font-weight: 500;
 }
-            .profile-info span {
-            display: block;
-            font-size: 12px;
-            color: #4CB493;
-            letter-spacing: 2px;
-            }
-            .profile-info a {
-            color: #4CB493;
-            }
-            .profile-info i {
-            padding: 15px 35px 0px 35px;
-            }
-            .profile-card:hover .profile-pic {
-            -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-            }
-            .profile-card:hover .profile-info hr  {
-            opacity: 1;
-            }
-            /* Underline From Center */
-            .hvr-underline-from-center {
-            display: inline-block;
-            vertical-align: middle;
-            -webkit-transform: translateZ(0);
-            transform: translateZ(0);
-            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-            -moz-osx-font-smoothing: grayscale;
-            position: relative;
-            overflow: hidden;
-            }
-            .hvr-underline-from-center:before {
-            content: "";
-            position: absolute;
-            z-index: -1;
-            left: 52%;
-            right: 52%;
-            bottom: 0;
-            background: #FFFFFF;
-            border-radius: 50%;
-            height: 3px;
-            -webkit-transition-property: all;
-            transition-property: all;
-            -webkit-transition-duration: 0.2s;
-            transition-duration: 0.2s;
-            -webkit-transition-timing-function: ease-out;
-            transition-timing-function: ease-out;
-            }
-            .profile-card:hover .hvr-underline-from-center:before, .profile-card:focus .hvr-underline-from-center:before, .profile-card:active .hvr-underline-from-center:before {
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: #CECECE;
-            border-radius: 0;
-            }
+
+.project-name {
+  text-align: center;
+  padding: 10px 0;
+}
+
+header {
+  background: #2b2e48;
+  padding: 10px;
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+  -ms-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+}
+header .logo {
+  color: #ee4d4d;
+  float: left;
+  font-family: "Dosis", arial, tahoma, verdana;
+  font-size: 22px;
+  font-weight: 500;
+}
+header .logo > span {
+  color: #f7aaaa;
+  font-weight: 300;
+}
+header .social {
+  float: right;
+}
+header .social .btn {
+  font-family: "Dosis";
+  font-size: 14px;
+  margin: 10px 5px;
+}
+
+#timeline {
+  width: 100%;
+  margin: 30px auto;
+  position: relative;
+  padding: 0 10px;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+#timeline:before {
+  content: "";
+  width: 3px;
+  height: 100%;
+  background: #ee4d4d;
+  left: 50%;
+  top: 0;
+  position: absolute;
+}
+#timeline:after {
+  content: "";
+  clear: both;
+  display: table;
+  width: 100%;
+}
+#timeline .timeline-item {
+  margin-bottom: 50px;
+  position: relative;
+}
+#timeline .timeline-item .timeline-icon {
+  background: #ee4d4d;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  overflow: hidden;
+  margin-left: -23px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+#timeline .timeline-item .timeline-icon svg {
+  position: relative;
+  top: 14px;
+  left: 14px;
+}
+#timeline .timeline-item .timeline-content {
+  width: 45%;
+  background: #fff;
+  padding: 20px;
+  -webkit-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+#timeline .timeline-item .timeline-content h2 {
+  padding: 15px;
+  background: #ee4d4d;
+  color: #fff;
+  margin: -20px -20px 0 -20px;
+  font-weight: 300;
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  -ms-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+}
+#timeline .timeline-item .timeline-content:before {
+  content: '';
+  position: absolute;
+  left: 45%;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 7px solid #ee4d4d;
+}
+#timeline .timeline-item .timeline-content.right {
+  float: right;
+}
+#timeline .timeline-item .timeline-content.right:before {
+  content: '';
+  right: 45%;
+  left: inherit;
+  border-left: 0;
+  border-right: 7px solid #ee4d4d;
+}
+
+.btn {
+  padding: 5px 15px;
+  text-decoration: none;
+  background: transparent;
+  border: 2px solid #f27c7c;
+  color: #f27c7c;
+  display: inline-block;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 12px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  -ms-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+  -webkit-box-shadow: 2px 2px 0 #f27c7c;
+  -moz-box-shadow: 2px 2px 0 #f27c7c;
+  -ms-box-shadow: 2px 2px 0 #f27c7c;
+  box-shadow: 2px 2px 0 #f27c7c;
+}
+.btn:hover {
+  box-shadow: none;
+  top: 2px;
+  left: 2px;
+  -webkit-box-shadow: 2px 2px 0 transparent;
+  -moz-box-shadow: 2px 2px 0 transparent;
+  -ms-box-shadow: 2px 2px 0 transparent;
+  box-shadow: 2px 2px 0 transparent;
+}
+
+@media screen and (max-width: 768px) {
+  #timeline {
+    margin: 30px;
+    padding: 0px;
+    width: 90%;
+  }
+  #timeline:before {
+    left: 0;
+  }
+  #timeline .timeline-item .timeline-content {
+    width: 90%;
+    float: right;
+  }
+  #timeline .timeline-item .timeline-content:before, #timeline .timeline-item .timeline-content.right:before {
+    left: 10%;
+    margin-left: -6px;
+    border-left: 0;
+    border-right: 7px solid #ee4d4d;
+  }
+  #timeline .timeline-item .timeline-icon {
+    left: 0;
+  }
+}  
         </style>
     </head>
     <body>
@@ -187,7 +336,7 @@
                     <!--<li><a  href="Officers.html">Officers&nbsp;&nbsp;</a></li>
                         Webmaster  <li><a href="DrConnect/index.html">Company </a></li>-->
                     <li class="dropdown">
-                        <a href="#" style="background-image: linear-gradient(180deg, rgba(0,0,0,0),rgba(0,0,0,0) 81%,pink 81.1%,pink 85%,rgba(0,0,0,0) 85.1%,rgba(0,0,0,0));font-weight: bold;"  onMouseOver="this.style.color='white';this.style.backgroundColor='transparent'"
+                        <a href="#" style="font-weight: bold;"  onMouseOver="this.style.color='white';this.style.backgroundColor='transparent'"
                             onMouseOut="this.style.color='white';this.style.backgroundColor='transparent'"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Chapter <span class="caret"></span></a>
                         <ul style="z-index: 1200" class="dropdown-menu" role="menu">
                             <li><a href="../Chapter/Officers.html">Officers</a></li>
@@ -197,7 +346,7 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#" style="font-weight: bold;"  onMouseOver="this.style.color='white';this.style.backgroundColor='transparent'"
+                        <a href="#" style="font-weight: bold;background-image: linear-gradient(180deg, rgba(0,0,0,0),rgba(0,0,0,0) 81%,pink 81.1%,pink 85%,rgba(0,0,0,0) 85.1%,rgba(0,0,0,0));"  onMouseOver="this.style.color='white';this.style.backgroundColor='transparent'"
                             onMouseOut="this.style.color='white';this.style.backgroundColor='transparent'"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Competition<span class="caret"></span></a>
                         <ul style="z-index: 1200" class="dropdown-menu" role="menu">
                             <li><a href="../Competition/Levels.html">Conferences</a></li>
@@ -218,138 +367,97 @@
 <div style="padding-top: 13%; padding-left: -5%;" id="list">
 
 <div class="containerA">
-	 <h1 class="section__headline">Our Officers</h1>
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-            <div class="container">
-                <div class="row ">
-                    <div class="col-lg-12">
-                        <div>
-                            <div class="col-md-4">
-                                <div class="profile-card text-center">
-                                    <img class="img-responsive" src="../images/pictures/A.jpg">
-                                    <div class="profile-info">
-                                        <img class="profile-pic" src="../images/pictures/A.jpg"><br><br>
-                                        <h2 class="hvr-underline-from-center">Prabhanjan <span>Co-President</span></h2>
-                                        <div>I am the current 2020-21 TSA State Secretary and the SFHS Co-President. I have previously worked on social media outreach and competition organization. I also have experience in over 10 events in our various conferences. I am a part of VEX Robotics division of TSA. The SFHS TSA Officer Team is looking forward to another great year!.</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="profile-card text-center">
-                                    <img class="img-responsive" src="../images/pictures/B.jpg">
-                                    <div class="profile-info">
-                                        <img class="profile-pic" src="../images/pictures/B.jpg"><br><br>
-                                        <h2 class="hvr-underline-from-center">Siva<br><span>Co-President</span></h2>
-                                        <div>Impassioned student with a focus in the computer science and mechanical engineering. IB Diploma Programme candidate. As co-President of our TSA chapter, I work to motivate and inspire individuals to strive for greater success in their events and to fulfill our ultimate goal of reclaiming first place at the State Leadership Conference (SLC). I also work with my team to provide more opportunities to chapter members and to create a cohesive group.</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="profile-card text-center">
-                                    <img class="img-responsive" src="../images/pictures/C.jpg">
-                                    <div class="profile-info">
-                                        <img class="profile-pic" src="../images/pictures/C.jpg"><br><br>
-                                        <h2 class="hvr-underline-from-center">Jelovy<br><span>Co-Reporter</span></h2>
-                                        <div>Hi everyone! My name is Jelovy, and I’m a sophomore here at South. I am a co-reporter at TSA, and I can’t wait to have an amazing time with you guys at TSA! Some hobbies are drawing, hanging out with friends and family, and music! <br><br><br><br><br><br><br></div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-md-4">
-                                <div class="profile-card text-center">
-                                    <img class="img-responsive" src="../images/pictures/None.jpg">
-                                    <div class="profile-info">
-                                        <img class="profile-pic" src="../images/pictures/None.jpg"><br><br>
-                                        <h2 class="hvr-underline-from-center">Avi<br><span>Co-Vice-President</span></h2>
-                                        <div></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="profile-card text-center">
-                                    <img class="img-responsive" src="../images/pictures/None.jpg">
-                                    <div class="profile-info">
-                                        <img class="profile-pic" src="../images/pictures/None.jpg"><br><br>
-                                        <h2 class="hvr-underline-from-center">Royce<br><span>Co-Mem-@-Large</span></h2>
-                                        <div></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="profile-card text-center">
-                                    <img class="img-responsive" src="../images/pictures/None.jpg">
-                                    <div class="profile-info">
-                                        <img class="profile-pic" src="../images/pictures/None.jpg"><br><br>
-                                        <h2 class="hvr-underline-from-center">Nakul<br><span>Treasurer</span></h2>
-                                        <div></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="profile-card text-center">
-                                    <img class="img-responsive" src="../images/pictures/None.jpg">
-                                    <div class="profile-info">
-                                        <img class="profile-pic" src="../images/pictures/None.jpg"><br><br>
-                                        <h2 class="hvr-underline-from-center">Nitin<br><span>Co-Vice-President</span></h2>
-                                        <div></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="profile-card text-center">
-                                    <img class="img-responsive" src="../images/pictures/None.jpg">
-                                    <div class="profile-info">
-                                        <img class="profile-pic" src="../images/pictures/None.jpg"><br><br>
-                                        <h2 class="hvr-underline-from-center">Rachel<br><span>Co-Reporter</span></h2>
-                                        <div></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="profile-card text-center">
-                                    <img class="img-responsive" src="../images/pictures/None.jpg">
-                                    <div class="profile-info">
-                                        <img class="profile-pic" src="../images/pictures/None.jpg"><br><br>
-                                        <h2 class="hvr-underline-from-center">Ria<br><span>Co-Mem-@-Large</span></h2>
-                                        <div></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="profile-card text-center">
-                                    <img class="img-responsive" src="../images/pictures/None.jpg">
-                                    <div class="profile-info">
-                                        <img class="profile-pic" src="../images/pictures/None.jpg"><br><br>
-                                        <h2 class="hvr-underline-from-center">Ryan<br><span>Co-Sar-@-Arms</span></h2>
-                                        <div></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="profile-card text-center">
-                                    <img class="img-responsive" src="../images/pictures/None.jpg">
-                                    <div class="profile-info">
-                                        <img class="profile-pic" src="../images/pictures/None.jpg"><br><br>
-                                        <h2 class="hvr-underline-from-center">Srija<br><span>Secretary</span></h2>
-                                        <div></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="profile-card text-center">
-                                    <img class="img-responsive" src="../images/pictures/None.jpg">
-                                    <div class="profile-info">
-                                        <img class="profile-pic" src="../images/pictures/None.jpg"><br><br>
-                                        <h2 class="hvr-underline-from-center">Emilee<br><span>Co-Sargent-at-arms</span></h2>
-                                        <div>I’m the Co-Sargent-at-arms for TSA. I have done webmaster, forensics, videogame design, and VEX. </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+     <div class="container">
+     
+        </div>
+        </header>
+        <div class="container">
+        <h1 class="project-name">CONFERENCE TIMELINE</h1>
+        <div id="timeline">
+        <div class="timeline-item">
+        <div class="timeline-icon">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="20px" viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
+        <path fill="#FFFFFF" d="M19.998,6.766l-5.759-0.544c-0.362-0.032-0.676-0.264-0.822-0.61l-2.064-4.999
+            c-0.329-0.825-1.5-0.825-1.83,0L7.476,5.611c-0.132,0.346-0.462,0.578-0.824,0.61L0.894,6.766C0.035,6.848-0.312,7.921,0.333,8.499
+            l4.338,3.811c0.279,0.246,0.395,0.609,0.314,0.975l-1.304,5.345c-0.199,0.842,0.708,1.534,1.468,1.089l4.801-2.822
+            c0.313-0.181,0.695-0.181,1.006,0l4.803,2.822c0.759,0.445,1.666-0.23,1.468-1.089l-1.288-5.345
+            c-0.081-0.365,0.035-0.729,0.313-0.975l4.34-3.811C21.219,7.921,20.855,6.848,19.998,6.766z" />
+        </svg>
+        </div>
+        <div class="timeline-content">
+        <h2>Technology Day</h2>
+        <p><br>
+        To be held on <b>October 12, 2020</b> <i> Perry, GA</i>
+        </p>
+        <a href="https://www.gatsa.org/conferences/tech-day" class="btn">Learn More</a>
+        </div>
+        </div>
+        
+        <div class="timeline-item">
+        <div class="timeline-icon">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="20px" viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
+        <g>
+        <path fill="#FFFFFF" d="M17.92,3.065l-1.669-2.302c-0.336-0.464-0.87-0.75-1.479-0.755C14.732,0.008,7.653,0,7.653,0v5.6
+                c0,0.096-0.047,0.185-0.127,0.237c-0.081,0.052-0.181,0.06-0.268,0.02l-1.413-0.64C5.773,5.183,5.69,5.183,5.617,5.215l-1.489,0.65
+                c-0.087,0.038-0.19,0.029-0.271-0.023c-0.079-0.052-0.13-0.141-0.13-0.235V0H2.191C1.655,0,1.233,0.434,1.233,0.97
+                c0,0,0.025,15.952,0.031,15.993c0.084,0.509,0.379,0.962,0.811,1.242l2.334,1.528C4.671,19.905,4.974,20,5.286,20h10.307
+                c1.452,0,2.634-1.189,2.634-2.64V4.007C18.227,3.666,18.12,3.339,17.92,3.065z M16.42,17.36c0,0.464-0.361,0.833-0.827,0.833H5.341
+                l-1.675-1.089h10.341c0.537,0,0.953-0.44,0.953-0.979V2.039l1.459,2.027V17.36L16.42,17.36z" />
+        </g>
+        </svg>
+        </div>
+        <div class="timeline-content right">
+        <h2>Leadercon</h2>
+        <p><br>
+            To be held on <b>November 13-15, 2020</b> <i>Jekyll Island</i>
+        </p>
+        <a href="https://www.gatsa.org/conferences/leadercon" class="btn">Learn More</a>
+        </div>
+        </div>
+        <div class="timeline-item">
+        <div class="timeline-icon">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="20px" viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
+        <path fill="#FFFFFF" d="M19.998,6.766l-5.759-0.544c-0.362-0.032-0.676-0.264-0.822-0.61l-2.064-4.999
+            c-0.329-0.825-1.5-0.825-1.83,0L7.476,5.611c-0.132,0.346-0.462,0.578-0.824,0.61L0.894,6.766C0.035,6.848-0.312,7.921,0.333,8.499
+            l4.338,3.811c0.279,0.246,0.395,0.609,0.314,0.975l-1.304,5.345c-0.199,0.842,0.708,1.534,1.468,1.089l4.801-2.822
+            c0.313-0.181,0.695-0.181,1.006,0l4.803,2.822c0.759,0.445,1.666-0.23,1.468-1.089l-1.288-5.345
+            c-0.081-0.365,0.035-0.729,0.313-0.975l4.34-3.811C21.219,7.921,20.855,6.848,19.998,6.766z" />
+        </svg>
+        </div>
+        <div class="timeline-content">
+        <h2>State Leadership Conferece</h2>
+        <p><br>
+            To be held on <b>March 17-20, 2021</b> <i>Athens, GA</i>
+        </p>
+        <a href="https://www.gatsa.org/conferences/state" class="btn">Learn More</a>
+        </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-icon">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="20px" viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
+            <g>
+            <path fill="#FFFFFF" d="M17.92,3.065l-1.669-2.302c-0.336-0.464-0.87-0.75-1.479-0.755C14.732,0.008,7.653,0,7.653,0v5.6
+                    c0,0.096-0.047,0.185-0.127,0.237c-0.081,0.052-0.181,0.06-0.268,0.02l-1.413-0.64C5.773,5.183,5.69,5.183,5.617,5.215l-1.489,0.65
+                    c-0.087,0.038-0.19,0.029-0.271-0.023c-0.079-0.052-0.13-0.141-0.13-0.235V0H2.191C1.655,0,1.233,0.434,1.233,0.97
+                    c0,0,0.025,15.952,0.031,15.993c0.084,0.509,0.379,0.962,0.811,1.242l2.334,1.528C4.671,19.905,4.974,20,5.286,20h10.307
+                    c1.452,0,2.634-1.189,2.634-2.64V4.007C18.227,3.666,18.12,3.339,17.92,3.065z M16.42,17.36c0,0.464-0.361,0.833-0.827,0.833H5.341
+                    l-1.675-1.089h10.341c0.537,0,0.953-0.44,0.953-0.979V2.039l1.459,2.027V17.36L16.42,17.36z" />
+            </g>
+            </svg>
             </div>
-			   </div>
+            <div class="timeline-content right">
+            <h2>National Leadership Conference</h2>
+            <p><br>
+                To be held on <b>June 27 - July 2, 2021 </b> <i>Orlando, FL</i>
+            </p>
+            <a href="https://www.gatsa.org/conferences/nationals" class="btn">Learn More</a>
+            </div>
+            </div>
+        </div>
+        </div>
+     
+</div>
+</div>
             <footer  class="site-footer">
                 <div class="container">
                     <div class="row">
@@ -398,6 +506,7 @@
             </footer>
        </div>
        </div>
+       
            <!--Total-->
          <button onclick="aDerv()" style='z-index: 10000000;background-color: lightblue; color: white;font-size:40px; border-radius: 20px;position: fixed;bottom:7px;right:7px;'> <i class='fa fa-comments'></i></button>
          <header  style="font-family: sans-serif;position: fixed; bottom: 68px; font-size: 15px;right: 7px;z-index: 1000000;background-color: white;font-weight: normal;">
@@ -417,6 +526,38 @@
                      $("#peekobot-container").fadeOut();
                  }
              }
+             window.addEventListener("scroll", function (event) {
+    var scroll = this.scrollY;
+    /*
+	id = elem
+	 <polyline points="0,0 0,200 220,200 300, 90 12241,150 12241,0"
+  style="fill: #485D71;stroke:white;stroke-width:4" />
+  */
+  if((200 -scroll) > 85) {
+  	document.getElementById("elem_fix").innerHTML = ("<polyline points=\"0,0 0," + (200-scroll) + " " + (200-scroll) + "," + (200-scroll) + " 300,90 12241,150 12241,0\" style=\"fill:lightblue;stroke:pink;stroke-width:4\"/>");
+	  document.getElementById("elem_fix").style.height = "250";
+  } else {
+	document.getElementById("elem_fix").innerHTML = ("<polyline points=\"0,0 0,90  300, 90 12241,150 12241,0\" style=\"fill: lightblue;stroke:pink;stroke-width:4\" />");
+	 document.getElementById("elem_fix").style.height = "100";
+  }
+  if(scroll > 270) {
+	 $( "#searchBar" ).fadeIn(800);
+  } else {
+	 $( "#searchBar" ).fadeOut(100);
+  }
+
+})
+
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginRight = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginRight= "0";
+}
+
          </script>
          <script src="../bot.js"></script>
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -430,7 +571,6 @@
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="https://s.electerious.com/basicScroll/dist/basicScroll.min.js"></script>
         <script src="../slideshow.js"></script>
-        <script src="../script.js"></script>
         <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
     </body>
 </html>
