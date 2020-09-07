@@ -1,16 +1,75 @@
-
 <!DOCTYPE html>
 <html>
     <head>
         <title> Officers | SFHS TSA </title>
         <link rel="icon" href="../images/favicon.png">
         <link rel="stylesheet" type="text/css" href="../baseSite.css">
-        <link rel="stylesheet" type="text/css" href="../compatibility.css">
+        <link rel="stylesheet" type="text/css"  href="../calendar.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Varela+Round'>
+        <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">    
         <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato&amp;subset=latin,latin-ext'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+       
         <style>
+		
+            body {
+                background-image: url("https://designwoop.com/uploads/2012/05/pattern_white_x0.5_pattern_vectorized_copy_2x-613x460.png");
+    background-repeat: repeat;
+	
+            }
+            #chat {
+	font-size:40px;
+	border-color: white;
+	border-radius: 20px;
+	position: fixed;
+	bottom:10px;
+	right:10px;
+}
+/* Mobile Compatibility Check */
+@media only screen and (min-width: 300px) and (max-width: 1340px)  {
+  .remove {
+      display: none;
+  }
+ html {
+	zoom: 70%;
+  }
+  video {
+	  transform: scaleY(1.4);
+  }
+  .container {
+      width: 500px;
+      position: relative;
+      left:0;
+  }
+}
+/* Laptop Compatibility Check */
+@media only screen and (min-width:  1340px) and (min-height: 400px)  {
+   
+    .remove {
+        display: block;
+    }
+    #do {
+        display: none;
+    }
+
+}
+#main_title1 {
+    position: absolute; 
+    top:5vh; 
+    left: 30%; 
+    color: white; 
+    font-weight: bold;
+    font-size: 20vh;
+  }
+        </style>
+          <style>
             .containerA {
             padding: 20px;
             }
@@ -116,297 +175,269 @@
             }
         </style>
     </head>
-    <body>
-        <div class="example3">
-        <nav class="navbar-primary navbar-static-top">
-            <a class="navbar-brand"  href="../index.html">
-                <div style="width: 30%; position: relative; left: -3%; top: -30px; z-index: 1001;" >
-                    <img src="../images/Logo.gif" style="width: 200px;transform: scaleX(-1);" alt="SFHS TSA Logo">
-                    <div style="position: absolute; left: 100px; margin-top: -100px; color: white; font-size: 60px;font-family: myFirstFont;">
-                        TSA<br><br>
-                        <p style="font-size: 12px;font-family: Arial, Helvetica, sans-serif; margin-left: -17px;"> LEAD  •  INSPIRE  •  INNOVATE</p>
+    <div id="remove" style="background-color: #0E355F; width: 100%; height: 100%;"></div>
+    <body style="display: none; ">
+
+            <div class="example3">
+                <nav class="navbar-primary navbar-static-top">
+                    <a class="navbar-brand" id="size" href="index.html">
+                        <div style="width: 30%; position: relative; left: -3%; top: -30px; z-index: 1004;" >
+                    </a>
                     </div>
-            </a>
-            <div id="searchBar" style="display: none;width: 300vh; left: -50%;position: fixed;  z-index: 1005; color: white; top: 44px; " >
-            <div class="wrap">
-            <!--	<div class="search">
-                <input type="text" class="searchTerm" placeholder="Explore...">
-                <button type="submit" class="searchButton">
-                	<i class="fa fa-search"></i>
-                </button>
-                </div>-->
-            </div> 
-            </div>
-            </img>
-            <a class="navbar-brand-mobile" href="index.html">
-            </a></div>
-            <div style="position: relative; top:0; z-index: 1000; left: -270px; width: 100000%;">
-                <svg id="elem_fix" style="opacity: 0.9;position: fixed;" height="250" width="12242">
-                    <polyline points="0,0 0,200 220,200 300, 90 12241,150 12241,0"
-                        style="fill: lightblue;stroke:pink;stroke-width:4" />
-                </svg>
-            </div>
-            <header id="phone">
-                <div style="z-index: 100000;position: fixed" id="mySidebar" class="sidebar">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                    <a href="../index.html">Home</a>
-                    <a href="../Chapter/FAQs.html">FAQs</a>
-                    <a href="../Chapter/Officers.html">Officers</a>
-                    <a href="../Chapter/Members.html">All Members</a>
-                    <a href="../Chapter/MeetingInfo.html">Meeting Info</a>
-                    <a href="../Competition/Levels.html">Conferences</a>
-                    <a href="../Competition/Timeline.html">Timeline</a>
-                    <a href="../Competition/EventInformation.html">Event Info</a>
-                    <a href="../Competition/EventThemes.html">Event Themes</a>
-                </div>
-                <div style="float: right;z-index: 100000;position: fixed;" id="main">
-                    <button class="openbtn" onclick="openNav()">☰</button>  
-                </div>
-                <div style="width: 100%; position: relative; left: -3%; top: -30px; z-index: 1001;" >
-                    <img src="images/Logo.gif" style="width: 200px;transform: scaleX(-1);" alt="SFHS TSA Logo">
-                    <div style="position: relative; left: 0%; margin-top: -150px; color: white; font-size: 60px;font-family: myFirstFont;">
-                        TSA<br><br>
-                        <p style="font-size: 20px;font-family: Arial, Helvetica, sans-serif; margin-left: -17px;margin-top: -80px;"> LEAD  •  INSPIRE  •  INNOVATE</p>
+                    <div style="position: relative; top:0;  left: -270px; width: 100000%;">
+                        <svg id="elem_fix1" style="opacity: 1;position: fixed;z-index: 1002;" height="120" width="12242">
+                            <polyline points="0,0 0,90 12241,150 12241,0"
+                                style="fill: white;stroke: pink;stroke-width:4" />
+                        </svg>
+                    
                     </div>
+
+       
+                    <div id="navbar3" class="navbar-collapse collapse">
+                        <button id="do" style="font-size:40px; color: black; border: none; background: transparent; position: relative;top: 10px;" onclick="move()"> <i class="fa fa-home"></i></button>
+                        <script>
+                            function move() {
+                                window.location.href = "../index.html";
+                            }
+                        </script>
+                        <ul  class="remove nav navbar-nav navbar-right">
+                            <li style="z-index: 10000;" ><a style="font-weight: bold;"  onMouseOver="this.style.backgroundColor='transparent'"
+                                onMouseOut="this.style.color='#0E355F';this.style.backgroundColor='transparent'" href="../index.html">Home</a></li>
+                            <li class="dropdown">
+                                <a href="#" style="background-image: linear-gradient(180deg, rgba(0,0,0,0),rgba(0,0,0,0) 81%,pink 81.1%,pink 85%,rgba(0,0,0,0) 85.1%,rgba(0,0,0,0));font-weight: bold;"  onMouseOver="this.style.backgroundColor='transparent'"
+                                    onMouseOut="this.style.color='#0E355F';this.style.backgroundColor='transparent'"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Chapter <span class="caret"></span></a>
+                                <ul style="z-index: 1200" class="dropdown-menu" role="menu">
+                                    <li><a href="../Chapter/Officers.html">Officers</a></li>
+                                    <li><a href="../Chapter/Members.html">All Members</a></li>
+                                    <li><a href="../Chapter/MeetingInfo.html">Meetings Info</a></li>
+                                    <li><a href="../Chapter/FAQs.html">FAQs</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" style="font-weight: bold;"  onMouseOver="this.style.backgroundColor='transparent'"
+                                    onMouseOut="this.style.color='#0E355F';this.style.backgroundColor='transparent'"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Competition<span class="caret"></span></a>
+                                <ul style="z-index: 1200" class="dropdown-menu" role="menu">
+                                    <li><a href="../Competition/Levels.html">Conferences</a></li>
+                                    <li><a href="../Competition/Timeline.html">Timeline</a></li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown-header">Contest</li>
+                                    <li><a href="../Competition/EventInformation.html">Event Information</a></li>
+                                    <li><a href="../Competition/EventThemes.html">Event Themes</a></li>
+                                </ul>
+                            </li>
+                            <li style="z-index: 10000;" ><a style="font-weight: bold;"  onMouseOver="this.style.backgroundColor='transparent'"
+                                onMouseOut="this.style.color='#0E355F';this.style.backgroundColor='transparent'" href="https://forms.gle/1idUPFj6g75AyS2w7">Join Now</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <!--Video start-->
+                <section style="top: 90px;position: relative; width: 100%;">
+                    <img style="width: 100%;position: relative; top:-10vh; height: 80vh" src="https://lh3.googleusercontent.com/-fYnrokG6tpM/X1EHltEXISI/AAAAAAAAT0E/--uGGyuNNZEJ15Zs1CkHSc_o3bMcPRqtACK8BGAsYHg/s512/2020-09-03.png"></img>
+                    <h1 id="main_title1"> Officers</h1>
+                </section>
+               <!--Image start-->
+               <div style="position: relative; top: 100px; z-index: 1001;">
+                    	
+<div class="containerA">
+
+           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+           <div class="container">
+               <div class="row ">
+                   <div class="col-lg-12">
+                       <div>
+                           <div class="col-md-4">
+                               <div class="profile-card text-center">
+                                   <img class="img-responsive" src="../images/pictures/A.jpg">
+                                   <div class="profile-info">
+                                       <img class="profile-pic" src="../images/pictures/A.jpg"><br><br>
+                                       <h2 class="hvr-underline-from-center">Prabhanjan <span>Co-President</span></h2>
+                                       <div>I am the current 2020-21 TSA State Secretary and the SFHS Co-President. I have previously worked on social media outreach and competition organization. I also have experience in over 10 events in our various conferences. I am a part of VEX Robotics division of TSA. The SFHS TSA Officer Team is looking forward to another great year!.</div>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="col-md-4">
+                               <div class="profile-card text-center">
+                                   <img class="img-responsive" src="../images/pictures/B.jpg">
+                                   <div class="profile-info">
+                                       <img class="profile-pic" src="../images/pictures/B.jpg"><br><br>
+                                       <h2 class="hvr-underline-from-center">Siva<br><span>Co-President</span></h2>
+                                       <div>Impassioned student with a focus in the computer science and mechanical engineering. IB Diploma Programme candidate. As co-President of our TSA chapter, I work to motivate and inspire individuals to strive for greater success in their events and to fulfill our ultimate goal of reclaiming first place at the State Leadership Conference (SLC). I also work with my team to provide more opportunities to chapter members and to create a cohesive group.</div>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="col-md-4">
+                               <div class="profile-card text-center">
+                                   <img class="img-responsive" src="../images/pictures/C.jpg">
+                                   <div class="profile-info">
+                                       <img class="profile-pic" src="../images/pictures/C.jpg"><br><br>
+                                       <h2 class="hvr-underline-from-center">Jelovy<br><span>Co-Reporter</span></h2>
+                                       <div>Hi everyone! My name is Jelovy, and I’m a sophomore here at South. I am a co-reporter at TSA, and I can’t wait to have an amazing time with you guys at TSA! Some hobbies are drawing, hanging out with friends and family, and music! <br><br><br><br><br><br><br></div>
+                                   </div>
+                               </div>
+                           </div>
+                           
+                           <div class="col-md-4">
+                               <div class="profile-card text-center">
+                                   <img class="img-responsive" src="../images/pictures/None.jpg">
+                                   <div class="profile-info">
+                                       <img class="profile-pic" src="../images/pictures/None.jpg"><br><br>
+                                       <h2 class="hvr-underline-from-center">Avi<br><span>Co-Vice-President</span></h2>
+                                       <div></div>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="col-md-4">
+                               <div class="profile-card text-center">
+                                   <img class="img-responsive" src="../images/pictures/None.jpg">
+                                   <div class="profile-info">
+                                       <img class="profile-pic" src="../images/pictures/None.jpg"><br><br>
+                                       <h2 class="hvr-underline-from-center">Royce<br><span>Co-Mem-@-Large</span></h2>
+                                       <div></div>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="col-md-4">
+                               <div class="profile-card text-center">
+                                   <img class="img-responsive" src="../images/pictures/None.jpg">
+                                   <div class="profile-info">
+                                       <img class="profile-pic" src="../images/pictures/None.jpg"><br><br>
+                                       <h2 class="hvr-underline-from-center">Nakul<br><span>Treasurer</span></h2>
+                                       <div></div>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="col-md-4">
+                               <div class="profile-card text-center">
+                                   <img class="img-responsive" src="../images/pictures/None.jpg">
+                                   <div class="profile-info">
+                                       <img class="profile-pic" src="../images/pictures/None.jpg"><br><br>
+                                       <h2 class="hvr-underline-from-center">Nitin<br><span>Co-Vice-President</span></h2>
+                                       <div></div>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="col-md-4">
+                               <div class="profile-card text-center">
+                                   <img class="img-responsive" src="../images/pictures/None.jpg">
+                                   <div class="profile-info">
+                                       <img class="profile-pic" src="../images/pictures/None.jpg"><br><br>
+                                       <h2 class="hvr-underline-from-center">Rachel<br><span>Co-Reporter</span></h2>
+                                       <div></div>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="col-md-4">
+                               <div class="profile-card text-center">
+                                   <img class="img-responsive" src="../images/pictures/None.jpg">
+                                   <div class="profile-info">
+                                       <img class="profile-pic" src="../images/pictures/None.jpg"><br><br>
+                                       <h2 class="hvr-underline-from-center">Ria<br><span>Co-Mem-@-Large</span></h2>
+                                       <div></div>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="col-md-4">
+                               <div class="profile-card text-center">
+                                   <img class="img-responsive" src="../images/pictures/None.jpg">
+                                   <div class="profile-info">
+                                       <img class="profile-pic" src="../images/pictures/None.jpg"><br><br>
+                                       <h2 class="hvr-underline-from-center">Ryan<br><span>Co-Sar-@-Arms</span></h2>
+                                       <div></div>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="col-md-4">
+                               <div class="profile-card text-center">
+                                   <img class="img-responsive" src="../images/pictures/None.jpg">
+                                   <div class="profile-info">
+                                       <img class="profile-pic" src="../images/pictures/None.jpg"><br><br>
+                                       <h2 class="hvr-underline-from-center">Srija<br><span>Secretary</span></h2>
+                                       <div></div>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="col-md-4">
+                               <div class="profile-card text-center">
+                                   <img class="img-responsive" src="../images/pictures/None.jpg">
+                                   <div class="profile-info">
+                                       <img class="profile-pic" src="../images/pictures/None.jpg"><br><br>
+                                       <h2 class="hvr-underline-from-center">Emilee<br><span>Co-Sargent-at-arms</span></h2>
+                                       <div>I’m the Co-Sargent-at-arms for TSA. I have done webmaster, forensics, videogame design, and VEX. </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+               </div>
+               
+                    <svg class="remove" style="position: relative;top:-98px  " height="250" width="10000">
+                        <polygon points="0,250 10000,0 10000,250 0,250" style="fill:#0E355F;" />
+                    </svg>
+                    <div class="remove" style="color: white;background-color:#0E355F; position: relative; width: 100%; height: 2px;"></div>
+                    </div>
+                    <!-- Site footer -->
+                    <footer style="position: relative; " class="remove site-footer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                    <h6>About</h6>
+                                    <p class="text-justify">TSA, standing for Technology Student Association, is a national student organization created to develop skills in science, mathematics, as well as business education. Further enhancing personal development, leadership, and STEM carrier opportunities.   </p>
+                                </div>
+                                <div class="col-xs-6 col-md-3">
+                                    <h6>Our Chapter</h6>
+                                    <ul class="footer-links">
+                                        <li><a href="../Chapter/Officers.html">Officers</a></li>
+                                        <li><a href="../Chapter/Members.html">All Members</a></li>
+                                        <li><a href="../Chapter/MeetingInfo.html">Meeting Info</a></li>
+                                        <li><a href="../Chapter/FAQs.html">FAQs</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-6 col-md-3">
+                                    <h6>Competition</h6>
+                                    <ul class="footer-links">
+                                        <li><a href="../Competition/Levels.html">Conferences</a></li>
+                                        <li><a href="../Competition/Timeline.html">Timeline</a></li>
+                                        <li><a href="../Competition/EventInformation.html">Event Information</a></li>
+                                        <li><a href="../Competition/EventThemes.html">Event Themes</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8 col-sm-6 col-xs-12">
+                                    <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by 
+                                        <a href="../index.html">SFHS TSA</a>.
+                                    </p>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <ul style="left: 44%;position: relative;" class="social-icons">
+                                        <!-- <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>-->
+                                        <li><a class="dribbble" href="https://www.forsyth.k12.ga.us/Page/22491"><i class="fa fa-dribbble"></i></a></li>
+                                        <li><a class="linkedin" href="https://www.instagram.com/sfhs.tsa/"><i class="fa fa-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                    
+                </div>
+               
+            </div>
+            <!--Total-->
+            <button onclick="aDerv()" id="chat" style='z-index: 10000000;background-color: pink; color: white;'> <i class='fa fa-comments'></i></button>
+            <header  style="font-family: sans-serif;position: fixed; bottom: 68px; font-size: 15px;right: 7px;z-index: 1000000;background-color: white;font-weight: normal;">
+                <div style="display: none;" id="peekobot-container">  
+                <div id="peekobot-inner">
+                    <div id="peekobot"></div>
+                </div>
                 </div>
             </header>
-            <div>
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar3">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    </button>
-                </div>
-            </div>
-            <div id="navbar3" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li style="z-index: 10000;" ><a style="font-weight: bold;"  onMouseOver="this.style.color='white';this.style.backgroundColor='transparent'"
-                        onMouseOut="this.style.color='white';this.style.backgroundColor='transparent'" href="../index.html">Home</a></li>
-                    <!--<li><a  href="Officers.html">Officers&nbsp;&nbsp;</a></li>
-                        Webmaster  <li><a href="DrConnect/index.html">Company </a></li>-->
-                    <li class="dropdown">
-                        <a href="#" style="background-image: linear-gradient(180deg, rgba(0,0,0,0),rgba(0,0,0,0) 81%,pink 81.1%,pink 85%,rgba(0,0,0,0) 85.1%,rgba(0,0,0,0));font-weight: bold;"  onMouseOver="this.style.color='white';this.style.backgroundColor='transparent'"
-                            onMouseOut="this.style.color='white';this.style.backgroundColor='transparent'"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Chapter <span class="caret"></span></a>
-                        <ul style="z-index: 1200" class="dropdown-menu" role="menu">
-                            <li><a href="../Chapter/Officers.html">Officers</a></li>
-                            <li><a href="../Chapter/Members.html">All Members</a></li>
-                            <li><a href="../Chapter/MeetingInfo.html">Meetings Info</a></li>
-                            <li><a href="../Chapter/FAQs.html">FAQs</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" style="font-weight: bold;"  onMouseOver="this.style.color='white';this.style.backgroundColor='transparent'"
-                            onMouseOut="this.style.color='white';this.style.backgroundColor='transparent'"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Competition<span class="caret"></span></a>
-                        <ul style="z-index: 1200" class="dropdown-menu" role="menu">
-                            <li><a href="../Competition/Levels.html">Conferences</a></li>
-                            <li><a href="../Competition/Timeline.html">Timeline</a></li>
-                            <li class="divider"></li>
-                            <li class="dropdown-header">Contest</li>
-                            <li><a href="../Competition/EventInformation.html">Event Information</a></li>
-                            <li><a href="../Competition/EventThemes.html">Event Themes</a></li>
-                        </ul>
-                    </li>
-                    <li style="z-index: 10000;" ><a style="font-weight: bold;"  onMouseOver="this.style.color='white';this.style.backgroundColor='transparent'"
-                        onMouseOut="this.style.color='white';this.style.backgroundColor='transparent'" href="https://forms.gle/1idUPFj6g75AyS2w7">Join Now</a></li>
-                </ul>
-            </div>
-        </nav>
-        <!-- Unique Site Data-->
-        
-<div style="padding-top: 13%; padding-left: -5%;" id="list">
-
-<div class="containerA">
-	 <h1 class="section__headline">Our Officers</h1>
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-            <div class="container">
-                <div class="row ">
-                    <div class="col-lg-12">
-                        <div>
-                            <div class="col-md-4">
-                                <div class="profile-card text-center">
-                                    <img class="img-responsive" src="../images/pictures/A.jpg">
-                                    <div class="profile-info">
-                                        <img class="profile-pic" src="../images/pictures/A.jpg"><br><br>
-                                        <h2 class="hvr-underline-from-center">Prabhanjan <span>Co-President</span></h2>
-                                        <div>I am the current 2020-21 TSA State Secretary and the SFHS Co-President. I have previously worked on social media outreach and competition organization. I also have experience in over 10 events in our various conferences. I am a part of VEX Robotics division of TSA. The SFHS TSA Officer Team is looking forward to another great year!.</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="profile-card text-center">
-                                    <img class="img-responsive" src="../images/pictures/B.jpg">
-                                    <div class="profile-info">
-                                        <img class="profile-pic" src="../images/pictures/B.jpg"><br><br>
-                                        <h2 class="hvr-underline-from-center">Siva<br><span>Co-President</span></h2>
-                                        <div>Impassioned student with a focus in the computer science and mechanical engineering. IB Diploma Programme candidate. As co-President of our TSA chapter, I work to motivate and inspire individuals to strive for greater success in their events and to fulfill our ultimate goal of reclaiming first place at the State Leadership Conference (SLC). I also work with my team to provide more opportunities to chapter members and to create a cohesive group.</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="profile-card text-center">
-                                    <img class="img-responsive" src="../images/pictures/C.jpg">
-                                    <div class="profile-info">
-                                        <img class="profile-pic" src="../images/pictures/C.jpg"><br><br>
-                                        <h2 class="hvr-underline-from-center">Jelovy<br><span>Co-Reporter</span></h2>
-                                        <div>Hi everyone! My name is Jelovy, and I’m a sophomore here at South. I am a co-reporter at TSA, and I can’t wait to have an amazing time with you guys at TSA! Some hobbies are drawing, hanging out with friends and family, and music! <br><br><br><br><br><br><br></div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-md-4">
-                                <div class="profile-card text-center">
-                                    <img class="img-responsive" src="../images/pictures/None.jpg">
-                                    <div class="profile-info">
-                                        <img class="profile-pic" src="../images/pictures/None.jpg"><br><br>
-                                        <h2 class="hvr-underline-from-center">Avi<br><span>Co-Vice-President</span></h2>
-                                        <div></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="profile-card text-center">
-                                    <img class="img-responsive" src="../images/pictures/None.jpg">
-                                    <div class="profile-info">
-                                        <img class="profile-pic" src="../images/pictures/None.jpg"><br><br>
-                                        <h2 class="hvr-underline-from-center">Royce<br><span>Co-Mem-@-Large</span></h2>
-                                        <div></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="profile-card text-center">
-                                    <img class="img-responsive" src="../images/pictures/None.jpg">
-                                    <div class="profile-info">
-                                        <img class="profile-pic" src="../images/pictures/None.jpg"><br><br>
-                                        <h2 class="hvr-underline-from-center">Nakul<br><span>Treasurer</span></h2>
-                                        <div></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="profile-card text-center">
-                                    <img class="img-responsive" src="../images/pictures/None.jpg">
-                                    <div class="profile-info">
-                                        <img class="profile-pic" src="../images/pictures/None.jpg"><br><br>
-                                        <h2 class="hvr-underline-from-center">Nitin<br><span>Co-Vice-President</span></h2>
-                                        <div></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="profile-card text-center">
-                                    <img class="img-responsive" src="../images/pictures/None.jpg">
-                                    <div class="profile-info">
-                                        <img class="profile-pic" src="../images/pictures/None.jpg"><br><br>
-                                        <h2 class="hvr-underline-from-center">Rachel<br><span>Co-Reporter</span></h2>
-                                        <div></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="profile-card text-center">
-                                    <img class="img-responsive" src="../images/pictures/None.jpg">
-                                    <div class="profile-info">
-                                        <img class="profile-pic" src="../images/pictures/None.jpg"><br><br>
-                                        <h2 class="hvr-underline-from-center">Ria<br><span>Co-Mem-@-Large</span></h2>
-                                        <div></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="profile-card text-center">
-                                    <img class="img-responsive" src="../images/pictures/None.jpg">
-                                    <div class="profile-info">
-                                        <img class="profile-pic" src="../images/pictures/None.jpg"><br><br>
-                                        <h2 class="hvr-underline-from-center">Ryan<br><span>Co-Sar-@-Arms</span></h2>
-                                        <div></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="profile-card text-center">
-                                    <img class="img-responsive" src="../images/pictures/None.jpg">
-                                    <div class="profile-info">
-                                        <img class="profile-pic" src="../images/pictures/None.jpg"><br><br>
-                                        <h2 class="hvr-underline-from-center">Srija<br><span>Secretary</span></h2>
-                                        <div></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="profile-card text-center">
-                                    <img class="img-responsive" src="../images/pictures/None.jpg">
-                                    <div class="profile-info">
-                                        <img class="profile-pic" src="../images/pictures/None.jpg"><br><br>
-                                        <h2 class="hvr-underline-from-center">Emilee<br><span>Co-Sargent-at-arms</span></h2>
-                                        <div>I’m the Co-Sargent-at-arms for TSA. I have done webmaster, forensics, videogame design, and VEX. </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-			   </div>
-            <footer  class="site-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-6">
-                            <h6>About</h6>
-                            <p class="text-justify">TSA, standing for Technology Student Association, is a national student organization created to develop skills in science, mathematics, as well as business education. Further enhancing personal development, leadership, and STEM carrier opportunities.   </p>
-                        </div>
-                        <div class="col-xs-6 col-md-3">
-                            <h6>Our Chapter</h6>
-                            <ul class="footer-links">
-                                <li><a href="../Chapter/Officers.html">Officers</a></li>
-                                <li><a href="../Chapter/Members.html">All Members</a></li>
-                                <li><a href="../Chapter/MeetingInfo.html">Meeting Info</a></li>
-                                <li><a href="../Chapter/FAQs.html">FAQs</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-xs-6 col-md-3">
-                            <h6>Competition</h6>
-                            <ul class="footer-links">
-                                <li><a href="../Competition/Levels.html">Conferences</a></li>
-                                <li><a href="../Competition/Timeline.html">Timeline</a></li>
-                                <li><a href="../Competition/EventInformation.html">Event Information</a></li>
-                                <li><a href="../Competition/EventThemes.html">Event Themes</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <hr>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8 col-sm-6 col-xs-12">
-                            <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by 
-                                <a href="../index.html">SFHS TSA</a>.
-                            </p>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <ul style="left: 44%;position: relative;" class="social-icons">
-                                <!-- <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>-->
-                                <li><a class="dribbble" href="https://www.forsyth.k12.ga.us/Page/22491"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a class="linkedin" href="https://www.instagram.com/sfhs.tsa/"><i class="fa fa-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-       </div>
-       </div>
-           <!--Total-->
-         <button onclick="aDerv()" style='z-index: 10000000;background-color: lightblue; color: white;font-size:40px; border-radius: 20px;position: fixed;bottom:7px;right:7px;'> <i class='fa fa-comments'></i></button>
-         <header  style="font-family: sans-serif;position: fixed; bottom: 68px; font-size: 15px;right: 7px;z-index: 1000000;background-color: white;font-weight: normal;">
-             <div style="display: none;" id="peekobot-container">  
-             <div id="peekobot-inner">
-                 <div id="peekobot"></div>
-             </div>
-             </div>
-         </header>
+        </claim>
          <script>
              let click = 0;
              function aDerv() {
@@ -418,10 +449,10 @@
                  }
              }
          </script>
-         <script src="../bot.js"></script>
+       
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <!-- Unique Site Data-->
         <!-- Load Script Imports-->
+        <script src="../bot.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
@@ -429,8 +460,15 @@
         <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="https://s.electerious.com/basicScroll/dist/basicScroll.min.js"></script>
-        <script src="../slideshow.js"></script>
-        <script src="../script.js"></script>
-        <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+        <script>window.onload = function() {
+            setTimeout(function(){ document.getElementById("remove").style.display = "none";$("body").fadeIn()  }, 1000);
+    };</script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+		<script>
+			$('body').delegate('.c-faq', 'click', function(){
+            $('.c-faq').removeClass('c-faq--active');
+            $(this).addClass('c-faq--active');
+            });
+        </script>
     </body>
 </html>

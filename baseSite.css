@@ -442,15 +442,14 @@ nav {
   margin: 25px 15px 25px 0;
 }
 .navbar-primary {
-	background-color: #0E355F;
-    //text-transform: uppercase;
+	background-color: #0F2075;
     color: red;
 }
 #intro_b > button {
 	zoom: 110%;
 }
 .navbar-primary a {
-    color: #0E355F;
+    color: #FEFEFE;
 }
 .scene {
 	position: absolute;
