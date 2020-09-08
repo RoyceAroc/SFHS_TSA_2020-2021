@@ -1,473 +1,789 @@
-
-
 <!DOCTYPE html>
 <html>
     <head>
         <title> Event Information | SFHS TSA </title>
         <link rel="icon" href="../images/favicon.png">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="../baseSite.css">
-        <link rel="stylesheet" type="text/css" href="../compatibility.css">
+        <link rel="stylesheet" type="text/css"  href="../calendar.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Varela+Round'>
+        <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">    
         <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato&amp;subset=latin,latin-ext'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+       
         <style>
-            .containerA {
-            padding: 20px;
-            }        
-           .container {
-            max-width: 1100px;
-            margin-left: auto;
-            margin-right: auto;
+		span {
+            font-weight: bold;
+            zoom: 150%;
+        }
+            body {
+                background-image: url("https://designwoop.com/uploads/2012/05/pattern_white_x0.5_pattern_vectorized_copy_2x-613x460.png");
+    background-repeat: repeat;
+	
             }
-            .section__headline {
-            font-family: "Varela Round", sans-serif;
-            font-size: 62px;
-            font-weight: light;
-            color: #1e88e5;
-            padding-left: 15px;
-            padding-top: 30px;
-            }          
+            #chat {
+	font-size:40px;
+	border-color: white;
+	border-radius: 20px;
+	position: fixed;
+	bottom:10px;
+	right:10px;
+}
+/* Mobile Compatibility Check */
+@media only screen and (min-width: 300px) and (max-width: 1340px)  {
+  .remove {
+      display: none;
+  }
+ html {
+	zoom: 70%;
+  }
+  video {
+	  transform: scaleY(1.4);
+  }
+}
+/* Laptop Compatibility Check */
+@media only screen and (min-width:  1340px) and (min-height: 400px)  {
+    .remove {
+        display: block;
+    }
+    #do {
+        display: none;
+    }
+
+}
+#main_title1 {
+    position: absolute; 
+    top:10vh; 
+    left: 20%; 
+    color: white; 
+    font-weight: bold;
+    font-size: 20vh;
+  }
         </style>
     </head>
-    <body>
-        <div class="example3">
-        <nav class="navbar-primary navbar-static-top">
-            <a class="navbar-brand"  href="../index.html">
-                <div style="width: 30%; position: relative; left: -3%; top: -30px; z-index: 1001;" >
-                    <img src="../images/Logo.gif" style="width: 200px;transform: scaleX(-1);" alt="SFHS TSA Logo">
-                    <div style="position: absolute; left: 100px; margin-top: -100px; color: white; font-size: 60px;font-family: myFirstFont;">
-                        TSA<br><br>
-                        <p style="font-size: 12px;font-family: Arial, Helvetica, sans-serif; margin-left: -17px;"> LEAD  •  INSPIRE  •  INNOVATE</p>
+    <div id="remove" style="background-color: #0F2075; width: 100%; height: 100%;"></div>
+    <body style="display: none; ">
+
+            <div class="example3">
+                <nav class="navbar-primary navbar-static-top">
+                    <a class="navbar-brand" id="size" href="index.html">
+                        <div style="width: 30%; position: relative; left: -3%; top: -30px; z-index: 1004;" >
+                    </a>
                     </div>
-            </a>
-            <div id="searchBar" style="display: none;width: 300vh; left: -50%;position: fixed;  z-index: 1005; color: white; top: 44px; " >
-            <div class="wrap">
-            <!--	<div class="search">
-                <input type="text" class="searchTerm" placeholder="Explore...">
-                <button type="submit" class="searchButton">
-                	<i class="fa fa-search"></i>
-                </button>
-                </div>-->
-            </div> 
-            </div>
-            </img>
-            <a class="navbar-brand-mobile" href="index.html">
-            </a></div>
-            <div style="position: relative; top:0; z-index: 1000; left: -270px; width: 100000%;">
-                <svg id="elem_fix" style="opacity: 0.9;position: fixed;" height="250" width="12242">
-                    <polyline points="0,0 0,200 220,200 300, 90 12241,150 12241,0"
-                        style="fill: lightblue;stroke:pink;stroke-width:4" />
-                </svg>
-            </div>
-            <header id="phone">
-                <div style="z-index: 100000;position: fixed" id="mySidebar" class="sidebar">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                    <a href="../index.html">Home</a>
-                    <a href="../Chapter/FAQs.html">FAQs</a>
-                    <a href="../Chapter/Officers.html">Officers</a>
-                    <a href="../Chapter/Members.html">All Members</a>
-                    <a href="../Chapter/MeetingInfo.html">Meeting Info</a>
-                    <a href="../Competition/Levels.html">Conferences</a>
-                    <a href="../Competition/Timeline.html">Timeline</a>
-                    <a href="../Competition/EventInformation.html">Event Info</a>
-                    <a href="../Competition/EventThemes.html">Event Themes</a>
-                </div>
-                <div style="float: right;z-index: 100000;position: fixed;" id="main">
-                    <button class="openbtn" onclick="openNav()">☰</button>  
-                </div>
-                <div style="width: 100%; position: relative; left: -3%; top: -30px; z-index: 1001;" >
-                    <img src="images/Logo.gif" style="width: 200px;transform: scaleX(-1);" alt="SFHS TSA Logo">
-                    <div style="position: relative; left: 0%; margin-top: -150px; color: white; font-size: 60px;font-family: myFirstFont;">
-                        TSA<br><br>
-                        <p style="font-size: 20px;font-family: Arial, Helvetica, sans-serif; margin-left: -17px;margin-top: -80px;"> LEAD  •  INSPIRE  •  INNOVATE</p>
+                    <div style="position: relative; top:0;  left: -270px; width: 100000%;">
+                        <svg id="elem_fix1" style="opacity: 1;position: fixed;z-index: 1002;" height="120" width="12242">
+                            <polyline points="0,0 0,90 12241,150 12241,0"
+                                style="fill: #9F001F;stroke: #A2AAAD;stroke-width:4" />
+                        </svg>
+                    
                     </div>
+
+       
+                    <div id="navbar3" class="navbar-collapse collapse">
+                        <button id="do" style="font-size:40px; color: white; border: none; background: transparent; position: relative;top: 10px;" onclick="move()"> <i class="fa fa-home"></i></button>
+                        <script>
+                            function move() {
+                                window.location.href = "../index.html";
+                            }
+                        </script>
+                        <ul  class="remove nav navbar-nav navbar-right">
+                            <li style="z-index: 10000;" ><a style="font-weight: bold;"  onMouseOver="this.style.color='white';this.style.backgroundColor='transparent'"
+                                onMouseOut="this.style.color='white';this.style.backgroundColor='transparent'" href="../index.html">Home</a></li>
+                            <li class="dropdown">
+                                <a href="#" style="font-weight: bold;"  onMouseOver="this.style.color='white';this.style.backgroundColor='transparent'"
+                                    onMouseOut="this.style.color='white';this.style.backgroundColor='transparent'"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Chapter <span class="caret"></span></a>
+                                <ul style="z-index: 1200" class="dropdown-menu" role="menu">
+                                    <li><a href="../Chapter/Officers.html">Officers</a></li>
+                                    <li><a href="../Chapter/Members.html">All Members</a></li>
+                                    <li><a href="../Chapter/MeetingInfo.html">Meetings Info</a></li>
+                                    <li><a href="../Chapter/FAQs.html">FAQs</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" style="background-image: linear-gradient(180deg, rgba(0,0,0,0),rgba(0,0,0,0) 81%,#FEFEFE 81.1%,#FEFEFE 85%,rgba(0,0,0,0) 85.1%,rgba(0,0,0,0));font-weight: bold;"  onMouseOver="this.style.color='white';this.style.backgroundColor='transparent'"
+                                    onMouseOut="this.style.color='white';this.style.backgroundColor='transparent'"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Competition<span class="caret"></span></a>
+                                <ul style="z-index: 1200" class="dropdown-menu" role="menu">
+                                    <li><a href="../Competition/Levels.html">Conferences</a></li>
+                                    <li><a href="../Competition/Timeline.html">Timeline</a></li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown-header">Contest</li>
+                                    <li><a href="../Competition/EventInformation.html">Event Information</a></li>
+                                    <li><a href="../Competition/EventThemes.html">Event Themes</a></li>
+                                </ul>
+                            </li>
+                            <li style="z-index: 10000;" ><a style="font-weight: bold;"  onMouseOver="this.style.color='white';this.style.backgroundColor='transparent'"
+                                onMouseOut="this.style.color='white';this.style.backgroundColor='transparent'" href="https://forms.gle/1idUPFj6g75AyS2w7">Join Now</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <!--Video start-->
+                <section style="top: 90px;position: relative; width: 100%;">
+                    <img style="width: 100%;position: relative; top:-10vh; height: 80vh" src="https://lh3.googleusercontent.com/-JIFaiwi0c4U/X1buMBcXv4I/AAAAAAAAT74/dqtJXUn5ERslf5OcbKN6sJZrTjr7_kfPgCK8BGAsYHg/s512/2020-09-07.png"></img>
+                    <h1 id="main_title1"> Events</h1>
+                </section>
+               <!--Image start-->
+               <div style="position: relative; top: 20px; padding: 50px; height: 600px;line-height: 4;z-index: 1001;">
+                <ul>
+                    <li>
+                        <span>Animatronics</span>
+                        <div>
+                            <ul>
+                                <li>Basic information: Participants will design and create an animatronic device that communicates their knowledge of mechanics and demonstrate a concept/idea.</li>
+                                <li>Theme: Create an animatronic exhibit for a science center</li>
+                                <li>Event Type: Project</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Architectural Design</span>
+                        <div>
+                            <ul>
+                                <li>Basic information: Develop architectural designs in response to a theme, including a physical and CAD model.</li>
+                                <li>Theme: Remodel an existing non-residential business following current pandemic restrictions.</li>
+                                <li>Event Type: Project</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Biotechnology Design</span>
+                        <div>
+                            <ul>
+                                <li>Basic information: Members will explore a biotechnical problem and conduct research on all aspects of the topic. They will then present this research through a presentation and display their work through prototype models and displays.</li>
+                                <li>Theme: The use of biotechnology in medicine</li>
+                                <li>Event Type: Project and Manual</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Board Game Design</span>
+                        <div>
+                            <ul>
+                                <li>Basic information: Teams will design, create, and package a board game that conveys the topic of their choice complete with instructions and game pieces. </li>
+                                <li>Event Type: Project</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Chapter Team</span>
+                        <div>
+                            <ul>
+                                <li>Basic information: Members of the chapter officer team will take the parliamentary procedure test to qualify for the semifinal round. In this round, they will complete a full business meeting consisting of the opening ceremony, business items, business actions, and the closing ceremony. </li>
+                                <li>Event Type: Test and On-Site Presentation</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Children's Stories</span>
+                        <div>
+                            <ul>
+                                <li>Basic information: Develop architectural designs in response to a theme, including a physical and CAD model.</li>
+                                <li>Theme: Create a pop-up book in which the pop-ups illustrate the story. The story should include the use of non-renewable energy resources.</li>
+                                <li>Event Type: Manual and On-Site Presentation</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Coding</span>
+                        <div>
+                            <ul>
+                                <li>Basic information: Compete against other competitors to quickly and effectively develop a program/software in response to the problem given on-site.</li>
+                                <li>Theme: Series of coding problems; Use one of the following languages: C (version C11), C++ (version C++14), C# (version 6.0), Java (version 10), Javascript (NodeJS version 8.10), Python (version 3.6), Ruby (version 2.5), Swift (version 4.2)</li>
+                                <li>Event Type: On-site Project</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Computer Integrated Manufacturing (CIM)</span>
+                        <div>
+                            <ul>
+                                <li>Basic Information: Participants will use CIM to design and fabricate a promotional project that will be showcased at the conference. </li>
+                                <li>Theme: Create an original design of a birdhouse</li>
+                                <li>Event Type: Project</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Computer-Aided Design (CAD), Architecture</span>
+                        <div>
+                            <ul>
+                                <li>Basic information: Use CAD software to develop a representation of architectural subjects.</li>
+                                <li>Event Type: On-Site Project</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Computer-Aided Design (CAD), Manufacturing</span>
+                        <div>
+                            <ul>
+                                <li>Basic information: Use CAD software to develop a representation of engineering subjects.</li>
+                                <li>Event Type: On-Site Project</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Cybersecurity</span>
+                        <div>
+                            <ul>
+                                <li>Basic information: Solve challenges on-site in limited time by responding to a cybersecurity challenge by identifying a breach in computer security.</li>
+                                <li>Event Type: On-site Project</li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <span>Debating Technological Issues</span>
+                        <div>
+                            <ul>
+                                <li>Basic information: Work together to prepare for a debate against a team. Teams will take either the pro or con side of the argument.</li>
+                                <li>Theme: Debate: Internet as a necessity, not a luxury.</li>
+                                <li>Event Type: Video and On-Site Presentation</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Digital Video Production</span>
+                        <div>
+                            <ul>
+                                <li>Basic information: Participants will film and edit a video as long as 3 minutes that demonstrate an understanding and/or reflects the given theme. They must also complete the required documentation concerning the video.</li>
+                                <li>Theme: Interview with your future self</li>
+                                <li>Event Type: Project and Manual</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Dragster Design</span>
+                        <div>
+                            <ul>
+                                <li>Basic Information: Participants will produce a working drawing for and construct a functioning prototype for a CO2-powered dragster that will be tested against other cars during the conference.</li>
+                                <li>Event Type: Project</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Engineering Design</span>
+                        <div>
+                            <ul>
+                                <li>Basic information: Participants will research, design, and develop documents and models as a solution for a National Academy of Engineering Grand Challenge found on the TSA website. </li>
+                                <li>Theme: Identify a need in a developing country and design a solution</li>
+                                <li>Event Type: Project</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Essays on Technology</span>
+                        <div>
+                            <ul>
+                                <li>Basic information: Develop a research-based essay paper that makes insightful connections on a current technologic topic.</li>
+                                <li>Event Type: On-Site Report</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Extemporaneous Speech</span>
+                        <div>
+                            <ul>
+                                <li>Basic information: Participants will verbally present a speech concerning technology or TSA after being presented with an on-site topic. </li>
+                                <li>Event Type: On-Site Presentation</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Fashion Design and Technology</span>
+                        <div>
+                            <ul>
+                                <li>Basic information: Participants will research and design a portfolio and a wearable prototype that corresponds to the given theme. </li>
+                                <li>Theme: In the professional workforce, proper work attire is essential. Students consider the challenges faced in workplace fashion and create proper, professional workplace attire. For example, someone working in an industry surrounded by harmful chemicals would need a uniform to protect them from that environment. Technological elements must be included in the construction of the garment.</li>
+                                <li>Event Type: Project and Manual</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Flight Endurance</span>
+                        <div>
+                            <ul>
+                                <li>Basic Information: Participants will design and assemble a rubber band-powered model aircraft that will be tested against other aircrafts the day of the conference, based on flight length.</li>
+                                <li>Event Type: Project</li>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Forensic Science</span>
+                        <div>
+                            <ul>
+                                <li>Basic information: Members will take an initial test regarding forensics and it practices. In the semifinals round, they will analyze a mock crime scene and investigate using their knowledge in forensics. </li>
+                                <li>Event Type: On-Site Presentation and Test</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Future Technology Teacher</span>
+                        <div>
+                            <ul>
+                                <li>Basic information: Members of the team will create a webinar that will describe the process of using new technology in the classroom as a tool for teachers’ reference. The semifinalist round will be the participants presenting this new technology in a mock lesson.</li>
+                                <li>Event Type: Project and On-Site Presentation</li>
+                            </ul>
+                        </div>
+                    </li>
+                  
+                    <li>
+                        <span>Information Technology Fundamentals+ Certification - CompTIA</span>
+                        <div>
+                            <ul>
+                                <li>TBD</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Music Production</span>
+                        <div>
+                            <ul>
+                                <li>Basic information: Participants will record and develop an original music score to be played at the National TSA opening and closing ceremony. </li>
+                                <li>Event Type: Project</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>On Demand Video</span>
+                        <div>
+                            <ul>
+                                <li>Basic information: Participants will plan, film, and edit a 60-second video during the conference.</li>
+                                <li>Event Type: On-Site Project</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Photographic Technology</span>
+                        <div>
+                            <ul>
+                                <li>Basic information: Participants will demonstrate mastery of photographic technology by producing a portfolio that conveys the message of the assigned theme.</li>
+                                <li>Theme: Nature</li>
+                                <li>Event Type: Project</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Prepared Presentation</span>
+                        <div>
+                            <ul>
+                                <li>Basic information:  Participants will create and orally present a presentation on an on-site topic concerning technology or TSA.</li>
+                                <li>Event Type: On-Site Presentation</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Promotional Design</span>
+                        <div>
+                            <ul>
+                                <li>Basic information: Use computerized graphic communications layout and design skills in the production of a promotional resource for TSA.</li>
+                                <li>Event Type: Project</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Scientific Visualization (SciVis)</span>
+                        <div>
+                            <ul>
+                                <li>Basic information: Create a graphic video using 2D or 3D animation that communicates, informs, analyzes, and/or illustrates a STEM topic, idea, subject, or concept.</li>
+                                <li>Event Type: Project</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Software Development</span>
+                        <div>
+                            <ul>
+                                <li>Basic information: Develop software using cutting-edge technologies, algorithm design, problem-solving principles, effective communication, and collaborative teamwork that contains an educational or social value.</li>
+                                <li>Event Type: Project</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Structural Design and Engineering</span>
+                        <div>
+                            <ul>
+                                <li>Basic information: Apply principles of structural engineering to build a designated structure.</li>
+                                <li>Theme: Trestle Bridge that spans a canyon over a river. </li>
+                                <li>Event Type: Project</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>System Control Technology</span>
+                        <div>
+                            <ul>
+                                <li>Basic information: Develop, build, and program a computer-controlled and mechanical solution to a given problem (generally industrial).</li>
+                                <li>Event Type: On-site Project</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Technology Bowl</span>
+                        <div>
+                            <ul>
+                                <li>Basic information: members of the team must first complete a written test demonstrating knowledge of various standards and technological content. Semifinalists will face off in direct competition in a question-answer format.</li>
+                                <li>Event Type: Test and On-Site Presentation</li>
+                            </ul>
+                        </div>
+                    </li><li>
+                        <span>Technology Problem Solving</span>
+                        <div>
+                            <ul>
+                                <li>Basic information: Participants will develop a solution to a problem assigned onsite at the conference.</li>
+                                <li>Event Type: On-site Project</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Transportation Modeling</span>
+                        <div>
+                            <ul>
+                                <li>Basic Information: Using appointed materials and following assigned regulations, teams of two will design and produce a scaled prototype of a vehicle that fits the annual design problem found on the TSA website.</li>
+                                <li>Theme: The History of Supersonic Aircraft</li>
+                                <li>Event Type: Project</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>VEX Robotics Competition</span>
+                        <div>
+                            <ul>
+                                <li>Basic Information: VEX teams design and build innovative robots that best explores the designated game design appointed for the school year. Participants compete in a head-to-head competition in which they attempt to defeat all other teams.</li>
+                                <li>Event Type: Project </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Video Game Design</span>
+                        <div>
+                            <ul>
+                                <li>Basic information: Develop a video game with high artistic, educational, and social value that resembles the given theme for the year.</li>
+                                <li>Theme: Adventure game</li>
+                                <li>Event Type: Project</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Webmaster</span>
+                        <div>
+                            <ul>
+                                <li>Basic information: Design, build, and launch a website that features our school’s CTAE program, TSA program, and the chapter’s ability to research and present a given topic pertaining to technology.</li>
+                                <li>Theme: Medical On Demand</li>
+                                <li>Event Type: Project</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+               <!-- <header>
+                    <br>
+                    <header class="orange">
+                        <button id="a" style="border-bottom: 0.1px solid white;" class="collapsible"> Construction Tech</button>
+                        <div class="content" style="position: relative;">
+                            <ul>
+                                <li id="0">
+                                    <span>Architectural Design</span>
+                                    <div></div>
+                                </li>
+                                <li id="1">
+                                    <span>Computer-Aided Design (CAD), Architecture</span>
+                                    <div></div>
+                                </li>
+                                <li id="2">
+                                    <span>Computer-Aided Design (CAD), Engineering</span>
+                                    <div></div>
+                                </li>
+                                <li id="3">
+                                    <span>Structural Design and Engineering</span>
+                                    <div></div>
+                                </li>
+                            </ul>
+                            <div style="position: absolute; right:10%; top:30%; background-color: white; width: 30%; height: 40%;">
+                                <ul class="broken">
+                                    <li class="broken">Basic information: Develop architectural designs in response to a theme, including a physical and CAD model.</li>
+                                    <li class="broken"> Theme: Remodel an existing non-residential business following current pandemic restrictions.</li>
+                                    <li class="broken">Event Type: Project</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button id="b" style="border-bottom: 0.1px solid white;" class="collapsible">Communications Tech</button>
+                        <div class="content">
+                            <ul>
+                                <li id="4">
+                                    <span>Children's Stories</span>
+                                    <div></div>
+                                </li>
+                                <li id="5">
+                                    <span>Debating Technological Issues</span>
+                                    <div></div>
+                                </li>
+                                <li id="6">
+                                    <span>Essays on Technology</span>
+                                    <div></div>
+                                </li>
+                                <li id="7">
+                                    <span>Promotional Design</span>
+                                    <div></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <button id="c" style="border-bottom: 0.1px solid white;" class="collapsible">Computer Science and IT</button>
+                        <div class="content">
+                            <ul>
+                                <li id="8">
+                                    <span>Coding</span>
+                                    <div></div>
+                                </li>
+                                <li id="9">
+                                    <span>Cybersecurity</span>
+                                    <div></div>
+                                </li>
+                                <li id="10">
+                                    <span>CompTIA Certification</span>
+                                    <div></div>
+                                </li>
+                                <li id="11">
+                                    <span>Scientific Visualization (SciVis)</span>
+                                    <div></div>
+                                </li>
+                                <li id="12">
+                                    <span>Software Development</span>
+                                    <div></div>
+                                </li>
+                                <li id="13">
+                                    <span>System Control Technology</span>
+                                    <div></div>
+                                </li>
+                                <li id="14">
+                                    <span>Video Game Design</span>
+                                    <div></div>
+                                </li>
+                                <li id="15">
+                                    <span>Webmaster</span>
+                                    <div></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <button id="d" class="collapsible" style="border-bottom: 0.1px solid white;">Leadership</button>
+                        <div class="content">
+                            <ul>
+                                <li id="16">
+                                    <span>Chapter Team</span>
+                                    <div></div>
+                                </li>
+                                <li id="17">
+                                    <span>Extemporaneous Speech</span>
+                                    <div></div>
+                                </li>
+                                <li id="18">
+                                    <span>Future Technology Teacher</span>
+                                    <div></div>
+                                </li>
+                                <li id="19">
+                                    <span>Prepared Presentation</span>
+                                    <div></div>
+                                </li>
+                                <li id="20">
+                                    <span>Technology Bowl</span>
+                                    <div></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <button id="e" style="border-bottom: 0.1px solid white;" class="collapsible">Manufacturing </button>
+                        <div class="content">
+                            <ul>
+                                <li id="21">
+                                    <span>Computer Integrated Manufacturing (CIM)</span>
+                                    <div></div>
+                                </li>
+                                <li id="22">
+                                    <span>Dragster Design</span>
+                                    <div></div>
+                                </li>
+                                <li id="23">
+                                    <span>Flight Endurance</span>
+                                    <div></div>
+                                </li>
+                                <li id="24">
+                                    <span>Transportation Modeling</span>
+                                    <div></div>
+                                </li>
+                                <li id="25">
+                                    <span>VEX Robotics Competition</span>
+                                    <div></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <button id="f" style="border-bottom: 0.1px solid white;" class="collapsible">STEM</button>
+                        <div class="content">
+                            <ul>
+                                <li id="26">
+                                    <span>Engineering Design</span>
+                                    <div></div>
+                                </li>
+                                <li id="27">
+                                    <span>Technology Problem Solving</span>
+                                    <div></div>
+                                </li>
+                                <li id="28">
+                                    <span>Animatronics</span>
+                                    <div></div>
+                                </li>
+                                <li id="29">
+                                    <span>Board Game Design</span>
+                                    <div></div>
+                                </li>
+                                <li id="30">
+                                    <span>Digital Video Production</span>
+                                    <div></div>
+                                </li>
+                                <li id="31">
+                                    <span>Fashion Design and Technology</span>
+                                    <div></div>
+                                </li>
+                                <li id="32">
+                                    <span>Music Production</span>
+                                    <div></div>
+                                </li>
+                                <li id="33">
+                                    <span>On Demand Video</span>
+                                    <div></div>
+                                </li>
+                                <li id="34">
+                                    <span>Photographic Technology</span>
+                                    <div></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <button id="g" style="border-bottom: 0.1px solid white;" class="collapsible">Technology and Research</button>
+                        <div class="content">
+                            <ul>
+                                <li id="35">
+                                    <span>Biotechnology Design</span>
+                                    <div></div>
+                                </li>
+                                <li id="36">
+                                    <span>Forensic Science</span>
+                                    <div></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </header>
+                    <p id="debug"></p>
+                                    <div id="opened" style="background-color: white; z-index: 1000000; position: fixed; display: none; top:30px;right:30px; left: 15px;bottom: 80px; height:90%; width: 97%;  padding-top: 1%; color: black; text-align: center;">
+                                        <button  onclick="closePop()" style="position: absolute; right: 0px; top: -1px; color: white; background-color: red;zoom: 150%; height: 30px;"> X </button>
+                                        <div id="append_iframe">	</div>
+                                    </div>
+                                    <script>
+                                        function open1(numA) {
+                                            let indexA = [49,103,111,265,87,127,163,241,97,0,0,249,257,275,309,317,75,169,201,233,285,119,145,183,301,0,155,295,41,67,137,175,209,217,223,59,193];
+                                            $("#opened").fadeIn();
+                                            document.getElementById("append_iframe").innerHTML = "";
+                                              var link = "/media/CompGuidelines.pdf#page=" + indexA[numA];
+                                                var iframe = document.createElement('iframe');
+                                                iframe.frameBorder=0;
+                                                iframe.width="300px";
+                                                iframe.height="600px";
+                                                iframe.setAttribute("src", link);
+                                                document.getElementById("append_iframe").appendChild(iframe);
+                                        
+                                            
+                                        
+                                            
+                                        }
+                                        var coll = document.getElementsByClassName("collapsible");
+            var i;
+            
+            for (i = 0; i < coll.length; ++i) {
+            
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                let id = $(this).attr("id");
+                let list = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
+                for(let m=0; m<list.length; m++) {
+                    if(id==list[m]) {
+                        let cons = [0, 4, 8, 16, 21, 26, 35];
+                        document.getElementById(cons[m]).click();
+                    }
+                }
+                //document.getElementById("content").click();
+                if (content.style.maxHeight){
+                  content.style.maxHeight = null;
+                } else {
+                  content.style.maxHeight = content.scrollHeight + 300 + "px";
+                } 
+              });
+            }
+            
+            function closePop() {
+                $("#opened").fadeOut();
+            }
+            
+            
+            
+            $(document).ready(function () {
+                $(".broken").removeAttr("style");
+              $('li').click(function () {
+                let choose = $(this).attr('id');
+                if ($(this).hasClass('expand')) {
+                  $(this).removeClass('expand');
+                  $(this).find('div').text('');
+                } else {
+                  // Remove all expand classes from list items
+                  $('li').removeClass('expand');
+                  $('li').find('div').text('');
+                  // Add to the newly clicked list item
+                  $(this).addClass('expand');
+                
+                  const width  = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+                  if(width < 1340) {
+                    $(this).find('div').html(function () {
+                    list = "https://tsa.roydero.com/images/slides/" + choose + ".jpg";
+                    return "<ol class=\"clean\"><img src=\"" + list + "\"/><br><br><button onclick=\"open1(" + choose + ")\"> Read More </button></ol>";
+                });
+                } else {
+                  $(this).find('div').html(function () {
+                     
+                        list = "https://tsa.roydero.com/images/slides/" + choose + ".jpg";
+                    return "<ol class=\"clean\"><img src=\"" + list + "\"/><br><br></ol>";
+                     
+                  });
+                }
+                }
+              });
+            
+              $('.expand').click(function () {
+                // Remove all expand classes from list items
+                $('li').removeClass('expand');
+              });
+            });
+            
+                                    </script>
+           </div></p>
+               </div>
+               
+                   
+                </div>
+               
+            </div>
+            <!--Total-->
+            <button onclick="aDerv()" id="chat" style='z-index: 10000000;background-color: #9F001F; color: white;'> <i class='fa fa-comments'></i></button>
+            <header  style="font-family: sans-serif;position: fixed; bottom: 68px; font-size: 15px;right: 7px;z-index: 1000000;background-color: white;font-weight: normal;">
+                <div style="display: none;" id="peekobot-container">  
+                <div id="peekobot-inner">
+                    <div id="peekobot"></div>
+                </div>
                 </div>
             </header>
-            <div>
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar3">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    </button>
-                </div>
-            </div>
-            <div id="navbar3" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li style="z-index: 10000;" ><a style="font-weight: bold;"  onMouseOver="this.style.color='white';this.style.backgroundColor='transparent'"
-                        onMouseOut="this.style.color='white';this.style.backgroundColor='transparent'" href="../index.html">Home</a></li>
-                    <!--<li><a  href="Officers.html">Officers&nbsp;&nbsp;</a></li>
-                        Webmaster  <li><a href="DrConnect/index.html">Company </a></li>-->
-                    <li class="dropdown">
-                        <a href="#" style="font-weight: bold;"  onMouseOver="this.style.color='white';this.style.backgroundColor='transparent'"
-                            onMouseOut="this.style.color='white';this.style.backgroundColor='transparent'"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Chapter <span class="caret"></span></a>
-                        <ul style="z-index: 1200" class="dropdown-menu" role="menu">
-                            <li><a href="../Chapter/Officers.html">Officers</a></li>
-                            <li><a href="../Chapter/Members.html">All Members</a></li>
-                            <li><a href="../Chapter/MeetingInfo.html">Meetings Info</a></li>
-                            <li><a href="../Chapter/FAQs.html">FAQs</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" style="font-weight: bold;background-image: linear-gradient(180deg, rgba(0,0,0,0),rgba(0,0,0,0) 81%,pink 81.1%,pink 85%,rgba(0,0,0,0) 85.1%,rgba(0,0,0,0));"  onMouseOver="this.style.color='white';this.style.backgroundColor='transparent'"
-                            onMouseOut="this.style.color='white';this.style.backgroundColor='transparent'"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Competition<span class="caret"></span></a>
-                        <ul style="z-index: 1200" class="dropdown-menu" role="menu">
-                            <li><a href="../Competition/Levels.html">Conferences</a></li>
-                            <li><a href="../Competition/Timeline.html">Timeline</a></li>
-                            <li class="divider"></li>
-                            <li class="dropdown-header">Contest</li>
-                            <li><a href="../Competition/EventInformation.html">Event Information</a></li>
-                            <li><a href="../Competition/EventThemes.html">Event Themes</a></li>
-                        </ul>
-                    </li>
-                    <li style="z-index: 10000;" ><a style="font-weight: bold;"  onMouseOver="this.style.color='white';this.style.backgroundColor='transparent'"
-                        onMouseOut="this.style.color='white';this.style.backgroundColor='transparent'" href="https://forms.gle/1idUPFj6g75AyS2w7">Join Now</a></li>
-                </ul>
-            </div>
-        </nav>
-        <!-- Unique Site Data-->
-        
-<div style="padding-top: 13%; padding-left: -5%;" id="list">
-
-<div class="containerA">
-	 <h1 class="section__headline">Competitive Events</h1>
-     <header>
-        <br>
-        <header class="orange">
-            <button id="a" style="border-bottom: 0.1px solid white;" class="collapsible"> Construction Tech</button>
-            <div class="content">
-                <ul>
-                    <li id="0">
-                        <span>Architectural Design</span>
-                        <div></div>
-                    </li>
-                    <li id="1">
-                        <span>Computer-Aided Design (CAD), Architecture</span>
-                        <div></div>
-                    </li>
-                    <li id="2">
-                        <span>Computer-Aided Design (CAD), Engineering</span>
-                        <div></div>
-                    </li>
-                    <li id="3">
-                        <span>Structural Design and Engineering</span>
-                        <div></div>
-                    </li>
-                </ul>
-            </div>
-            <button id="b" style="border-bottom: 0.1px solid white;" class="collapsible">Communications Tech</button>
-            <div class="content">
-                <ul>
-                    <li id="4">
-                        <span>Children's Stories</span>
-                        <div></div>
-                    </li>
-                    <li id="5">
-                        <span>Debating Technological Issues</span>
-                        <div></div>
-                    </li>
-                    <li id="6">
-                        <span>Essays on Technology</span>
-                        <div></div>
-                    </li>
-                    <li id="7">
-                        <span>Promotional Design</span>
-                        <div></div>
-                    </li>
-                </ul>
-            </div>
-            <button id="c" style="border-bottom: 0.1px solid white;" class="collapsible">Computer Science and IT</button>
-            <div class="content">
-                <ul>
-                    <li id="8">
-                        <span>Coding</span>
-                        <div></div>
-                    </li>
-                    <li id="9">
-                        <span>Cybersecurity</span>
-                        <div></div>
-                    </li>
-                    <li id="10">
-                        <span>CompTIA Certification</span>
-                        <div></div>
-                    </li>
-                    <li id="11">
-                        <span>Scientific Visualization (SciVis)</span>
-                        <div></div>
-                    </li>
-                    <li id="12">
-                        <span>Software Development</span>
-                        <div></div>
-                    </li>
-                    <li id="13">
-                        <span>System Control Technology</span>
-                        <div></div>
-                    </li>
-                    <li id="14">
-                        <span>Video Game Design</span>
-                        <div></div>
-                    </li>
-                    <li id="15">
-                        <span>Webmaster</span>
-                        <div></div>
-                    </li>
-                </ul>
-            </div>
-            <button id="d" class="collapsible" style="border-bottom: 0.1px solid white;">Leadership</button>
-            <div class="content">
-                <ul>
-                    <li id="16">
-                        <span>Chapter Team</span>
-                        <div></div>
-                    </li>
-                    <li id="17">
-                        <span>Extemporaneous Speech</span>
-                        <div></div>
-                    </li>
-                    <li id="18">
-                        <span>Future Technology Teacher</span>
-                        <div></div>
-                    </li>
-                    <li id="19">
-                        <span>Prepared Presentation</span>
-                        <div></div>
-                    </li>
-                    <li id="20">
-                        <span>Technology Bowl</span>
-                        <div></div>
-                    </li>
-                </ul>
-            </div>
-            <button id="e" style="border-bottom: 0.1px solid white;" class="collapsible">Manufacturing </button>
-            <div class="content">
-                <ul>
-                    <li id="21">
-                        <span>Computer Integrated Manufacturing (CIM)</span>
-                        <div></div>
-                    </li>
-                    <li id="22">
-                        <span>Dragster Design</span>
-                        <div></div>
-                    </li>
-                    <li id="23">
-                        <span>Flight Endurance</span>
-                        <div></div>
-                    </li>
-                    <li id="24">
-                        <span>Transportation Modeling</span>
-                        <div></div>
-                    </li>
-                    <li id="25">
-                        <span>VEX Robotics Competition</span>
-                        <div></div>
-                    </li>
-                </ul>
-            </div>
-            <button id="f" style="border-bottom: 0.1px solid white;" class="collapsible">STEM</button>
-            <div class="content">
-                <ul>
-                    <li id="26">
-                        <span>Engineering Design</span>
-                        <div></div>
-                    </li>
-                    <li id="27">
-                        <span>Technology Problem Solving</span>
-                        <div></div>
-                    </li>
-                    <li id="28">
-                        <span>Animatronics</span>
-                        <div></div>
-                    </li>
-                    <li id="29">
-                        <span>Board Game Design</span>
-                        <div></div>
-                    </li>
-                    <li id="30">
-                        <span>Digital Video Production</span>
-                        <div></div>
-                    </li>
-                    <li id="31">
-                        <span>Fashion Design and Technology</span>
-                        <div></div>
-                    </li>
-                    <li id="32">
-                        <span>Music Production</span>
-                        <div></div>
-                    </li>
-                    <li id="33">
-                        <span>On Demand Video</span>
-                        <div></div>
-                    </li>
-                    <li id="34">
-                        <span>Photographic Technology</span>
-                        <div></div>
-                    </li>
-                </ul>
-            </div>
-            <button id="g" style="border-bottom: 0.1px solid white;" class="collapsible">Technology and Research</button>
-            <div class="content">
-                <ul>
-                    <li id="35">
-                        <span>Biotechnology Design</span>
-                        <div></div>
-                    </li>
-                    <li id="36">
-                        <span>Forensic Science</span>
-                        <div></div>
-                    </li>
-                </ul>
-            </div>
-        </header>
-        <p id="debug"></p>
-                        <div id="opened" style="background-color: white; z-index: 1000000; position: fixed; display: none; top:30px;right:30px; left: 15px;bottom: 80px; height:90%; width: 97%;  padding-top: 1%; color: black; text-align: center;">
-                            <button  onclick="closePop()" style="position: absolute; right: 0px; top: -1px; color: white; background-color: red;zoom: 150%; height: 30px;"> X </button>
-                            <div id="append_iframe">	</div>
-                        </div>
-                        <script>
-                            function open1(numA) {
-                            	let indexA = [49,103,111,265,87,127,163,241,97,0,0,249,257,275,309,317,75,169,201,233,285,119,145,183,301,0,155,295,41,67,137,175,209,217,223,59,193];
-                            	$("#opened").fadeIn();
-                            	document.getElementById("append_iframe").innerHTML = "";
-                            	  var link = "/media/CompGuidelines.pdf#page=" + indexA[numA];
-                            		var iframe = document.createElement('iframe');
-                            		iframe.frameBorder=0;
-                            		iframe.width="300px";
-                            		iframe.height="600px";
-                            		iframe.setAttribute("src", link);
-                            		document.getElementById("append_iframe").appendChild(iframe);
-                            
-                            	
-                            
-                            	
-                            }
-                            var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; ++i) {
-
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-	let id = $(this).attr("id");
-	let list = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
-	for(let m=0; m<list.length; m++) {
-		if(id==list[m]) {
-			let cons = [0, 4, 8, 16, 21, 26, 35];
-			document.getElementById(cons[m]).click();
-		}
-	}
-	//document.getElementById("content").click();
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + 300 + "px";
-    } 
-  });
-}
-
-function closePop() {
-	$("#opened").fadeOut();
-}
-function openNav() {
-  document.getElementById("mySidebar").style.width = "250px";
-  document.getElementById("main").style.marginRight = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidebar").style.width = "0";
-  document.getElementById("main").style.marginRight= "0";
-}
-
-
-$(document).ready(function () {
-  $('li').click(function () {
-	let choose = $(this).attr('id');
-    if ($(this).hasClass('expand')) {
-      $(this).removeClass('expand');
-      $(this).find('div').text('');
-    } else {
-      // Remove all expand classes from list items
-      $('li').removeClass('expand');
-      $('li').find('div').text('');
-      // Add to the newly clicked list item
-      $(this).addClass('expand');
-      $(this).find('div').html(function () {
-        list = "https://tsa.roydero.com/images/slides/" + choose + ".jpg";
-        return "<ol class=\"clean\"><img src=\"" + list + "\"/><br><br><button onclick=\"open1(" + choose + ")\"> Read More </button></ol>";
-      });
-    }
-  });
-
-  $('.expand').click(function () {
-    // Remove all expand classes from list items
-    $('li').removeClass('expand');
-  });
-});
-
-                        </script>
-</div>
-</div>
-            <footer  class="site-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-6">
-                            <h6>About</h6>
-                            <p class="text-justify">TSA, standing for Technology Student Association, is a national student organization created to develop skills in science, mathematics, as well as business education. Further enhancing personal development, leadership, and STEM carrier opportunities.   </p>
-                        </div>
-                        <div class="col-xs-6 col-md-3">
-                            <h6>Our Chapter</h6>
-                            <ul class="footer-links">
-                                <li><a href="../Chapter/Officers.html">Officers</a></li>
-                                <li><a href="../Chapter/Members.html">All Members</a></li>
-                                <li><a href="../Chapter/MeetingInfo.html">Meeting Info</a></li>
-                                <li><a href="../Chapter/FAQs.html">FAQs</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-xs-6 col-md-3">
-                            <h6>Competition</h6>
-                            <ul class="footer-links">
-                                <li><a href="../Competition/Levels.html">Conferences</a></li>
-                                <li><a href="../Competition/Timeline.html">Timeline</a></li>
-                                <li><a href="../Competition/EventInformation.html">Event Information</a></li>
-                                <li><a href="../Competition/EventThemes.html">Event Themes</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <hr>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8 col-sm-6 col-xs-12">
-                            <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by 
-                                <a href="../index.html">SFHS TSA</a>.
-                            </p>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <ul style="left: 44%;position: relative;" class="social-icons">
-                                <!-- <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>-->
-                                <li><a class="dribbble" href="https://www.forsyth.k12.ga.us/Page/22491"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a class="linkedin" href="https://www.instagram.com/sfhs.tsa/"><i class="fa fa-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-       </div>
-       </div>
-       
-           <!--Total-->
-         <button onclick="aDerv()" style='z-index: 10000000;background-color: lightblue; color: white;font-size:40px; border-radius: 20px;position: fixed;bottom:7px;right:7px;'> <i class='fa fa-comments'></i></button>
-         <header  style="font-family: sans-serif;position: fixed; bottom: 68px; font-size: 15px;right: 7px;z-index: 1000000;background-color: white;font-weight: normal;">
-             <div style="display: none;" id="peekobot-container">  
-             <div id="peekobot-inner">
-                 <div id="peekobot"></div>
-             </div>
-             </div>
-         </header>
+        </claim>
          <script>
              let click = 0;
              function aDerv() {
@@ -478,32 +794,11 @@ $(document).ready(function () {
                      $("#peekobot-container").fadeOut();
                  }
              }
-             window.addEventListener("scroll", function (event) {
-    var scroll = this.scrollY;
-    /*
-	id = elem
-	 <polyline points="0,0 0,200 220,200 300, 90 12241,150 12241,0"
-  style="fill: #485D71;stroke:white;stroke-width:4" />
-  */
-  if((200 -scroll) > 85) {
-  	document.getElementById("elem_fix").innerHTML = ("<polyline points=\"0,0 0," + (200-scroll) + " " + (200-scroll) + "," + (200-scroll) + " 300,90 12241,150 12241,0\" style=\"fill:lightblue;stroke:pink;stroke-width:4\"/>");
-	  document.getElementById("elem_fix").style.height = "250";
-  } else {
-	document.getElementById("elem_fix").innerHTML = ("<polyline points=\"0,0 0,90  300, 90 12241,150 12241,0\" style=\"fill: lightblue;stroke:pink;stroke-width:4\" />");
-	 document.getElementById("elem_fix").style.height = "100";
-  }
-  if(scroll > 270) {
-	 $( "#searchBar" ).fadeIn(800);
-  } else {
-	 $( "#searchBar" ).fadeOut(100);
-  }
-
-})
          </script>
-         <script src="../bot.js"></script>
+       
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <!-- Unique Site Data-->
         <!-- Load Script Imports-->
+        <script src="../bot.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
@@ -511,7 +806,15 @@ $(document).ready(function () {
         <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="https://s.electerious.com/basicScroll/dist/basicScroll.min.js"></script>
-        <script src="../slideshow.js"></script>
-        <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+        <script>window.onload = function() {
+            setTimeout(function(){ document.getElementById("remove").style.display = "none";$("body").fadeIn()  }, 1000);
+    };</script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+		<script>
+			$('body').delegate('.c-faq', 'click', function(){
+            $('.c-faq').removeClass('c-faq--active');
+            $(this).addClass('c-faq--active');
+            });
+        </script>
     </body>
 </html>
