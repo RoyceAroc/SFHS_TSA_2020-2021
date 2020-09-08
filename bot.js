@@ -69,7 +69,7 @@ const chat = {
 		url: "../media/CompGuidelines.pdf" }*/] },
   
 		8: {
-	  text: 'TSA Chapter meetings are held Tuesday mornings at 7:45 AM Virtually across a Microsoft Teams Meeting. ',
+	  text: 'The meetings will be hosted on Thursdays after-school (Dates TBA). The meetings will start at 4:00 PM in Mr. Hodges and Mrs. Zhou\'s rooms in the Engineering Hallway in West Hall. These meetings will accommodate both in-school and virtual students. Virtual students can simply join a Microsoft Teams meeting posted on the ItsLearning page, and in-school students will sit in the classrooms. All state restrictions apply, so masks and social distancing will be mandated. ',
 	  },
 	  9: {
 	  text: 'To keep our members actively participated, the point system was introduced in our SFHS TSA Chapter.',

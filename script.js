@@ -1,4 +1,10 @@
- AOS.init();
+
+AOS.init({
+		easing: 'ease-in-out-sine'
+	  });
+window.addEventListener('load', AOS.refresh)
+
+
  window.addEventListener("scroll", function (event) {
     var scroll = this.scrollY;
     /*
